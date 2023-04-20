@@ -2327,6 +2327,11 @@
     )
   )
 
+  (text "鉴定为困傻了（" (exclude_from_sim no)
+ (at 96.52 151.13 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 007c816a-c611-47d7-b7e9-479d5f44b86a)
+  )
   (text "我把这幅杰作留在这 因为我看了半天怎么想也没想明白为啥要把这个电容放在这里\n光电二极管的信号频率不高的 在输入脚串电容不就开路了吗？想要有人帮忙指点一下\n" (exclude_from_sim no)
 
     (at 91.44 147.955 0)
