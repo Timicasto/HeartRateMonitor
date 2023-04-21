@@ -58,6 +58,14 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SCREEN_DC_Pin GPIO_PIN_3
+#define SCREEN_DC_GPIO_Port GPIOA
+#define SCREEN_RES_Pin GPIO_PIN_4
+#define SCREEN_RES_GPIO_Port GPIOA
+#define SCREEN_BLK_Pin GPIO_PIN_6
+#define SCREEN_BLK_GPIO_Port GPIOA
+#define SCREEN_CS_Pin GPIO_PIN_7
+#define SCREEN_CS_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
@@ -67,5 +75,3 @@ void Error_Handler(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
