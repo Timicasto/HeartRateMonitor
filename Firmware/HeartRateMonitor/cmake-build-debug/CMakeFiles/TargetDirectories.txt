@@ -1,3 +1,0 @@
-/home/timicasto/Projects/Hardware/HeartRateMonitor/Firmware/HeartRateMonitor/cmake-build-debug/CMakeFiles/HeartRateMonitor.elf.dir
-/home/timicasto/Projects/Hardware/HeartRateMonitor/Firmware/HeartRateMonitor/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/timicasto/Projects/Hardware/HeartRateMonitor/Firmware/HeartRateMonitor/cmake-build-debug/CMakeFiles/rebuild_cache.dir

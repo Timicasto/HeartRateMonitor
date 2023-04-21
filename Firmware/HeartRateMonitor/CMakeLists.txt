@@ -15,8 +15,8 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # project settings
 project(HeartRateMonitor C CXX ASM)
-set(CMAKE_CXX_STANDARD 23)
-set(CMAKE_C_STANDARD 23)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_C_STANDARD 11)
 
 #Uncomment for hardware floating point
 #add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
@@ -46,7 +46,7 @@ elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
     add_compile_options(-Os)
 else ()
     message(STATUS "Minimal optimization, debug info included")
-    add_compile_options(-Og -g)
+    add_compile_options(-Os -g)
 endif ()
 
 include_directories(Core/Inc Drivers/STM32G0xx_HAL_Driver/Inc Drivers/STM32G0xx_HAL_Driver/Inc/Legacy Drivers/CMSIS/Device/ST/STM32G0xx/Include Drivers/CMSIS/Include)
