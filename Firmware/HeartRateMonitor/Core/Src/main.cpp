@@ -98,8 +98,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   auto logger = Logger(&huart1);
-  auto ad5272 = AD5272(AD5272::NC, &hi2c2, logger);
-  
+  auto ad5272 = AD5272(AD5272::NC, &hi2c2, logger, 20000);
   /* USER CODE END 2 */
 
   /* Infinite loop */

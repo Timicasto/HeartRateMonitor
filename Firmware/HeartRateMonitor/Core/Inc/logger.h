@@ -1,7 +1,7 @@
 #ifndef HEARTRATEMONITOR_LOGGER_H
 #define HEARTRATEMONITOR_LOGGER_H
 
-//#include <string>
+#include <cstring>
 #include "stm32g0xx.h"
 
 class Logger {
@@ -15,7 +15,7 @@ public:
 	} LogLevel;
 	
 	explicit Logger(UART_HandleTypeDef* huart);
-//	void log(LogLevel level, const std::string& msg);
+	void log(LogLevel level, const char* msg);
 	
 private:
 	UART_HandleTypeDef* uart;
