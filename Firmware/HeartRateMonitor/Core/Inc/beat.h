@@ -1,6 +1,8 @@
 #ifndef HEARTRATEMONITOR_BEAT_H
 #define HEARTRATEMONITOR_BEAT_H
 
+#include "stm32g0xx.h"
+
 class Beat {
 public:
     uint8_t getRate();

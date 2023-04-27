@@ -43,6 +43,8 @@ extern "C" {
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
 
+
+
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/
@@ -58,6 +60,10 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define LED1_Pin GPIO_PIN_14
+#define LED1_GPIO_Port GPIOC
+#define LED2_Pin GPIO_PIN_15
+#define LED2_GPIO_Port GPIOC
 #define SCREEN_DC_Pin GPIO_PIN_3
 #define SCREEN_DC_GPIO_Port GPIOA
 #define SCREEN_RES_Pin GPIO_PIN_4

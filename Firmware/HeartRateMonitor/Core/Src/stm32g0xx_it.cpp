@@ -21,6 +21,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32g0xx_it.h"
+#include "adc.h"
+#include "tim.h"
+#include "beat.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -42,7 +45,8 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern uint16_t dmabuf[];
+extern Beat beat;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -56,7 +60,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern DMA_HandleTypeDef hdma_adc1;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -140,6 +144,26 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32g0xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles DMA1 channel 1 interrupt.
+  */
+void DMA1_Channel1_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 0 */
+	HAL_ADC_Stop_DMA(&hadc1);
+	HAL_TIM_Base_Stop(&htim3);
+  /* USER CODE END DMA1_Channel1_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_adc1);
+  /* USER CODE BEGIN DMA1_Channel1_IRQn 1 */
+	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
+	HAL_TIM_Base_Start(&htim3);
+
+	for (int i = 0; i < 256; ++i) {
+		beat.update(dmabuf[i]);
+	}
+  /* USER CODE END DMA1_Channel1_IRQn 1 */
+}
 
 /* USER CODE BEGIN 1 */
 
