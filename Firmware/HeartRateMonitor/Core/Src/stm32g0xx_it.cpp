@@ -161,6 +161,10 @@ void DMA1_Channel1_IRQHandler(void)
 
 	for (int i = 0; i < 256; ++i) {
 		beat.update(dmabuf[i]);
+		if (beat.isValid()) {
+			uint8_t rate = beat.getRate();
+			// send this to SPI DMA
+		}
 	}
   /* USER CODE END DMA1_Channel1_IRQn 1 */
 }

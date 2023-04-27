@@ -13,8 +13,13 @@ private:
     uint16_t beat = 0;
     uint16_t last_beat = 0;
     uint16_t max = 0;
-    uint8_t down_flag = 1;
+public:
+	uint8_t isValid() const;
+
+private:
+	uint8_t down_flag = 1;
     uint8_t stop = 0;
+	uint8_t valid = 0;
 };
 
 #endif

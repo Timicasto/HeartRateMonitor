@@ -24,6 +24,7 @@ void Beat::update(uint16_t s) {
                 last_beat = beat;
                 max = max >> 5;
                 stop = 1;
+				valid = 1;
             }
         
         }
@@ -38,5 +39,10 @@ uint8_t Beat::getRate() {
         counter += rate;
         r++;
     }
+	valid = 0;
     return r;
+}
+
+uint8_t Beat::isValid() const {
+	return valid;
 }
