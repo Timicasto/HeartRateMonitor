@@ -26,6 +26,8 @@
 #include "usart.h"
 #include "gpio.h"
 #include "beat.h"
+#include "logger.h"
+#include "screen.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -56,7 +58,7 @@ Beat beat = Beat();
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
-void SystemClock_Config(void);
+void SystemClock_Config();
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -70,7 +72,7 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
-int main(void)
+int main()
 {
   /* USER CODE BEGIN 1 */
 
@@ -103,7 +105,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	HAL_TIM_Base_Start(&htim3);
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
-
+	auto logger = Logger(&huart1);
+	logger.log(Logger::INFO, "Logger Initialized");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -124,7 +127,7 @@ int main(void)
   * @brief System Clock Configuration
   * @retval None
   */
-void SystemClock_Config(void)
+void SystemClock_Config()
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};

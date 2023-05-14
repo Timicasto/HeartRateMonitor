@@ -72,6 +72,7 @@ void Error_Handler(void);
 #define SCREEN_BLK_GPIO_Port GPIOA
 #define SCREEN_CS_Pin GPIO_PIN_7
 #define SCREEN_CS_GPIO_Port GPIOA
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

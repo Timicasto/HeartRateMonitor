@@ -1,0 +1,55 @@
+#ifndef HEARTRATEMONITOR_SCREEN_H
+#define HEARTRATEMONITOR_SCREEN_H
+
+#include "stm32g0xx.h"
+
+
+typedef struct GPIO {
+	GPIO_TypeDef *GPIOx;
+	uint16_t GPIO_Pin;
+} GPIO;
+
+
+class IO_Pin {
+public:
+	explicit IO_Pin(GPIO gpio);
+	IO_Pin(GPIO_TypeDef* io, uint16_t pinNum);
+
+	void set() const;
+	void reset() const;
+private:
+	GPIO _gpio;
+};
+
+class Screen {
+public:
+	Screen(SPI_HandleTypeDef* hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt);
+
+	void switchBacklight(bool enable);
+	void fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color);
+	void reset();
+	void drawFont(uint16_t x, uint16_t y, char* str, uint8_t length);
+private:
+	SPI_HandleTypeDef* spi;
+	IO_Pin CS;
+	IO_Pin RES;
+	IO_Pin DC;
+	IO_Pin BKLT;
+
+	void sendCommand(uint8_t command);
+	void sendData(uint8_t data);
+	void sendWdata(uint16_t data);
+	void writeRegister(uint8_t address, uint8_t data);
+};
+
+class ScreenFactory {
+
+private:
+	SPI_HandleTypeDef* spi;
+	GPIO CS;
+	GPIO DC;
+	GPIO RES;
+	GPIO BKLT;
+};
+
+#endif //HEARTRATEMONITOR_SCREEN_H
