@@ -173,17 +173,6 @@ static inline bool _is_digit(char ch)
 }
 
 
-// internal ASCII string to unsigned int conversion
-static unsigned int _atoi(const char** str)
-{
-	unsigned int i = 0U;
-	while (_is_digit(**str)) {
-		i = i * 10U + (unsigned int)(*((*str)++) - '0');
-	}
-	return i;
-}
-
-
 // output the specified string in reverse, taking care of any zero-padding
 static size_t _out_rev(out_fct_type out, char* buffer, size_t idx, size_t maxlen, const char* buf, size_t len, unsigned int width, unsigned int flags)
 {
@@ -292,27 +281,6 @@ static size_t _ntoa_long(out_fct_type out, char* buffer, size_t idx, size_t maxl
 
 // internal itoa for 'long long' type
 #if defined(PRINTF_SUPPORT_LONG_LONG)
-static size_t _ntoa_long_long(out_fct_type out, char* buffer, size_t idx, size_t maxlen, unsigned long long value, bool negative, unsigned long long base, unsigned int prec, unsigned int width, unsigned int flags)
-{
-	char buf[PRINTF_NTOA_BUFFER_SIZE];
-	size_t len = 0U;
-
-	// no hash for 0 values
-	if (!value) {
-		flags &= ~FLAGS_HASH;
-	}
-
-	// write if precision != 0 and value is != 0
-	if (!(flags & FLAGS_PRECISION) || value) {
-		do {
-			const char digit = (char)(value % base);
-			buf[len++] = digit < 10 ? '0' + digit : (flags & FLAGS_UPPERCASE ? 'A' : 'a') + digit - 10;
-			value /= base;
-		} while (value && (len < PRINTF_NTOA_BUFFER_SIZE));
-	}
-
-	return _ntoa_format(out, buffer, idx, maxlen, buf, len, negative, (unsigned int)base, prec, width, flags);
-}
 #endif  // PRINTF_SUPPORT_LONG_LONG
 
 
@@ -700,7 +668,7 @@ static int _vsnprintf(out_fct_type out, char* buffer, const size_t maxlen, const
 				width = sizeof(void*) * 2U;
 				flags |= FLAGS_ZEROPAD | FLAGS_UPPERCASE;
 #if defined(PRINTF_SUPPORT_LONG_LONG)
-				const bool is_ll = sizeof(uintptr_t) == sizeof(long long);
+				const bool is_ll = 0;
 #endif
 				idx = _ntoa_long(out, buffer, idx, maxlen, (unsigned long) ((uintptr_t) va_arg(va, void*)), false, 16U,
 				                 precision, width, flags);

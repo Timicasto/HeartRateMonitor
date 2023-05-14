@@ -22,7 +22,7 @@ TARGET = HeartRateMonitor
 # debug build?
 DEBUG = 1
 # optimization
-OPT = -Og
+OPT = -Oz
 
 
 #######################################
@@ -83,7 +83,7 @@ Core/Src/screen.cpp
 
 # ASM sources
 ASM_SOURCES =  \
-startup_stm32g030xx.s
+startup/startup_stm32g030xx.s
 
 
 #######################################

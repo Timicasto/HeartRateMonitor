@@ -28,7 +28,7 @@ public:
 	void switchBacklight(bool enable);
 	void fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color);
 	void reset();
-	void drawFont(uint16_t x, uint16_t y, char* str, uint8_t length);
+	void drawFont(uint16_t x, uint16_t y, char* str, uint8_t length, uint16_t color);
 private:
 	SPI_HandleTypeDef* spi;
 	IO_Pin CS;
@@ -40,12 +40,20 @@ private:
 	void sendData(uint8_t data);
 	void sendWdata(uint16_t data);
 	void writeRegister(uint8_t address, uint8_t data);
+	void setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_t stopY);
 };
 
 class ScreenFactory {
+public:
+	ScreenFactory spi(SPI_HandleTypeDef* hspi);
+	ScreenFactory cs(GPIO_TypeDef* gpio, uint16_t pin);
+	ScreenFactory dc(GPIO_TypeDef* gpio, uint16_t pin);
+	ScreenFactory res(GPIO_TypeDef* gpio, uint16_t pin);
+	ScreenFactory bklt(GPIO_TypeDef* gpio, uint16_t pin);
+	Screen build();
 
 private:
-	SPI_HandleTypeDef* spi;
+	SPI_HandleTypeDef* SPI;
 	GPIO CS;
 	GPIO DC;
 	GPIO RES;

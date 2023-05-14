@@ -107,6 +107,12 @@ int main()
 	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
 	auto logger = Logger(&huart1);
 	logger.log(Logger::INFO, "Logger Initialized");
+	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
+			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
+			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
+	
+	char str[5] = {'0', '1', '2', '3', '4'};
+	screen.drawFont(0, 0, str, 5, 0xFFFF);
   /* USER CODE END 2 */
 
   /* Infinite loop */

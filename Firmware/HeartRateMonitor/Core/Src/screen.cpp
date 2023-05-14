@@ -1,4 +1,5 @@
 #include "screen.h"
+#include "numfonts.h"
 
 IO_Pin::IO_Pin(GPIO gpio): _gpio(gpio) {
 
@@ -172,8 +173,50 @@ void Screen::reset() {
 	HAL_Delay(50);
 }
 
-void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length) {
+void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_t color) {
+	uint16_t currentX = x;
+	for (int i = 0 ; i < length ; ++i) {
+		setRegion(currentX, y, currentX + 16, y + 30);
+		if (str[i] == '.') {
+			for (const auto& item : fonts[10]) {
+				sendWdata(((item >> 7) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 6) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 5) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 4) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 3) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 2) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 1) & 0x01) ? 0x0000 : color);
+				sendWdata((item & 0x01) ? 0x0000 : color);
+			}
+		} else {
+			for (const auto& item : fonts[str[i] - '0']) {
+				sendWdata(((item >> 7) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 6) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 5) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 4) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 3) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 2) & 0x01) ? 0x0000 : color);
+				sendWdata(((item >> 1) & 0x01) ? 0x0000 : color);
+				sendWdata((item & 0x01) ? 0x0000 : color);
+			}
+		}
+	}
+}
 
+void Screen::setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_t stopY) {
+	sendCommand(0x2A);
+	sendData(0x00);
+	sendData(startX + 2);
+	sendData(0x00);
+	sendData(stopX + 2);
+	
+	sendCommand(0x2B);
+	sendData(0x00);
+	sendData(startY + 3);
+	sendData(0x00);
+	sendData(stopY + 3);
+	
+	sendCommand(0x2C);
 }
 
 void Screen::sendCommand(uint8_t command) {
@@ -200,4 +243,33 @@ void Screen::sendWdata(uint16_t data) {
 void Screen::writeRegister(uint8_t address, uint8_t data) {
 	sendCommand(address);
 	sendData(data);
+}
+
+ScreenFactory ScreenFactory::spi(SPI_HandleTypeDef* hspi) {
+	this -> SPI = hspi;
+	return *this;
+}
+
+ScreenFactory ScreenFactory::cs(GPIO_TypeDef* gpio, uint16_t pin) {
+	this -> CS = {gpio, pin};
+	return *this;
+}
+
+ScreenFactory ScreenFactory::dc(GPIO_TypeDef* gpio, uint16_t pin) {
+	this -> DC = {gpio, pin};
+	return *this;
+}
+
+ScreenFactory ScreenFactory::res(GPIO_TypeDef* gpio, uint16_t pin) {
+	this -> RES = {gpio, pin};
+	return *this;
+}
+
+ScreenFactory ScreenFactory::bklt(GPIO_TypeDef* gpio, uint16_t pin) {
+	this -> BKLT = {gpio, pin};
+	return *this;
+}
+
+Screen ScreenFactory::build() {
+	return {this -> SPI, IO_Pin(this -> CS), IO_Pin(this -> RES), IO_Pin(this -> DC), IO_Pin(this -> BKLT)};
 }
