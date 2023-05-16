@@ -1,0 +1,529 @@
+ARM GAS  /tmp/ccgTwp16.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"ad5272.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/ad5272.cpp"
+  18              		.section	.rodata._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert.str1.1,"aMS",%pro
+  19              	.LC0:
+  20 0000 496E6974 		.ascii	"Initialized AD5272.\000"
+  20      69616C69 
+  20      7A656420 
+  20      41443532 
+  20      37322E00 
+  21              		.section	.text._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert,"ax",%progbits
+  22              		.align	1
+  23              		.global	_ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert
+  24              		.syntax unified
+  25              		.code	16
+  26              		.thumb_func
+  28              	_ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert:
+  29              		.fnstart
+  30              	.LVL0:
+  31              	.LFB428:
+   1:Core/Src/ad5272.cpp **** #include "ad5272.h"
+   2:Core/Src/ad5272.cpp **** 
+   3:Core/Src/ad5272.cpp **** AD5272::AD5272(AD5272::AD5272AddrMode addrMode, I2C_HandleTypeDef* hi2c, Logger log, uint16_t maxR)
+  32              		.loc 1 3 1 view -0
+  33              		.cfi_startproc
+  34              		@ args = 4, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		.loc 1 3 1 is_stmt 0 view .LVU1
+  37 0000 10B5     		push	{r4, lr}
+  38              		.save {r4, lr}
+  39              	.LCFI0:
+  40              		.cfi_def_cfa_offset 8
+  41              		.cfi_offset 4, -8
+  42              		.cfi_offset 14, -4
+  43              		.loc 1 3 1 view .LVU2
+  44 0002 0400     		movs	r4, r0
+   4:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+   5:Core/Src/ad5272.cpp **** 	logger.log(Logger::INFO, "Initialized AD5272.");
+   6:Core/Src/ad5272.cpp **** }
+  45              		.loc 1 6 1 view .LVU3
+  46              		@ sp needed
+   3:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+  47              		.loc 1 3 1 view .LVU4
+ARM GAS  /tmp/ccgTwp16.s 			page 2
+
+
+  48 0004 02A8     		add	r0, sp, #8
+  49              	.LVL1:
+   3:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+  50              		.loc 1 3 1 view .LVU5
+  51 0006 0088     		ldrh	r0, [r0]
+  52              	.LVL2:
+  53              	.LBB2:
+   3:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+  54              		.loc 1 3 102 view .LVU6
+  55 0008 2170     		strb	r1, [r4]
+   4:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+  56              		.loc 1 4 100 view .LVU7
+  57 000a A081     		strh	r0, [r4, #12]
+   5:Core/Src/ad5272.cpp **** }
+  58              		.loc 1 5 2 is_stmt 1 view .LVU8
+   5:Core/Src/ad5272.cpp **** }
+  59              		.loc 1 5 12 is_stmt 0 view .LVU9
+  60 000c 2000     		movs	r0, r4
+   3:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+  61              		.loc 1 3 121 view .LVU10
+  62 000e 6260     		str	r2, [r4, #4]
+   5:Core/Src/ad5272.cpp **** }
+  63              		.loc 1 5 12 view .LVU11
+  64 0010 0121     		movs	r1, #1
+  65              	.LVL3:
+   5:Core/Src/ad5272.cpp **** }
+  66              		.loc 1 5 12 view .LVU12
+  67 0012 034A     		ldr	r2, .L2
+  68              	.LVL4:
+   4:Core/Src/ad5272.cpp ****                                                                                       logger(log), 
+  69              		.loc 1 4 87 view .LVU13
+  70 0014 A360     		str	r3, [r4, #8]
+   5:Core/Src/ad5272.cpp **** }
+  71              		.loc 1 5 12 view .LVU14
+  72 0016 0830     		adds	r0, r0, #8
+  73 0018 FFF7FEFF 		bl	_ZN6Logger3logENS_8LogLevelEPKc
+  74              	.LVL5:
+   5:Core/Src/ad5272.cpp **** }
+  75              		.loc 1 5 12 view .LVU15
+  76              	.LBE2:
+  77              		.loc 1 6 1 view .LVU16
+  78 001c 2000     		movs	r0, r4
+  79              	.LVL6:
+  80              		.loc 1 6 1 view .LVU17
+  81 001e 10BD     		pop	{r4, pc}
+  82              	.L3:
+  83              		.align	2
+  84              	.L2:
+  85 0020 00000000 		.word	.LC0
+  86              		.cfi_endproc
+  87              	.LFE428:
+  88              		.fnend
+  90              		.global	_ZN6AD5272C1ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert
+  91              		.thumb_set _ZN6AD5272C1ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert,_ZN6AD5272C2ENS_14AD527
+  92              		.section	.text._ZN6AD527211sendCommandENS_14AD5272CommandsE,"ax",%progbits
+  93              		.align	1
+  94              		.global	_ZN6AD527211sendCommandENS_14AD5272CommandsE
+ARM GAS  /tmp/ccgTwp16.s 			page 3
+
+
+  95              		.syntax unified
+  96              		.code	16
+  97              		.thumb_func
+  99              	_ZN6AD527211sendCommandENS_14AD5272CommandsE:
+ 100              		.fnstart
+ 101              	.LVL7:
+ 102              	.LFB430:
+   7:Core/Src/ad5272.cpp **** 
+   8:Core/Src/ad5272.cpp **** void AD5272::sendCommand(AD5272::AD5272Commands com) {
+ 103              		.loc 1 8 54 is_stmt 1 view -0
+ 104              		.cfi_startproc
+ 105              		@ args = 0, pretend = 0, frame = 8
+ 106              		@ frame_needed = 0, uses_anonymous_args = 0
+   9:Core/Src/ad5272.cpp **** 	uint8_t data[2] = {static_cast<uint8_t>(com << 2), 0x00};
+ 107              		.loc 1 9 2 view .LVU19
+   8:Core/Src/ad5272.cpp **** 	uint8_t data[2] = {static_cast<uint8_t>(com << 2), 0x00};
+ 108              		.loc 1 8 54 is_stmt 0 view .LVU20
+ 109 0000 1FB5     		push	{r0, r1, r2, r3, r4, lr}
+ 110              		.save {r0, r1, r2, r3, r4, lr}
+ 111              	.LCFI1:
+ 112              		.cfi_def_cfa_offset 24
+ 113              		.cfi_offset 0, -24
+ 114              		.cfi_offset 1, -20
+ 115              		.cfi_offset 2, -16
+ 116              		.cfi_offset 3, -12
+ 117              		.cfi_offset 4, -8
+ 118              		.cfi_offset 14, -4
+ 119              		.loc 1 9 10 view .LVU21
+ 120 0002 0023     		movs	r3, #0
+ 121 0004 6A46     		mov	r2, sp
+ 122 0006 5373     		strb	r3, [r2, #13]
+  10:Core/Src/ad5272.cpp **** 	HAL_I2C_Master_Transmit(i2c, address, data, 2, 1000);
+ 123              		.loc 1 10 25 view .LVU22
+ 124 0008 FA23     		movs	r3, #250
+   9:Core/Src/ad5272.cpp **** 	uint8_t data[2] = {static_cast<uint8_t>(com << 2), 0x00};
+ 125              		.loc 1 9 46 view .LVU23
+ 126 000a 8900     		lsls	r1, r1, #2
+ 127              	.LVL8:
+ 128              		.loc 1 10 25 view .LVU24
+ 129 000c 9B00     		lsls	r3, r3, #2
+   9:Core/Src/ad5272.cpp **** 	uint8_t data[2] = {static_cast<uint8_t>(com << 2), 0x00};
+ 130              		.loc 1 9 57 view .LVU25
+ 131 000e 1173     		strb	r1, [r2, #12]
+ 132              		.loc 1 10 2 is_stmt 1 view .LVU26
+ 133              		.loc 1 10 25 is_stmt 0 view .LVU27
+ 134 0010 0178     		ldrb	r1, [r0]
+ 135 0012 0093     		str	r3, [sp]
+ 136 0014 03AA     		add	r2, sp, #12
+ 137 0016 0223     		movs	r3, #2
+ 138 0018 4068     		ldr	r0, [r0, #4]
+ 139              	.LVL9:
+ 140              		.loc 1 10 25 view .LVU28
+ 141 001a FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 142              	.LVL10:
+  11:Core/Src/ad5272.cpp **** }
+ 143              		.loc 1 11 1 view .LVU29
+ 144 001e 05B0     		add	sp, sp, #20
+ARM GAS  /tmp/ccgTwp16.s 			page 4
+
+
+ 145              		@ sp needed
+ 146 0020 00BD     		pop	{pc}
+ 147              		.cfi_endproc
+ 148              	.LFE430:
+ 149              		.fnend
+ 151              		.section	.text._ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt,"ax",%progbits
+ 152              		.align	1
+ 153              		.global	_ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt
+ 154              		.syntax unified
+ 155              		.code	16
+ 156              		.thumb_func
+ 158              	_ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt:
+ 159              		.fnstart
+ 160              	.LVL11:
+ 161              	.LFB431:
+  12:Core/Src/ad5272.cpp **** 
+  13:Core/Src/ad5272.cpp **** void AD5272::sendCommandWithData(AD5272::AD5272Commands com, uint16_t data) {
+ 162              		.loc 1 13 77 is_stmt 1 view -0
+ 163              		.cfi_startproc
+ 164              		@ args = 0, pretend = 0, frame = 8
+ 165              		@ frame_needed = 0, uses_anonymous_args = 0
+  14:Core/Src/ad5272.cpp **** 	uint8_t buf[2] = {static_cast<uint8_t>((com << 2 | ((data & 0x300) >> 8))), static_cast<uint8_t>(d
+ 166              		.loc 1 14 2 view .LVU31
+  13:Core/Src/ad5272.cpp **** 	uint8_t buf[2] = {static_cast<uint8_t>((com << 2 | ((data & 0x300) >> 8))), static_cast<uint8_t>(d
+ 167              		.loc 1 13 77 is_stmt 0 view .LVU32
+ 168 0000 1FB5     		push	{r0, r1, r2, r3, r4, lr}
+ 169              		.save {r0, r1, r2, r3, r4, lr}
+ 170              	.LCFI2:
+ 171              		.cfi_def_cfa_offset 24
+ 172              		.cfi_offset 0, -24
+ 173              		.cfi_offset 1, -20
+ 174              		.cfi_offset 2, -16
+ 175              		.cfi_offset 3, -12
+ 176              		.cfi_offset 4, -8
+ 177              		.cfi_offset 14, -4
+ 178              		.loc 1 14 69 view .LVU33
+ 179 0002 9305     		lsls	r3, r2, #22
+ 180              		.loc 1 14 51 view .LVU34
+ 181 0004 8900     		lsls	r1, r1, #2
+ 182              	.LVL12:
+ 183              		.loc 1 14 69 view .LVU35
+ 184 0006 9B0F     		lsrs	r3, r3, #30
+ 185              		.loc 1 14 51 view .LVU36
+ 186 0008 0B43     		orrs	r3, r1
+ 187              		.loc 1 14 111 view .LVU37
+ 188 000a 6946     		mov	r1, sp
+ 189 000c 0B73     		strb	r3, [r1, #12]
+  15:Core/Src/ad5272.cpp **** 	HAL_I2C_Master_Transmit(i2c, address, buf, 2, 1000);
+ 190              		.loc 1 15 25 view .LVU38
+ 191 000e FA23     		movs	r3, #250
+ 192 0010 9B00     		lsls	r3, r3, #2
+  14:Core/Src/ad5272.cpp **** 	uint8_t buf[2] = {static_cast<uint8_t>((com << 2 | ((data & 0x300) >> 8))), static_cast<uint8_t>(d
+ 193              		.loc 1 14 111 view .LVU39
+ 194 0012 4A73     		strb	r2, [r1, #13]
+ 195              		.loc 1 15 2 is_stmt 1 view .LVU40
+ 196              		.loc 1 15 25 is_stmt 0 view .LVU41
+ 197 0014 0178     		ldrb	r1, [r0]
+ARM GAS  /tmp/ccgTwp16.s 			page 5
+
+
+ 198 0016 0093     		str	r3, [sp]
+ 199 0018 03AA     		add	r2, sp, #12
+ 200              	.LVL13:
+ 201              		.loc 1 15 25 view .LVU42
+ 202 001a 0223     		movs	r3, #2
+ 203 001c 4068     		ldr	r0, [r0, #4]
+ 204              	.LVL14:
+ 205              		.loc 1 15 25 view .LVU43
+ 206 001e FFF7FEFF 		bl	HAL_I2C_Master_Transmit
+ 207              	.LVL15:
+  16:Core/Src/ad5272.cpp **** }
+ 208              		.loc 1 16 1 view .LVU44
+ 209 0022 05B0     		add	sp, sp, #20
+ 210              		@ sp needed
+ 211 0024 00BD     		pop	{pc}
+ 212              		.cfi_endproc
+ 213              	.LFE431:
+ 214              		.fnend
+ 216              		.global	__aeabi_dmul
+ 217              		.global	__aeabi_ui2d
+ 218              		.global	__aeabi_ddiv
+ 219              		.global	__aeabi_d2uiz
+ 220              		.section	.text._ZN6AD527213setResistanceEd,"ax",%progbits
+ 221              		.align	1
+ 222              		.global	_ZN6AD527213setResistanceEd
+ 223              		.syntax unified
+ 224              		.code	16
+ 225              		.thumb_func
+ 227              	_ZN6AD527213setResistanceEd:
+ 228              		.fnstart
+ 229              	.LVL16:
+ 230              	.LFB432:
+  17:Core/Src/ad5272.cpp **** 
+  18:Core/Src/ad5272.cpp **** void AD5272::setResistance(double resistance) {
+ 231              		.loc 1 18 47 is_stmt 1 view -0
+ 232              		.cfi_startproc
+ 233              		@ args = 0, pretend = 0, frame = 0
+ 234              		@ frame_needed = 0, uses_anonymous_args = 0
+  19:Core/Src/ad5272.cpp **** 	auto wiper = (unsigned short)(resistance * 1024.0 / (double)maxResistance);
+ 235              		.loc 1 19 2 view .LVU46
+  18:Core/Src/ad5272.cpp **** 	auto wiper = (unsigned short)(resistance * 1024.0 / (double)maxResistance);
+ 236              		.loc 1 18 47 is_stmt 0 view .LVU47
+ 237 0000 D0B5     		push	{r4, r6, r7, lr}
+ 238              		.save {r4, r6, r7, lr}
+ 239              	.LCFI3:
+ 240              		.cfi_def_cfa_offset 16
+ 241              		.cfi_offset 4, -16
+ 242              		.cfi_offset 6, -12
+ 243              		.cfi_offset 7, -8
+ 244              		.cfi_offset 14, -4
+  18:Core/Src/ad5272.cpp **** 	auto wiper = (unsigned short)(resistance * 1024.0 / (double)maxResistance);
+ 245              		.loc 1 18 47 view .LVU48
+ 246 0002 1900     		movs	r1, r3
+  20:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+  21:Core/Src/ad5272.cpp **** }
+ 247              		.loc 1 21 1 view .LVU49
+ 248              		@ sp needed
+ARM GAS  /tmp/ccgTwp16.s 			page 6
+
+
+  18:Core/Src/ad5272.cpp **** 	auto wiper = (unsigned short)(resistance * 1024.0 / (double)maxResistance);
+ 249              		.loc 1 18 47 view .LVU50
+ 250 0004 0400     		movs	r4, r0
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 251              		.loc 1 19 43 view .LVU51
+ 252 0006 0C4B     		ldr	r3, .L7
+  18:Core/Src/ad5272.cpp **** 	auto wiper = (unsigned short)(resistance * 1024.0 / (double)maxResistance);
+ 253              		.loc 1 18 47 view .LVU52
+ 254 0008 1000     		movs	r0, r2
+ 255              	.LVL17:
+  20:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 256              		.loc 1 20 2 is_stmt 1 view .LVU53
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 257              		.loc 1 19 43 is_stmt 0 view .LVU54
+ 258 000a 0022     		movs	r2, #0
+ 259              	.LVL18:
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 260              		.loc 1 19 43 view .LVU55
+ 261 000c FFF7FEFF 		bl	__aeabi_dmul
+ 262              	.LVL19:
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 263              		.loc 1 19 43 view .LVU56
+ 264 0010 0600     		movs	r6, r0
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 265              		.loc 1 19 54 view .LVU57
+ 266 0012 A089     		ldrh	r0, [r4, #12]
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 267              		.loc 1 19 43 view .LVU58
+ 268 0014 0F00     		movs	r7, r1
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 269              		.loc 1 19 54 view .LVU59
+ 270 0016 FFF7FEFF 		bl	__aeabi_ui2d
+ 271              	.LVL20:
+ 272 001a 0B00     		movs	r3, r1
+ 273 001c 0200     		movs	r2, r0
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 274              		.loc 1 19 52 view .LVU60
+ 275 001e 3900     		movs	r1, r7
+ 276 0020 3000     		movs	r0, r6
+ 277 0022 FFF7FEFF 		bl	__aeabi_ddiv
+ 278              	.LVL21:
+  19:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 279              		.loc 1 19 7 view .LVU61
+ 280 0026 FFF7FEFF 		bl	__aeabi_d2uiz
+ 281              	.LVL22:
+  20:Core/Src/ad5272.cpp **** 	sendCommandWithData(R_SET, wiper);
+ 282              		.loc 1 20 21 view .LVU62
+ 283 002a 0121     		movs	r1, #1
+ 284 002c 82B2     		uxth	r2, r0
+ 285 002e 2000     		movs	r0, r4
+ 286 0030 FFF7FEFF 		bl	_ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt
+ 287              	.LVL23:
+ 288              	.LVL24:
+ 289              		.loc 1 21 1 view .LVU63
+ 290 0034 D0BD     		pop	{r4, r6, r7, pc}
+ 291              	.L8:
+ 292 0036 C046     		.align	2
+ARM GAS  /tmp/ccgTwp16.s 			page 7
+
+
+ 293              	.L7:
+ 294 0038 00009040 		.word	1083179008
+ 295              		.cfi_endproc
+ 296              	.LFE432:
+ 297              		.fnend
+ 299              		.global	__aeabi_i2d
+ 300              		.section	.text._ZN6AD527214readResistanceEv,"ax",%progbits
+ 301              		.align	1
+ 302              		.global	_ZN6AD527214readResistanceEv
+ 303              		.syntax unified
+ 304              		.code	16
+ 305              		.thumb_func
+ 307              	_ZN6AD527214readResistanceEv:
+ 308              		.fnstart
+ 309              	.LVL25:
+ 310              	.LFB433:
+  22:Core/Src/ad5272.cpp **** 
+  23:Core/Src/ad5272.cpp **** double AD5272::readResistance() {
+ 311              		.loc 1 23 33 is_stmt 1 view -0
+ 312              		.cfi_startproc
+ 313              		@ args = 0, pretend = 0, frame = 8
+ 314              		@ frame_needed = 0, uses_anonymous_args = 0
+  24:Core/Src/ad5272.cpp **** 	sendCommand(R_READ);
+ 315              		.loc 1 24 2 view .LVU65
+  23:Core/Src/ad5272.cpp **** 	sendCommand(R_READ);
+ 316              		.loc 1 23 33 is_stmt 0 view .LVU66
+ 317 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 318              		.save {r4, r5, r6, r7, lr}
+ 319              	.LCFI4:
+ 320              		.cfi_def_cfa_offset 20
+ 321              		.cfi_offset 4, -20
+ 322              		.cfi_offset 5, -16
+ 323              		.cfi_offset 6, -12
+ 324              		.cfi_offset 7, -8
+ 325              		.cfi_offset 14, -4
+ 326              		.loc 1 24 13 view .LVU67
+ 327 0002 0221     		movs	r1, #2
+  23:Core/Src/ad5272.cpp **** 	sendCommand(R_READ);
+ 328              		.loc 1 23 33 view .LVU68
+ 329              		.pad #20
+ 330 0004 85B0     		sub	sp, sp, #20
+ 331              	.LCFI5:
+ 332              		.cfi_def_cfa_offset 40
+  23:Core/Src/ad5272.cpp **** 	sendCommand(R_READ);
+ 333              		.loc 1 23 33 view .LVU69
+ 334 0006 0400     		movs	r4, r0
+ 335              		.loc 1 24 13 view .LVU70
+ 336 0008 FFF7FEFF 		bl	_ZN6AD527211sendCommandENS_14AD5272CommandsE
+ 337              	.LVL26:
+  25:Core/Src/ad5272.cpp **** 	uint8_t buf[2];
+ 338              		.loc 1 25 2 is_stmt 1 view .LVU71
+  26:Core/Src/ad5272.cpp **** 	HAL_I2C_Master_Receive(i2c, address, buf, 2, 1000);
+ 339              		.loc 1 26 2 view .LVU72
+ 340              		.loc 1 26 24 is_stmt 0 view .LVU73
+ 341 000c FA23     		movs	r3, #250
+ 342 000e 9B00     		lsls	r3, r3, #2
+ 343 0010 2178     		ldrb	r1, [r4]
+ARM GAS  /tmp/ccgTwp16.s 			page 8
+
+
+ 344 0012 03AD     		add	r5, sp, #12
+ 345 0014 0093     		str	r3, [sp]
+ 346 0016 2A00     		movs	r2, r5
+ 347 0018 0223     		movs	r3, #2
+ 348 001a 6068     		ldr	r0, [r4, #4]
+ 349 001c FFF7FEFF 		bl	HAL_I2C_Master_Receive
+ 350              	.LVL27:
+  27:Core/Src/ad5272.cpp **** 	uint16_t wiper = (buf[0] << 8) | (buf[1] & 0xFF);
+ 351              		.loc 1 27 2 is_stmt 1 view .LVU74
+  28:Core/Src/ad5272.cpp **** 	return wiper * (maxResistance / 1024.0);
+ 352              		.loc 1 28 2 view .LVU75
+ 353              		.loc 1 28 9 is_stmt 0 view .LVU76
+ 354 0020 2888     		ldrh	r0, [r5]
+ 355 0022 40BA     		rev16	r0, r0
+ 356 0024 80B2     		uxth	r0, r0
+ 357              		.loc 1 28 15 view .LVU77
+ 358 0026 FFF7FEFF 		bl	__aeabi_i2d
+ 359              	.LVL28:
+ 360              		.loc 1 28 15 view .LVU78
+ 361 002a 0600     		movs	r6, r0
+ 362              		.loc 1 28 18 view .LVU79
+ 363 002c A089     		ldrh	r0, [r4, #12]
+ 364              		.loc 1 28 15 view .LVU80
+ 365 002e 0F00     		movs	r7, r1
+ 366              		.loc 1 28 32 view .LVU81
+ 367 0030 FFF7FEFF 		bl	__aeabi_i2d
+ 368              	.LVL29:
+ 369 0034 0022     		movs	r2, #0
+ 370 0036 054B     		ldr	r3, .L10
+ 371 0038 FFF7FEFF 		bl	__aeabi_dmul
+ 372              	.LVL30:
+ 373 003c 0200     		movs	r2, r0
+ 374 003e 0B00     		movs	r3, r1
+ 375              		.loc 1 28 40 view .LVU82
+ 376 0040 3000     		movs	r0, r6
+ 377 0042 3900     		movs	r1, r7
+ 378 0044 FFF7FEFF 		bl	__aeabi_dmul
+ 379              	.LVL31:
+  29:Core/Src/ad5272.cpp **** }
+ 380              		.loc 1 29 1 view .LVU83
+ 381 0048 05B0     		add	sp, sp, #20
+ 382              		@ sp needed
+ 383              	.LVL32:
+ 384              		.loc 1 29 1 view .LVU84
+ 385 004a F0BD     		pop	{r4, r5, r6, r7, pc}
+ 386              	.L11:
+ 387              		.align	2
+ 388              	.L10:
+ 389 004c 0000503F 		.word	1062207488
+ 390              		.cfi_endproc
+ 391              	.LFE433:
+ 392              		.fnend
+ 394              		.text
+ 395              	.Letext0:
+ 396              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 397              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 398              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g030xx.h"
+ARM GAS  /tmp/ccgTwp16.s 			page 9
+
+
+ 399              		.file 5 "/usr/lib/gcc/arm-none-eabi/13.1.0/include/stddef.h"
+ 400              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 401              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 402              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h"
+ 403              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 404              		.file 10 "/usr/arm-none-eabi/include/c++/13.1.0/cstring"
+ 405              		.file 11 "/usr/arm-none-eabi/include/c++/13.1.0/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h"
+ 406              		.file 12 "/usr/arm-none-eabi/include/string.h"
+ 407              		.file 13 "Core/Inc/logger.h"
+ 408              		.file 14 "Core/Inc/ad5272.h"
+ 409              		.file 15 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  /tmp/ccgTwp16.s 			page 10
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 ad5272.cpp
+     /tmp/ccgTwp16.s:22     .text._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert:00000000 $t
+     /tmp/ccgTwp16.s:28     .text._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert:00000000 _ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert
+     /tmp/ccgTwp16.s:85     .text._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert:00000020 $d
+.ARM.exidx.text._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert:00000000 $d
+     /tmp/ccgTwp16.s:28     .text._ZN6AD5272C2ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert:00000000 _ZN6AD5272C1ENS_14AD5272AddrModeEP19__I2C_HandleTypeDef6Loggert
+     /tmp/ccgTwp16.s:93     .text._ZN6AD527211sendCommandENS_14AD5272CommandsE:00000000 $t
+     /tmp/ccgTwp16.s:99     .text._ZN6AD527211sendCommandENS_14AD5272CommandsE:00000000 _ZN6AD527211sendCommandENS_14AD5272CommandsE
+.ARM.exidx.text._ZN6AD527211sendCommandENS_14AD5272CommandsE:00000000 $d
+     /tmp/ccgTwp16.s:152    .text._ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt:00000000 $t
+     /tmp/ccgTwp16.s:158    .text._ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt:00000000 _ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt
+.ARM.exidx.text._ZN6AD527219sendCommandWithDataENS_14AD5272CommandsEt:00000000 $d
+     /tmp/ccgTwp16.s:221    .text._ZN6AD527213setResistanceEd:00000000 $t
+     /tmp/ccgTwp16.s:227    .text._ZN6AD527213setResistanceEd:00000000 _ZN6AD527213setResistanceEd
+     /tmp/ccgTwp16.s:294    .text._ZN6AD527213setResistanceEd:00000038 $d
+.ARM.exidx.text._ZN6AD527213setResistanceEd:00000000 $d
+     /tmp/ccgTwp16.s:301    .text._ZN6AD527214readResistanceEv:00000000 $t
+     /tmp/ccgTwp16.s:307    .text._ZN6AD527214readResistanceEv:00000000 _ZN6AD527214readResistanceEv
+     /tmp/ccgTwp16.s:389    .text._ZN6AD527214readResistanceEv:0000004c $d
+.ARM.exidx.text._ZN6AD527214readResistanceEv:00000000 $d
+
+UNDEFINED SYMBOLS
+_ZN6Logger3logENS_8LogLevelEPKc
+__aeabi_unwind_cpp_pr0
+HAL_I2C_Master_Transmit
+__aeabi_dmul
+__aeabi_ui2d
+__aeabi_ddiv
+__aeabi_d2uiz
+__aeabi_i2d
+HAL_I2C_Master_Receive

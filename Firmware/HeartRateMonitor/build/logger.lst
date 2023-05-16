@@ -1,0 +1,344 @@
+ARM GAS  /tmp/ccJLd24T.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"logger.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/logger.cpp"
+  18              		.section	.rodata._ZN6LoggerC2EP20__UART_HandleTypeDef.str1.1,"aMS",%progbits,1
+  19              	.LC0:
+  20 0000 496E6974 		.ascii	"Initializing Logger with speed\000"
+  20      69616C69 
+  20      7A696E67 
+  20      204C6F67 
+  20      67657220 
+  21              		.section	.text._ZN6LoggerC2EP20__UART_HandleTypeDef,"ax",%progbits
+  22              		.align	1
+  23              		.global	_ZN6LoggerC2EP20__UART_HandleTypeDef
+  24              		.syntax unified
+  25              		.code	16
+  26              		.thumb_func
+  28              	_ZN6LoggerC2EP20__UART_HandleTypeDef:
+  29              		.fnstart
+  30              	.LVL0:
+  31              	.LFB428:
+   1:Core/Src/logger.cpp **** #include "printf.h"
+   2:Core/Src/logger.cpp **** #include "logger.h"
+   3:Core/Src/logger.cpp **** 
+   4:Core/Src/logger.cpp **** Logger::Logger(UART_HandleTypeDef* huart): uart(huart) {
+  32              		.loc 1 4 1 view -0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 0, uses_anonymous_args = 0
+  36              		.loc 1 4 1 is_stmt 0 view .LVU1
+  37 0000 10B5     		push	{r4, lr}
+  38              		.save {r4, lr}
+  39              	.LCFI0:
+  40              		.cfi_def_cfa_offset 8
+  41              		.cfi_offset 4, -8
+  42              		.cfi_offset 14, -4
+  43              	.LBB2:
+  44              	.LBB3:
+   5:Core/Src/logger.cpp **** 	const char* out = "Initializing Logger with speed";
+   6:Core/Src/logger.cpp **** 	HAL_UART_Transmit(huart, reinterpret_cast<const uint8_t *>(out), strlen(out), 1000);
+  45              		.loc 1 6 19 discriminator 1 view .LVU2
+  46 0002 FA23     		movs	r3, #250
+  47              	.LBE3:
+  48              	.LBE2:
+ARM GAS  /tmp/ccJLd24T.s 			page 2
+
+
+   7:Core/Src/logger.cpp **** }
+  49              		.loc 1 7 1 view .LVU3
+  50              		@ sp needed
+   4:Core/Src/logger.cpp **** 	const char* out = "Initializing Logger with speed";
+  51              		.loc 1 4 1 view .LVU4
+  52 0004 0400     		movs	r4, r0
+  53              	.LBB7:
+  54              	.LBB4:
+   6:Core/Src/logger.cpp **** }
+  55              		.loc 1 6 19 discriminator 1 view .LVU5
+  56 0006 1E22     		movs	r2, #30
+  57              	.LBE4:
+   4:Core/Src/logger.cpp **** 	const char* out = "Initializing Logger with speed";
+  58              		.loc 1 4 44 view .LVU6
+  59 0008 2160     		str	r1, [r4]
+  60              	.LBB5:
+   5:Core/Src/logger.cpp **** 	HAL_UART_Transmit(huart, reinterpret_cast<const uint8_t *>(out), strlen(out), 1000);
+  61              		.loc 1 5 2 is_stmt 1 view .LVU7
+  62              	.LVL1:
+   6:Core/Src/logger.cpp **** }
+  63              		.loc 1 6 2 view .LVU8
+  64              	.LBE5:
+  65              	.LBE7:
+   4:Core/Src/logger.cpp **** 	const char* out = "Initializing Logger with speed";
+  66              		.loc 1 4 1 is_stmt 0 view .LVU9
+  67 000a 0800     		movs	r0, r1
+  68              	.LVL2:
+  69              	.LBB8:
+  70              	.LBB6:
+   6:Core/Src/logger.cpp **** }
+  71              		.loc 1 6 19 discriminator 1 view .LVU10
+  72 000c 9B00     		lsls	r3, r3, #2
+  73 000e 0249     		ldr	r1, .L2
+  74              	.LVL3:
+   6:Core/Src/logger.cpp **** }
+  75              		.loc 1 6 19 discriminator 1 view .LVU11
+  76 0010 FFF7FEFF 		bl	HAL_UART_Transmit
+  77              	.LVL4:
+   6:Core/Src/logger.cpp **** }
+  78              		.loc 1 6 19 discriminator 1 view .LVU12
+  79              	.LBE6:
+  80              	.LBE8:
+  81              		.loc 1 7 1 view .LVU13
+  82 0014 2000     		movs	r0, r4
+  83              	.LVL5:
+  84              		.loc 1 7 1 view .LVU14
+  85 0016 10BD     		pop	{r4, pc}
+  86              	.L3:
+  87              		.align	2
+  88              	.L2:
+  89 0018 00000000 		.word	.LC0
+  90              		.cfi_endproc
+  91              	.LFE428:
+  92              		.fnend
+  94              		.global	_ZN6LoggerC1EP20__UART_HandleTypeDef
+  95              		.thumb_set _ZN6LoggerC1EP20__UART_HandleTypeDef,_ZN6LoggerC2EP20__UART_HandleTypeDef
+  96              		.section	.rodata._ZN6Logger3logENS_8LogLevelEPKc.str1.1,"aMS",%progbits,1
+ARM GAS  /tmp/ccJLd24T.s 			page 3
+
+
+  97              	.LC2:
+  98 0000 5741524E 		.ascii	"WARN] \000"
+  98      5D2000
+  99              	.LC4:
+ 100 0007 494E464F 		.ascii	"INFO] \000"
+ 100      5D2000
+ 101              	.LC6:
+ 102 000e 46415441 		.ascii	"FATAL]\000"
+ 102      4C5D00
+ 103              	.LC8:
+ 104 0015 4552524F 		.ascii	"ERROR]\000"
+ 104      525D00
+ 105              	.LC10:
+ 106 001c 5B00     		.ascii	"[\000"
+ 107              	.LC12:
+ 108 001e 2573256C 		.ascii	"%s%lu%s%s%s%s\012\000"
+ 108      75257325 
+ 108      73257325 
+ 108      730A00
+ 109              	.LC14:
+ 110 002d 2000     		.ascii	" \000"
+ 111              	.LC16:
+ 112 002f 5D205B00 		.ascii	"] [\000"
+ 113              		.section	.text._ZN6Logger3logENS_8LogLevelEPKc,"ax",%progbits
+ 114              		.align	1
+ 115              		.global	_ZN6Logger3logENS_8LogLevelEPKc
+ 116              		.syntax unified
+ 117              		.code	16
+ 118              		.thumb_func
+ 120              	_ZN6Logger3logENS_8LogLevelEPKc:
+ 121              		.fnstart
+ 122              	.LVL6:
+ 123              	.LFB430:
+   8:Core/Src/logger.cpp **** 
+   9:Core/Src/logger.cpp **** void Logger::log(Logger::LogLevel level, const char* msg) {
+ 124              		.loc 1 9 59 is_stmt 1 view -0
+ 125              		.cfi_startproc
+ 126              		@ args = 0, pretend = 0, frame = 8
+ 127              		@ frame_needed = 1, uses_anonymous_args = 0
+  10:Core/Src/logger.cpp **** 	auto time = HAL_GetTick();
+ 128              		.loc 1 10 2 view .LVU16
+   9:Core/Src/logger.cpp **** 	auto time = HAL_GetTick();
+ 129              		.loc 1 9 59 is_stmt 0 view .LVU17
+ 130 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 131              		.save {r4, r5, r6, r7, lr}
+ 132              	.LCFI1:
+ 133              		.cfi_def_cfa_offset 20
+ 134              		.cfi_offset 4, -20
+ 135              		.cfi_offset 5, -16
+ 136              		.cfi_offset 6, -12
+ 137              		.cfi_offset 7, -8
+ 138              		.cfi_offset 14, -4
+ 139              		.pad #28
+ 140 0002 87B0     		sub	sp, sp, #28
+ 141              	.LCFI2:
+ 142              		.cfi_def_cfa_offset 48
+ 143              		.setfp r7, sp, #16
+ARM GAS  /tmp/ccJLd24T.s 			page 4
+
+
+ 144 0004 04AF     		add	r7, sp, #16
+ 145              	.LCFI3:
+ 146              		.cfi_def_cfa 7, 32
+   9:Core/Src/logger.cpp **** 	auto time = HAL_GetTick();
+ 147              		.loc 1 9 59 view .LVU18
+ 148 0006 0600     		movs	r6, r0
+ 149 0008 0C00     		movs	r4, r1
+ 150 000a 7A60     		str	r2, [r7, #4]
+ 151              		.loc 1 10 25 view .LVU19
+ 152 000c FFF7FEFF 		bl	HAL_GetTick
+ 153              	.LVL7:
+  11:Core/Src/logger.cpp **** 	auto levelstr = (level & 0x01) ? "INFO] " : (level >> 1 & 0x01) ? "WARN] " : (level >> 2 & 0x01) ?
+ 154              		.loc 1 11 7 discriminator 2 view .LVU20
+ 155 0010 164D     		ldr	r5, .L13
+  10:Core/Src/logger.cpp **** 	auto time = HAL_GetTick();
+ 156              		.loc 1 10 25 view .LVU21
+ 157 0012 3860     		str	r0, [r7]
+ 158              	.LVL8:
+ 159              		.loc 1 11 2 is_stmt 1 view .LVU22
+ 160              		.loc 1 11 7 is_stmt 0 view .LVU23
+ 161 0014 E307     		lsls	r3, r4, #31
+ 162 0016 06D4     		bmi	.L5
+ 163              		.loc 1 11 7 discriminator 4 view .LVU24
+ 164 0018 154D     		ldr	r5, .L13+4
+ 165              		.loc 1 11 7 discriminator 1 view .LVU25
+ 166 001a A307     		lsls	r3, r4, #30
+ 167 001c 03D4     		bmi	.L5
+ 168              		.loc 1 11 7 discriminator 6 view .LVU26
+ 169 001e 154D     		ldr	r5, .L13+8
+ 170              		.loc 1 11 7 discriminator 3 view .LVU27
+ 171 0020 6407     		lsls	r4, r4, #29
+ 172 0022 00D5     		bpl	.L5
+ 173              	.LVL9:
+ 174              		.loc 1 11 7 discriminator 5 view .LVU28
+ 175 0024 144D     		ldr	r5, .L13+12
+ 176              	.L5:
+ 177              	.LVL10:
+  12:Core/Src/logger.cpp **** 	size_t size = 24 + strlen(msg);
+ 178              		.loc 1 12 2 is_stmt 1 view .LVU29
+ 179              		.loc 1 12 27 is_stmt 0 view .LVU30
+ 180 0026 7868     		ldr	r0, [r7, #4]
+ 181              	.LVL11:
+ 182              		.loc 1 12 27 view .LVU31
+ 183 0028 FFF7FEFF 		bl	strlen
+ 184              	.LVL12:
+  13:Core/Src/logger.cpp **** 	char out[size];
+ 185              		.loc 1 13 2 is_stmt 1 view .LVU32
+ 186              		.loc 1 13 7 is_stmt 0 view .LVU33
+ 187 002c 6B46     		mov	r3, sp
+ 188 002e 1F30     		adds	r0, r0, #31
+ 189              	.LVL13:
+ 190              		.loc 1 13 7 view .LVU34
+ 191 0030 C008     		lsrs	r0, r0, #3
+ 192              	.LVL14:
+ 193              		.loc 1 13 7 view .LVU35
+ 194 0032 C000     		lsls	r0, r0, #3
+ 195 0034 1B1A     		subs	r3, r3, r0
+ARM GAS  /tmp/ccJLd24T.s 			page 5
+
+
+ 196 0036 9D46     		mov	sp, r3
+  14:Core/Src/logger.cpp **** 	sprintf(out, "%s%lu%s%s%s%s\n", "[", time, "] [", levelstr, " ", msg);
+ 197              		.loc 1 14 9 view .LVU36
+ 198 0038 7B68     		ldr	r3, [r7, #4]
+  13:Core/Src/logger.cpp **** 	char out[size];
+ 199              		.loc 1 13 7 view .LVU37
+ 200 003a 04AC     		add	r4, sp, #16
+ 201              	.LVL15:
+ 202              		.loc 1 14 2 is_stmt 1 view .LVU38
+ 203              		.loc 1 14 9 is_stmt 0 view .LVU39
+ 204 003c 0393     		str	r3, [sp, #12]
+ 205              	.LVL16:
+ 206              		.loc 1 14 9 view .LVU40
+ 207 003e 0F4B     		ldr	r3, .L13+16
+ 208 0040 0195     		str	r5, [sp, #4]
+ 209 0042 0293     		str	r3, [sp, #8]
+ 210 0044 0E4B     		ldr	r3, .L13+20
+ 211 0046 0F4A     		ldr	r2, .L13+24
+ 212 0048 0093     		str	r3, [sp]
+ 213 004a 3B68     		ldr	r3, [r7]
+ 214 004c 0E49     		ldr	r1, .L13+28
+ 215 004e 2000     		movs	r0, r4
+ 216 0050 FFF7FEFF 		bl	sprintf_
+ 217              	.LVL17:
+  15:Core/Src/logger.cpp **** 	HAL_UART_Transmit(uart, reinterpret_cast<const uint8_t *>(out), strlen(out), 1000);
+ 218              		.loc 1 15 2 is_stmt 1 view .LVU41
+ 219              		.loc 1 15 72 is_stmt 0 view .LVU42
+ 220 0054 2000     		movs	r0, r4
+ 221 0056 FFF7FEFF 		bl	strlen
+ 222              	.LVL18:
+ 223              		.loc 1 15 19 discriminator 1 view .LVU43
+ 224 005a FA23     		movs	r3, #250
+ 225 005c 82B2     		uxth	r2, r0
+ 226 005e 2100     		movs	r1, r4
+ 227 0060 3068     		ldr	r0, [r6]
+ 228 0062 9B00     		lsls	r3, r3, #2
+ 229 0064 FFF7FEFF 		bl	HAL_UART_Transmit
+ 230              	.LVL19:
+  16:Core/Src/logger.cpp **** }
+ 231              		.loc 1 16 1 view .LVU44
+ 232 0068 BD46     		mov	sp, r7
+ 233              		@ sp needed
+ 234              	.LVL20:
+ 235              	.LVL21:
+ 236              	.LVL22:
+ 237              		.loc 1 16 1 view .LVU45
+ 238 006a F7BD     		pop	{r0, r1, r2, r4, r5, r6, r7, pc}
+ 239              	.L14:
+ 240              		.align	2
+ 241              	.L13:
+ 242 006c 07000000 		.word	.LC4
+ 243 0070 00000000 		.word	.LC2
+ 244 0074 0E000000 		.word	.LC6
+ 245 0078 15000000 		.word	.LC8
+ 246 007c 2D000000 		.word	.LC14
+ 247 0080 2F000000 		.word	.LC16
+ 248 0084 1C000000 		.word	.LC10
+ARM GAS  /tmp/ccJLd24T.s 			page 6
+
+
+ 249 0088 1E000000 		.word	.LC12
+ 250              		.cfi_endproc
+ 251              	.LFE430:
+ 252              		.fnend
+ 254              		.text
+ 255              	.Letext0:
+ 256              		.file 2 "/usr/arm-none-eabi/include/c++/13.1.0/cstring"
+ 257              		.file 3 "/usr/arm-none-eabi/include/c++/13.1.0/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h"
+ 258              		.file 4 "/usr/lib/gcc/arm-none-eabi/13.1.0/include/stddef.h"
+ 259              		.file 5 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 260              		.file 6 "/usr/arm-none-eabi/include/string.h"
+ 261              		.file 7 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 262              		.file 8 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g030xx.h"
+ 263              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 264              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 265              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 266              		.file 12 "Core/Inc/logger.h"
+ 267              		.file 13 "Core/Inc/printf.h"
+ 268              		.file 14 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ 269              		.file 15 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
+ARM GAS  /tmp/ccJLd24T.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 logger.cpp
+     /tmp/ccJLd24T.s:22     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 $t
+     /tmp/ccJLd24T.s:28     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 _ZN6LoggerC2EP20__UART_HandleTypeDef
+     /tmp/ccJLd24T.s:89     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000018 $d
+.ARM.exidx.text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 $d
+     /tmp/ccJLd24T.s:28     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 _ZN6LoggerC1EP20__UART_HandleTypeDef
+     /tmp/ccJLd24T.s:114    .text._ZN6Logger3logENS_8LogLevelEPKc:00000000 $t
+     /tmp/ccJLd24T.s:120    .text._ZN6Logger3logENS_8LogLevelEPKc:00000000 _ZN6Logger3logENS_8LogLevelEPKc
+     /tmp/ccJLd24T.s:242    .text._ZN6Logger3logENS_8LogLevelEPKc:0000006c $d
+.ARM.exidx.text._ZN6Logger3logENS_8LogLevelEPKc:00000000 $d
+
+UNDEFINED SYMBOLS
+HAL_UART_Transmit
+__aeabi_unwind_cpp_pr0
+HAL_GetTick
+strlen
+sprintf_

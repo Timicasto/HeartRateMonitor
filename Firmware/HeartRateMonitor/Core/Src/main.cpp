@@ -96,15 +96,15 @@ int main()
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ADC1_Init();
+//  MX_ADC1_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
-  MX_DMA_Init();
+//  MX_DMA_Init();
   MX_I2C2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-	HAL_TIM_Base_Start(&htim3);
-	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
+//	HAL_TIM_Base_Start(&htim3);
+//	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
 	auto logger = Logger(&huart1);
 	logger.log(Logger::INFO, "Logger Initialized");
 	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
@@ -113,6 +113,7 @@ int main()
 	
 	char str[5] = {'0', '1', '2', '3', '4'};
 	screen.drawFont(0, 0, str, 5, 0xFFFF);
+	screen.switchBacklight(true);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -121,7 +122,7 @@ int main()
   {
     /* USER CODE END WHILE */
 
-	uint8_t rate = beat.getRate();
+//	uint8_t rate = beat.getRate();
 	// send this to screen
 
     /* USER CODE BEGIN 3 */

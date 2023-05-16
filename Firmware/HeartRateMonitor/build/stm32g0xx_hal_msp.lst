@@ -1,0 +1,197 @@
+ARM GAS  /tmp/ccgxv845.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"stm32g0xx_hal_msp.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/stm32g0xx_hal_msp.c"
+  18              		.section	.text.HAL_MspInit,"ax",%progbits
+  19              		.align	1
+  20              		.global	HAL_MspInit
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  25              	HAL_MspInit:
+  26              	.LFB420:
+   1:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Header */
+   2:Core/Src/stm32g0xx_hal_msp.c **** /**
+   3:Core/Src/stm32g0xx_hal_msp.c ****   ******************************************************************************
+   4:Core/Src/stm32g0xx_hal_msp.c ****   * @file         stm32g0xx_hal_msp.c
+   5:Core/Src/stm32g0xx_hal_msp.c ****   * @brief        This file provides code for the MSP Initialization
+   6:Core/Src/stm32g0xx_hal_msp.c ****   *               and de-Initialization codes.
+   7:Core/Src/stm32g0xx_hal_msp.c ****   ******************************************************************************
+   8:Core/Src/stm32g0xx_hal_msp.c ****   * @attention
+   9:Core/Src/stm32g0xx_hal_msp.c ****   *
+  10:Core/Src/stm32g0xx_hal_msp.c ****   * <h2><center>&copy; Copyright (c) 2023 STMicroelectronics.
+  11:Core/Src/stm32g0xx_hal_msp.c ****   * All rights reserved.</center></h2>
+  12:Core/Src/stm32g0xx_hal_msp.c ****   *
+  13:Core/Src/stm32g0xx_hal_msp.c ****   * This software component is licensed by ST under BSD 3-Clause license,
+  14:Core/Src/stm32g0xx_hal_msp.c ****   * the "License"; You may not use this file except in compliance with the
+  15:Core/Src/stm32g0xx_hal_msp.c ****   * License. You may obtain a copy of the License at:
+  16:Core/Src/stm32g0xx_hal_msp.c ****   *                        opensource.org/licenses/BSD-3-Clause
+  17:Core/Src/stm32g0xx_hal_msp.c ****   *
+  18:Core/Src/stm32g0xx_hal_msp.c ****   ******************************************************************************
+  19:Core/Src/stm32g0xx_hal_msp.c ****   */
+  20:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END Header */
+  21:Core/Src/stm32g0xx_hal_msp.c **** 
+  22:Core/Src/stm32g0xx_hal_msp.c **** /* Includes ------------------------------------------------------------------*/
+  23:Core/Src/stm32g0xx_hal_msp.c **** #include "main.h"
+  24:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Includes */
+  25:Core/Src/stm32g0xx_hal_msp.c **** 
+  26:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END Includes */
+  27:Core/Src/stm32g0xx_hal_msp.c **** 
+  28:Core/Src/stm32g0xx_hal_msp.c **** /* Private typedef -----------------------------------------------------------*/
+  29:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN TD */
+  30:Core/Src/stm32g0xx_hal_msp.c **** 
+  31:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END TD */
+  32:Core/Src/stm32g0xx_hal_msp.c **** 
+ARM GAS  /tmp/ccgxv845.s 			page 2
+
+
+  33:Core/Src/stm32g0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
+  34:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Define */
+  35:Core/Src/stm32g0xx_hal_msp.c **** 
+  36:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END Define */
+  37:Core/Src/stm32g0xx_hal_msp.c **** 
+  38:Core/Src/stm32g0xx_hal_msp.c **** /* Private macro -------------------------------------------------------------*/
+  39:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN Macro */
+  40:Core/Src/stm32g0xx_hal_msp.c **** 
+  41:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END Macro */
+  42:Core/Src/stm32g0xx_hal_msp.c **** 
+  43:Core/Src/stm32g0xx_hal_msp.c **** /* Private variables ---------------------------------------------------------*/
+  44:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN PV */
+  45:Core/Src/stm32g0xx_hal_msp.c **** 
+  46:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END PV */
+  47:Core/Src/stm32g0xx_hal_msp.c **** 
+  48:Core/Src/stm32g0xx_hal_msp.c **** /* Private function prototypes -----------------------------------------------*/
+  49:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN PFP */
+  50:Core/Src/stm32g0xx_hal_msp.c **** 
+  51:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END PFP */
+  52:Core/Src/stm32g0xx_hal_msp.c **** 
+  53:Core/Src/stm32g0xx_hal_msp.c **** /* External functions --------------------------------------------------------*/
+  54:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN ExternalFunctions */
+  55:Core/Src/stm32g0xx_hal_msp.c **** 
+  56:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END ExternalFunctions */
+  57:Core/Src/stm32g0xx_hal_msp.c **** 
+  58:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE BEGIN 0 */
+  59:Core/Src/stm32g0xx_hal_msp.c **** 
+  60:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END 0 */
+  61:Core/Src/stm32g0xx_hal_msp.c **** /**
+  62:Core/Src/stm32g0xx_hal_msp.c ****   * Initializes the Global MSP.
+  63:Core/Src/stm32g0xx_hal_msp.c ****   */
+  64:Core/Src/stm32g0xx_hal_msp.c **** void HAL_MspInit(void)
+  65:Core/Src/stm32g0xx_hal_msp.c **** {
+  27              		.loc 1 65 1 view -0
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 0, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  66:Core/Src/stm32g0xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
+  67:Core/Src/stm32g0xx_hal_msp.c **** 
+  68:Core/Src/stm32g0xx_hal_msp.c ****   /* USER CODE END MspInit 0 */
+  69:Core/Src/stm32g0xx_hal_msp.c **** 
+  70:Core/Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_SYSCFG_CLK_ENABLE();
+  32              		.loc 1 70 3 view .LVU1
+  33              	.LBB2:
+  34              		.loc 1 70 3 view .LVU2
+  35              		.loc 1 70 3 view .LVU3
+  36 0000 0121     		movs	r1, #1
+  37 0002 0A4B     		ldr	r3, .L2
+  38              	.LBE2:
+  65:Core/Src/stm32g0xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 0 */
+  39              		.loc 1 65 1 is_stmt 0 view .LVU4
+  40 0004 82B0     		sub	sp, sp, #8
+  41              	.LCFI0:
+  42              		.cfi_def_cfa_offset 8
+  43              	.LBB3:
+  44              		.loc 1 70 3 view .LVU5
+ARM GAS  /tmp/ccgxv845.s 			page 3
+
+
+  45 0006 1A6C     		ldr	r2, [r3, #64]
+  46 0008 0A43     		orrs	r2, r1
+  47 000a 1A64     		str	r2, [r3, #64]
+  48              		.loc 1 70 3 is_stmt 1 view .LVU6
+  49 000c 1A6C     		ldr	r2, [r3, #64]
+  50 000e 0A40     		ands	r2, r1
+  51              	.LBE3:
+  52              	.LBB4:
+  71:Core/Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  53              		.loc 1 71 3 is_stmt 0 view .LVU7
+  54 0010 8021     		movs	r1, #128
+  55              	.LBE4:
+  56              	.LBB5:
+  70:Core/Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  57              		.loc 1 70 3 view .LVU8
+  58 0012 0092     		str	r2, [sp]
+  70:Core/Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  59              		.loc 1 70 3 is_stmt 1 view .LVU9
+  60 0014 009A     		ldr	r2, [sp]
+  61              	.LBE5:
+  70:Core/Src/stm32g0xx_hal_msp.c ****   __HAL_RCC_PWR_CLK_ENABLE();
+  62              		.loc 1 70 3 view .LVU10
+  63              		.loc 1 71 3 view .LVU11
+  64              	.LBB6:
+  65              		.loc 1 71 3 view .LVU12
+  66              		.loc 1 71 3 view .LVU13
+  67 0016 DA6B     		ldr	r2, [r3, #60]
+  68 0018 4905     		lsls	r1, r1, #21
+  69 001a 0A43     		orrs	r2, r1
+  70 001c DA63     		str	r2, [r3, #60]
+  71              		.loc 1 71 3 view .LVU14
+  72 001e DB6B     		ldr	r3, [r3, #60]
+  73 0020 0B40     		ands	r3, r1
+  74 0022 0193     		str	r3, [sp, #4]
+  75              		.loc 1 71 3 view .LVU15
+  76 0024 019B     		ldr	r3, [sp, #4]
+  77              	.LBE6:
+  78              		.loc 1 71 3 view .LVU16
+  72:Core/Src/stm32g0xx_hal_msp.c **** 
+  73:Core/Src/stm32g0xx_hal_msp.c ****   /* System interrupt init*/
+  74:Core/Src/stm32g0xx_hal_msp.c **** 
+  75:Core/Src/stm32g0xx_hal_msp.c ****   /* USER CODE BEGIN MspInit 1 */
+  76:Core/Src/stm32g0xx_hal_msp.c **** 
+  77:Core/Src/stm32g0xx_hal_msp.c ****   /* USER CODE END MspInit 1 */
+  78:Core/Src/stm32g0xx_hal_msp.c **** }
+  79              		.loc 1 78 1 is_stmt 0 view .LVU17
+  80 0026 02B0     		add	sp, sp, #8
+  81              		@ sp needed
+  82 0028 7047     		bx	lr
+  83              	.L3:
+  84 002a C046     		.align	2
+  85              	.L2:
+  86 002c 00100240 		.word	1073876992
+  87              		.cfi_endproc
+  88              	.LFE420:
+  90              		.text
+  91              	.Letext0:
+ARM GAS  /tmp/ccgxv845.s 			page 4
+
+
+  92              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+  93              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+  94              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g030xx.h"
+  95              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  /tmp/ccgxv845.s 			page 5
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32g0xx_hal_msp.c
+     /tmp/ccgxv845.s:19     .text.HAL_MspInit:00000000 $t
+     /tmp/ccgxv845.s:25     .text.HAL_MspInit:00000000 HAL_MspInit
+     /tmp/ccgxv845.s:86     .text.HAL_MspInit:0000002c $d
+
+NO UNDEFINED SYMBOLS

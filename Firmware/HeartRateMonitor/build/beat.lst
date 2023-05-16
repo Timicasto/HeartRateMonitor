@@ -1,0 +1,387 @@
+ARM GAS  /tmp/ccEQjZ0t.s 			page 1
+
+
+   1              		.cpu cortex-m0plus
+   2              		.arch armv6s-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 0
+  12              		.eabi_attribute 18, 4
+  13              		.file	"beat.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Core/Src/beat.cpp"
+  18              		.section	.text._ZN4Beat6updateEt,"ax",%progbits
+  19              		.align	1
+  20              		.global	_ZN4Beat6updateEt
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  25              	_ZN4Beat6updateEt:
+  26              		.fnstart
+  27              	.LVL0:
+  28              	.LFB420:
+   1:Core/Src/beat.cpp **** #include "../Inc/beat.h"
+   2:Core/Src/beat.cpp **** 
+   3:Core/Src/beat.cpp **** void Beat::update(uint16_t s) {
+  29              		.loc 1 3 31 view -0
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+   4:Core/Src/beat.cpp ****     if (c == 1999) {
+  33              		.loc 1 4 5 view .LVU1
+  34 0000 184B     		ldr	r3, .L11
+  35 0002 4288     		ldrh	r2, [r0, #2]
+   3:Core/Src/beat.cpp ****         c = 0;
+  36              		.loc 1 3 31 is_stmt 0 view .LVU2
+  37 0004 30B5     		push	{r4, r5, lr}
+  38              	.LCFI0:
+  39              		.cfi_def_cfa_offset 12
+  40              		.cfi_offset 4, -12
+  41              		.cfi_offset 5, -8
+  42              		.cfi_offset 14, -4
+  43              		.loc 1 4 5 view .LVU3
+  44 0006 9A42     		cmp	r2, r3
+  45 0008 02D1     		bne	.L2
+   5:Core/Src/beat.cpp ****         c = 0;
+  46              		.loc 1 5 9 is_stmt 1 view .LVU4
+  47              		.loc 1 5 11 is_stmt 0 view .LVU5
+  48 000a 0023     		movs	r3, #0
+  49 000c 4380     		strh	r3, [r0, #2]
+   6:Core/Src/beat.cpp ****         max = 0;
+  50              		.loc 1 6 9 is_stmt 1 view .LVU6
+  51              		.loc 1 6 13 is_stmt 0 view .LVU7
+ARM GAS  /tmp/ccEQjZ0t.s 			page 2
+
+
+  52 000e 0381     		strh	r3, [r0, #8]
+  53              	.L2:
+   7:Core/Src/beat.cpp ****     }
+   8:Core/Src/beat.cpp ****     if (s >= max) {
+  54              		.loc 1 8 5 is_stmt 1 view .LVU8
+  55              		.loc 1 8 14 is_stmt 0 view .LVU9
+  56 0010 0489     		ldrh	r4, [r0, #8]
+   9:Core/Src/beat.cpp ****         max = s;
+  10:Core/Src/beat.cpp ****         beat = c;
+  57              		.loc 1 10 16 view .LVU10
+  58 0012 4288     		ldrh	r2, [r0, #2]
+   8:Core/Src/beat.cpp ****         max = s;
+  59              		.loc 1 8 5 view .LVU11
+  60 0014 8C42     		cmp	r4, r1
+  61 0016 06D8     		bhi	.L3
+   9:Core/Src/beat.cpp ****         max = s;
+  62              		.loc 1 9 9 is_stmt 1 view .LVU12
+  11:Core/Src/beat.cpp ****         down_flag = 1;
+  63              		.loc 1 11 19 is_stmt 0 view .LVU13
+  64 0018 0123     		movs	r3, #1
+   9:Core/Src/beat.cpp ****         max = s;
+  65              		.loc 1 9 13 view .LVU14
+  66 001a 0181     		strh	r1, [r0, #8]
+  10:Core/Src/beat.cpp ****         down_flag = 1;
+  67              		.loc 1 10 9 is_stmt 1 view .LVU15
+  10:Core/Src/beat.cpp ****         down_flag = 1;
+  68              		.loc 1 10 14 is_stmt 0 view .LVU16
+  69 001c 8280     		strh	r2, [r0, #4]
+  70              		.loc 1 11 9 is_stmt 1 view .LVU17
+  12:Core/Src/beat.cpp ****         stop = 0;
+  71              		.loc 1 12 9 view .LVU18
+  11:Core/Src/beat.cpp ****         down_flag = 1;
+  72              		.loc 1 11 19 is_stmt 0 view .LVU19
+  73 001e 4381     		strh	r3, [r0, #10]
+  74              	.LVL1:
+  75              	.L4:
+  13:Core/Src/beat.cpp ****     }
+  14:Core/Src/beat.cpp ****     else {
+  15:Core/Src/beat.cpp ****         if (stop == 0) {
+  16:Core/Src/beat.cpp ****             down_flag = down_flag << 1;
+  17:Core/Src/beat.cpp ****             if (down_flag > 0x0F) {
+  18:Core/Src/beat.cpp ****                 down_flag = 1;
+  19:Core/Src/beat.cpp ****                 if (beat < last_beat) {
+  20:Core/Src/beat.cpp ****                     rate = 2000 - last_beat + beat;
+  21:Core/Src/beat.cpp ****                 } else {
+  22:Core/Src/beat.cpp ****                     rate = beat - last_beat;
+  23:Core/Src/beat.cpp ****                 }
+  24:Core/Src/beat.cpp ****                 last_beat = beat;
+  25:Core/Src/beat.cpp ****                 max = max >> 5;
+  26:Core/Src/beat.cpp ****                 stop = 1;
+  27:Core/Src/beat.cpp **** 				valid = 1;
+  28:Core/Src/beat.cpp ****             }
+  29:Core/Src/beat.cpp ****         
+  30:Core/Src/beat.cpp ****         }
+  31:Core/Src/beat.cpp ****     }
+  32:Core/Src/beat.cpp ****     c++;
+  76              		.loc 1 32 5 is_stmt 1 view .LVU20
+ARM GAS  /tmp/ccEQjZ0t.s 			page 3
+
+
+  77              		.loc 1 32 6 is_stmt 0 view .LVU21
+  78 0020 0132     		adds	r2, r2, #1
+  79 0022 4280     		strh	r2, [r0, #2]
+  33:Core/Src/beat.cpp **** }
+  80              		.loc 1 33 1 view .LVU22
+  81              		@ sp needed
+  82 0024 30BD     		pop	{r4, r5, pc}
+  83              	.LVL2:
+  84              	.L3:
+  15:Core/Src/beat.cpp ****             down_flag = down_flag << 1;
+  85              		.loc 1 15 9 is_stmt 1 view .LVU23
+  86 0026 C37A     		ldrb	r3, [r0, #11]
+  87 0028 002B     		cmp	r3, #0
+  88 002a F9D1     		bne	.L4
+  16:Core/Src/beat.cpp ****             if (down_flag > 0x0F) {
+  89              		.loc 1 16 13 view .LVU24
+  16:Core/Src/beat.cpp ****             if (down_flag > 0x0F) {
+  90              		.loc 1 16 35 is_stmt 0 view .LVU25
+  91 002c 837A     		ldrb	r3, [r0, #10]
+  92 002e 5B00     		lsls	r3, r3, #1
+  93 0030 DBB2     		uxtb	r3, r3
+  17:Core/Src/beat.cpp ****                 down_flag = 1;
+  94              		.loc 1 17 13 is_stmt 1 view .LVU26
+  95 0032 0F2B     		cmp	r3, #15
+  96 0034 01D8     		bhi	.L6
+  16:Core/Src/beat.cpp ****             if (down_flag > 0x0F) {
+  97              		.loc 1 16 23 is_stmt 0 view .LVU27
+  98 0036 8372     		strb	r3, [r0, #10]
+  99 0038 F2E7     		b	.L4
+ 100              	.L6:
+  18:Core/Src/beat.cpp ****                 if (beat < last_beat) {
+ 101              		.loc 1 18 17 is_stmt 1 view .LVU28
+  18:Core/Src/beat.cpp ****                 if (beat < last_beat) {
+ 102              		.loc 1 18 27 is_stmt 0 view .LVU29
+ 103 003a 0123     		movs	r3, #1
+  19:Core/Src/beat.cpp ****                     rate = 2000 - last_beat + beat;
+ 104              		.loc 1 19 21 view .LVU30
+ 105 003c 8188     		ldrh	r1, [r0, #4]
+ 106              	.LVL3:
+  18:Core/Src/beat.cpp ****                 if (beat < last_beat) {
+ 107              		.loc 1 18 27 view .LVU31
+ 108 003e 8372     		strb	r3, [r0, #10]
+  19:Core/Src/beat.cpp ****                     rate = 2000 - last_beat + beat;
+ 109              		.loc 1 19 17 is_stmt 1 view .LVU32
+  19:Core/Src/beat.cpp ****                     rate = 2000 - last_beat + beat;
+ 110              		.loc 1 19 28 is_stmt 0 view .LVU33
+ 111 0040 C388     		ldrh	r3, [r0, #6]
+  19:Core/Src/beat.cpp ****                     rate = 2000 - last_beat + beat;
+ 112              		.loc 1 19 17 view .LVU34
+ 113 0042 9942     		cmp	r1, r3
+ 114 0044 0CD2     		bcs	.L8
+  20:Core/Src/beat.cpp ****                 } else {
+ 115              		.loc 1 20 21 is_stmt 1 view .LVU35
+  20:Core/Src/beat.cpp ****                 } else {
+ 116              		.loc 1 20 45 is_stmt 0 view .LVU36
+ 117 0046 FA25     		movs	r5, #250
+ 118 0048 ED00     		lsls	r5, r5, #3
+ARM GAS  /tmp/ccEQjZ0t.s 			page 4
+
+
+ 119 004a 4D19     		adds	r5, r1, r5
+ 120 004c EB1A     		subs	r3, r5, r3
+ 121              	.L10:
+  22:Core/Src/beat.cpp ****                 }
+ 122              		.loc 1 22 33 view .LVU37
+ 123 004e 9BB2     		uxth	r3, r3
+ 124 0050 0380     		strh	r3, [r0]
+  24:Core/Src/beat.cpp ****                 max = max >> 5;
+ 125              		.loc 1 24 17 is_stmt 1 view .LVU38
+  26:Core/Src/beat.cpp **** 				valid = 1;
+ 126              		.loc 1 26 22 is_stmt 0 view .LVU39
+ 127 0052 0123     		movs	r3, #1
+  25:Core/Src/beat.cpp ****                 stop = 1;
+ 128              		.loc 1 25 27 view .LVU40
+ 129 0054 6409     		lsrs	r4, r4, #5
+  24:Core/Src/beat.cpp ****                 max = max >> 5;
+ 130              		.loc 1 24 27 view .LVU41
+ 131 0056 C180     		strh	r1, [r0, #6]
+  25:Core/Src/beat.cpp ****                 stop = 1;
+ 132              		.loc 1 25 17 is_stmt 1 view .LVU42
+  25:Core/Src/beat.cpp ****                 stop = 1;
+ 133              		.loc 1 25 21 is_stmt 0 view .LVU43
+ 134 0058 0481     		strh	r4, [r0, #8]
+  26:Core/Src/beat.cpp **** 				valid = 1;
+ 135              		.loc 1 26 17 is_stmt 1 view .LVU44
+  26:Core/Src/beat.cpp **** 				valid = 1;
+ 136              		.loc 1 26 22 is_stmt 0 view .LVU45
+ 137 005a C372     		strb	r3, [r0, #11]
+  27:Core/Src/beat.cpp ****             }
+ 138              		.loc 1 27 5 is_stmt 1 view .LVU46
+  27:Core/Src/beat.cpp ****             }
+ 139              		.loc 1 27 11 is_stmt 0 view .LVU47
+ 140 005c 0373     		strb	r3, [r0, #12]
+ 141 005e DFE7     		b	.L4
+ 142              	.L8:
+  22:Core/Src/beat.cpp ****                 }
+ 143              		.loc 1 22 21 is_stmt 1 view .LVU48
+  22:Core/Src/beat.cpp ****                 }
+ 144              		.loc 1 22 33 is_stmt 0 view .LVU49
+ 145 0060 CB1A     		subs	r3, r1, r3
+ 146 0062 F4E7     		b	.L10
+ 147              	.L12:
+ 148              		.align	2
+ 149              	.L11:
+ 150 0064 CF070000 		.word	1999
+ 151              		.cfi_endproc
+ 152              	.LFE420:
+ 153              		.cantunwind
+ 154              		.fnend
+ 156              		.section	.text._ZN4Beat7getRateEv,"ax",%progbits
+ 157              		.align	1
+ 158              		.global	_ZN4Beat7getRateEv
+ 159              		.syntax unified
+ 160              		.code	16
+ 161              		.thumb_func
+ 163              	_ZN4Beat7getRateEv:
+ 164              		.fnstart
+ARM GAS  /tmp/ccEQjZ0t.s 			page 5
+
+
+ 165              	.LVL4:
+ 166              	.LFB421:
+  34:Core/Src/beat.cpp **** 
+  35:Core/Src/beat.cpp **** uint8_t Beat::getRate() {
+ 167              		.loc 1 35 25 is_stmt 1 view -0
+ 168              		.cfi_startproc
+ 169              		@ args = 0, pretend = 0, frame = 0
+ 170              		@ frame_needed = 0, uses_anonymous_args = 0
+  36:Core/Src/beat.cpp ****     uint8_t r = 0;
+ 171              		.loc 1 36 5 view .LVU51
+  37:Core/Src/beat.cpp ****     uint16_t counter = 0;
+ 172              		.loc 1 37 5 view .LVU52
+  38:Core/Src/beat.cpp ****     while (counter < 60000) {
+ 173              		.loc 1 38 5 view .LVU53
+ 174              		.loc 1 38 20 view .LVU54
+  37:Core/Src/beat.cpp ****     uint16_t counter = 0;
+ 175              		.loc 1 37 14 is_stmt 0 view .LVU55
+ 176 0000 0023     		movs	r3, #0
+  35:Core/Src/beat.cpp ****     uint8_t r = 0;
+ 177              		.loc 1 35 25 view .LVU56
+ 178 0002 0200     		movs	r2, r0
+ 179 0004 10B5     		push	{r4, lr}
+ 180              	.LCFI1:
+ 181              		.cfi_def_cfa_offset 8
+ 182              		.cfi_offset 4, -8
+ 183              		.cfi_offset 14, -4
+  39:Core/Src/beat.cpp ****         counter += rate;
+ 184              		.loc 1 39 20 view .LVU57
+ 185 0006 0488     		ldrh	r4, [r0]
+  36:Core/Src/beat.cpp ****     uint16_t counter = 0;
+ 186              		.loc 1 36 13 view .LVU58
+ 187 0008 1800     		movs	r0, r3
+ 188              	.LVL5:
+  38:Core/Src/beat.cpp ****         counter += rate;
+ 189              		.loc 1 38 20 view .LVU59
+ 190 000a 0549     		ldr	r1, .L16
+ 191              	.LVL6:
+ 192              	.L14:
+ 193              		.loc 1 39 9 is_stmt 1 view .LVU60
+ 194              		.loc 1 39 17 is_stmt 0 view .LVU61
+ 195 000c E318     		adds	r3, r4, r3
+ 196              	.LVL7:
+  40:Core/Src/beat.cpp ****         r++;
+ 197              		.loc 1 40 10 view .LVU62
+ 198 000e 0130     		adds	r0, r0, #1
+ 199              	.LVL8:
+  39:Core/Src/beat.cpp ****         r++;
+ 200              		.loc 1 39 17 view .LVU63
+ 201 0010 9BB2     		uxth	r3, r3
+ 202              	.LVL9:
+ 203              		.loc 1 40 9 is_stmt 1 view .LVU64
+ 204              		.loc 1 40 10 is_stmt 0 view .LVU65
+ 205 0012 C0B2     		uxtb	r0, r0
+ 206              	.LVL10:
+  38:Core/Src/beat.cpp ****         counter += rate;
+ 207              		.loc 1 38 20 is_stmt 1 view .LVU66
+ 208 0014 8B42     		cmp	r3, r1
+ARM GAS  /tmp/ccEQjZ0t.s 			page 6
+
+
+ 209 0016 F9D9     		bls	.L14
+  41:Core/Src/beat.cpp ****     }
+  42:Core/Src/beat.cpp **** 	valid = 0;
+ 210              		.loc 1 42 2 view .LVU67
+  43:Core/Src/beat.cpp ****     return r;
+  44:Core/Src/beat.cpp **** }
+ 211              		.loc 1 44 1 is_stmt 0 view .LVU68
+ 212              		@ sp needed
+  42:Core/Src/beat.cpp ****     return r;
+ 213              		.loc 1 42 8 view .LVU69
+ 214 0018 0023     		movs	r3, #0
+ 215              	.LVL11:
+  42:Core/Src/beat.cpp ****     return r;
+ 216              		.loc 1 42 8 view .LVU70
+ 217 001a 1373     		strb	r3, [r2, #12]
+  43:Core/Src/beat.cpp ****     return r;
+ 218              		.loc 1 43 5 is_stmt 1 view .LVU71
+ 219              		.loc 1 44 1 is_stmt 0 view .LVU72
+ 220 001c 10BD     		pop	{r4, pc}
+ 221              	.L17:
+ 222 001e C046     		.align	2
+ 223              	.L16:
+ 224 0020 5FEA0000 		.word	59999
+ 225              		.cfi_endproc
+ 226              	.LFE421:
+ 227              		.cantunwind
+ 228              		.fnend
+ 230              		.section	.text._ZNK4Beat7isValidEv,"ax",%progbits
+ 231              		.align	1
+ 232              		.global	_ZNK4Beat7isValidEv
+ 233              		.syntax unified
+ 234              		.code	16
+ 235              		.thumb_func
+ 237              	_ZNK4Beat7isValidEv:
+ 238              		.fnstart
+ 239              	.LVL12:
+ 240              	.LFB422:
+  45:Core/Src/beat.cpp **** 
+  46:Core/Src/beat.cpp **** uint8_t Beat::isValid() const {
+ 241              		.loc 1 46 31 is_stmt 1 view -0
+ 242              		.cfi_startproc
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 0, uses_anonymous_args = 0
+ 245              		@ link register save eliminated.
+  47:Core/Src/beat.cpp **** 	return valid;
+ 246              		.loc 1 47 2 view .LVU74
+ 247              		.loc 1 47 9 is_stmt 0 discriminator 1 view .LVU75
+ 248 0000 007B     		ldrb	r0, [r0, #12]
+ 249              	.LVL13:
+  48:Core/Src/beat.cpp **** }
+ 250              		.loc 1 48 1 view .LVU76
+ 251              		@ sp needed
+ 252 0002 7047     		bx	lr
+ 253              		.cfi_endproc
+ 254              	.LFE422:
+ 255              		.cantunwind
+ 256              		.fnend
+ARM GAS  /tmp/ccEQjZ0t.s 			page 7
+
+
+ 258              		.text
+ 259              	.Letext0:
+ 260              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 261              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 262              		.file 4 "Core/Src/../Inc/beat.h"
+ 263              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  /tmp/ccEQjZ0t.s 			page 8
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 beat.cpp
+     /tmp/ccEQjZ0t.s:19     .text._ZN4Beat6updateEt:00000000 $t
+     /tmp/ccEQjZ0t.s:25     .text._ZN4Beat6updateEt:00000000 _ZN4Beat6updateEt
+     /tmp/ccEQjZ0t.s:150    .text._ZN4Beat6updateEt:00000064 $d
+.ARM.exidx.text._ZN4Beat6updateEt:00000000 $d
+     /tmp/ccEQjZ0t.s:157    .text._ZN4Beat7getRateEv:00000000 $t
+     /tmp/ccEQjZ0t.s:163    .text._ZN4Beat7getRateEv:00000000 _ZN4Beat7getRateEv
+     /tmp/ccEQjZ0t.s:224    .text._ZN4Beat7getRateEv:00000020 $d
+.ARM.exidx.text._ZN4Beat7getRateEv:00000000 $d
+     /tmp/ccEQjZ0t.s:231    .text._ZNK4Beat7isValidEv:00000000 $t
+     /tmp/ccEQjZ0t.s:237    .text._ZNK4Beat7isValidEv:00000000 _ZNK4Beat7isValidEv
+.ARM.exidx.text._ZNK4Beat7isValidEv:00000000 $d
+
+NO UNDEFINED SYMBOLS
