@@ -28,6 +28,7 @@
 #include "beat.h"
 #include "logger.h"
 #include "screen.h"
+#include "color.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -112,8 +113,13 @@ int main()
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
 	
 	char str[5] = {'0', '1', '2', '3', '4'};
-	screen.drawFont(0, 0, str, 5, 0xFFFF);
-	screen.switchBacklight(true);
+//	screen.drawFont(0, 0, str, 5, YELLOW);
+	screen.fillArea(0,0,31,31,YELLOW);
+	screen.fillArea(32,0,63,31,WHITE);
+	screen.fillArea(64,0,95,31,RED);
+	screen.fillArea(96,0,127,31,GREEN);
+	screen.fillArea(0,32,31,63,BLUE);
+	screen.fillArea(32,32,63,63,BLACK);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -124,7 +130,7 @@ int main()
 
 //	uint8_t rate = beat.getRate();
 	// send this to screen
-
+	
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

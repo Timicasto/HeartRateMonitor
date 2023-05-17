@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccJL7Kxx.s 			page 1
+ARM GAS  /tmp/ccU1xUJD.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
   30:Core/Src/system_stm32g0xx.c ****   *        SYSCLK(Hz)                             | 16000000
   31:Core/Src/system_stm32g0xx.c ****   *-----------------------------------------------------------------------------
   32:Core/Src/system_stm32g0xx.c ****   *        HCLK(Hz)                               | 16000000
-ARM GAS  /tmp/ccJL7Kxx.s 			page 2
+ARM GAS  /tmp/ccU1xUJD.s 			page 2
 
 
   33:Core/Src/system_stm32g0xx.c ****   *-----------------------------------------------------------------------------
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
   87:Core/Src/system_stm32g0xx.c **** #if !defined  (LSI_VALUE)
   88:Core/Src/system_stm32g0xx.c ****  #define LSI_VALUE   (32000UL)     /*!< Value of LSI in Hz*/
   89:Core/Src/system_stm32g0xx.c **** #endif /* LSI_VALUE */
-ARM GAS  /tmp/ccJL7Kxx.s 			page 3
+ARM GAS  /tmp/ccU1xUJD.s 			page 3
 
 
   90:Core/Src/system_stm32g0xx.c **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  144:Core/Src/system_stm32g0xx.c **** /**
  145:Core/Src/system_stm32g0xx.c ****   * @}
  146:Core/Src/system_stm32g0xx.c ****   */
-ARM GAS  /tmp/ccJL7Kxx.s 			page 4
+ARM GAS  /tmp/ccU1xUJD.s 			page 4
 
 
  147:Core/Src/system_stm32g0xx.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
   36              	.LFE420:
   38              		.global	__aeabi_uidiv
   39              		.global	__aeabi_idiv
-ARM GAS  /tmp/ccJL7Kxx.s 			page 5
+ARM GAS  /tmp/ccU1xUJD.s 			page 5
 
 
   40              		.section	.text.SystemCoreClockUpdate,"ax",%progbits
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
   52              		@ frame_needed = 0, uses_anonymous_args = 0
  235:Core/Src/system_stm32g0xx.c ****   uint32_t tmp;
   53              		.loc 1 235 3 view .LVU3
-ARM GAS  /tmp/ccJL7Kxx.s 			page 6
+ARM GAS  /tmp/ccU1xUJD.s 			page 6
 
 
  236:Core/Src/system_stm32g0xx.c ****   uint32_t pllvco;
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  261:Core/Src/system_stm32g0xx.c ****       pllsource = (RCC->PLLCFGR & RCC_PLLCFGR_PLLSRC);
  262:Core/Src/system_stm32g0xx.c ****       pllm = ((RCC->PLLCFGR & RCC_PLLCFGR_PLLM) >> RCC_PLLCFGR_PLLM_Pos) + 1UL;
  263:Core/Src/system_stm32g0xx.c **** 
-ARM GAS  /tmp/ccJL7Kxx.s 			page 7
+ARM GAS  /tmp/ccU1xUJD.s 			page 7
 
 
  264:Core/Src/system_stm32g0xx.c ****       if(pllsource == 0x03UL)           /* HSE used as PLL clock source */
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  111              		.loc 1 262 7 is_stmt 1 view .LVU26
  262:Core/Src/system_stm32g0xx.c **** 
  112              		.loc 1 262 19 is_stmt 0 view .LVU27
-ARM GAS  /tmp/ccJL7Kxx.s 			page 8
+ARM GAS  /tmp/ccU1xUJD.s 			page 8
 
 
  113 0030 E168     		ldr	r1, [r4, #12]
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  151              	.LVL11:
  272:Core/Src/system_stm32g0xx.c ****       pllr = (((RCC->PLLCFGR & RCC_PLLCFGR_PLLR) >> RCC_PLLCFGR_PLLR_Pos) + 1UL);
  152              		.loc 1 272 14 view .LVU44
-ARM GAS  /tmp/ccJL7Kxx.s 			page 9
+ARM GAS  /tmp/ccU1xUJD.s 			page 9
 
 
  153 004e 5843     		muls	r0, r3
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  188              		.loc 1 270 18 is_stmt 0 view .LVU59
  189 006a 0448     		ldr	r0, .L13+4
  190 006c E8E7     		b	.L12
-ARM GAS  /tmp/ccJL7Kxx.s 			page 10
+ARM GAS  /tmp/ccU1xUJD.s 			page 10
 
 
  191              	.LVL17:
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  249              		.align	2
  252              	SystemCoreClock:
  253 0000 0024F400 		.word	16000000
-ARM GAS  /tmp/ccJL7Kxx.s 			page 11
+ARM GAS  /tmp/ccU1xUJD.s 			page 11
 
 
  254              		.text
@@ -608,22 +608,22 @@ ARM GAS  /tmp/ccJL7Kxx.s 			page 1
  258              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/system_stm32g0xx.h"
  259              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g030xx.h"
  260              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/ccJL7Kxx.s 			page 12
+ARM GAS  /tmp/ccU1xUJD.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 system_stm32g0xx.c
-     /tmp/ccJL7Kxx.s:19     .text.SystemInit:00000000 $t
-     /tmp/ccJL7Kxx.s:25     .text.SystemInit:00000000 SystemInit
-     /tmp/ccJL7Kxx.s:41     .text.SystemCoreClockUpdate:00000000 $t
-     /tmp/ccJL7Kxx.s:47     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-     /tmp/ccJL7Kxx.s:203    .text.SystemCoreClockUpdate:00000078 $d
-     /tmp/ccJL7Kxx.s:230    .rodata.AHBPrescTable:00000000 AHBPrescTable
-     /tmp/ccJL7Kxx.s:252    .data.SystemCoreClock:00000000 SystemCoreClock
-     /tmp/ccJL7Kxx.s:216    .rodata.APBPrescTable:00000000 APBPrescTable
-     /tmp/ccJL7Kxx.s:213    .rodata.APBPrescTable:00000000 $d
-     /tmp/ccJL7Kxx.s:227    .rodata.AHBPrescTable:00000000 $d
-     /tmp/ccJL7Kxx.s:249    .data.SystemCoreClock:00000000 $d
+     /tmp/ccU1xUJD.s:19     .text.SystemInit:00000000 $t
+     /tmp/ccU1xUJD.s:25     .text.SystemInit:00000000 SystemInit
+     /tmp/ccU1xUJD.s:41     .text.SystemCoreClockUpdate:00000000 $t
+     /tmp/ccU1xUJD.s:47     .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+     /tmp/ccU1xUJD.s:203    .text.SystemCoreClockUpdate:00000078 $d
+     /tmp/ccU1xUJD.s:230    .rodata.AHBPrescTable:00000000 AHBPrescTable
+     /tmp/ccU1xUJD.s:252    .data.SystemCoreClock:00000000 SystemCoreClock
+     /tmp/ccU1xUJD.s:216    .rodata.APBPrescTable:00000000 APBPrescTable
+     /tmp/ccU1xUJD.s:213    .rodata.APBPrescTable:00000000 $d
+     /tmp/ccU1xUJD.s:227    .rodata.AHBPrescTable:00000000 $d
+     /tmp/ccU1xUJD.s:249    .data.SystemCoreClock:00000000 $d
 
 UNDEFINED SYMBOLS
 __aeabi_uidiv

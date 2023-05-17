@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccJLd24T.s 			page 1
+ARM GAS  /tmp/cc3qemKv.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccJLd24T.s 			page 1
   46 0002 FA23     		movs	r3, #250
   47              	.LBE3:
   48              	.LBE2:
-ARM GAS  /tmp/ccJLd24T.s 			page 2
+ARM GAS  /tmp/cc3qemKv.s 			page 2
 
 
    7:Core/Src/logger.cpp **** }
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccJLd24T.s 			page 1
   94              		.global	_ZN6LoggerC1EP20__UART_HandleTypeDef
   95              		.thumb_set _ZN6LoggerC1EP20__UART_HandleTypeDef,_ZN6LoggerC2EP20__UART_HandleTypeDef
   96              		.section	.rodata._ZN6Logger3logENS_8LogLevelEPKc.str1.1,"aMS",%progbits,1
-ARM GAS  /tmp/ccJLd24T.s 			page 3
+ARM GAS  /tmp/cc3qemKv.s 			page 3
 
 
   97              	.LC2:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccJLd24T.s 			page 1
  141              	.LCFI2:
  142              		.cfi_def_cfa_offset 48
  143              		.setfp r7, sp, #16
-ARM GAS  /tmp/ccJLd24T.s 			page 4
+ARM GAS  /tmp/cc3qemKv.s 			page 4
 
 
  144 0004 04AF     		add	r7, sp, #16
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccJLd24T.s 			page 1
  193              		.loc 1 13 7 view .LVU35
  194 0032 C000     		lsls	r0, r0, #3
  195 0034 1B1A     		subs	r3, r3, r0
-ARM GAS  /tmp/ccJLd24T.s 			page 5
+ARM GAS  /tmp/cc3qemKv.s 			page 5
 
 
  196 0036 9D46     		mov	sp, r3
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccJLd24T.s 			page 1
  246 007c 2D000000 		.word	.LC14
  247 0080 2F000000 		.word	.LC16
  248 0084 1C000000 		.word	.LC10
-ARM GAS  /tmp/ccJLd24T.s 			page 6
+ARM GAS  /tmp/cc3qemKv.s 			page 6
 
 
  249 0088 1E000000 		.word	.LC12
@@ -321,19 +321,19 @@ ARM GAS  /tmp/ccJLd24T.s 			page 1
  267              		.file 13 "Core/Inc/printf.h"
  268              		.file 14 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  269              		.file 15 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
-ARM GAS  /tmp/ccJLd24T.s 			page 7
+ARM GAS  /tmp/cc3qemKv.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 logger.cpp
-     /tmp/ccJLd24T.s:22     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 $t
-     /tmp/ccJLd24T.s:28     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 _ZN6LoggerC2EP20__UART_HandleTypeDef
-     /tmp/ccJLd24T.s:89     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000018 $d
+     /tmp/cc3qemKv.s:22     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 $t
+     /tmp/cc3qemKv.s:28     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 _ZN6LoggerC2EP20__UART_HandleTypeDef
+     /tmp/cc3qemKv.s:89     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000018 $d
 .ARM.exidx.text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 $d
-     /tmp/ccJLd24T.s:28     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 _ZN6LoggerC1EP20__UART_HandleTypeDef
-     /tmp/ccJLd24T.s:114    .text._ZN6Logger3logENS_8LogLevelEPKc:00000000 $t
-     /tmp/ccJLd24T.s:120    .text._ZN6Logger3logENS_8LogLevelEPKc:00000000 _ZN6Logger3logENS_8LogLevelEPKc
-     /tmp/ccJLd24T.s:242    .text._ZN6Logger3logENS_8LogLevelEPKc:0000006c $d
+     /tmp/cc3qemKv.s:28     .text._ZN6LoggerC2EP20__UART_HandleTypeDef:00000000 _ZN6LoggerC1EP20__UART_HandleTypeDef
+     /tmp/cc3qemKv.s:114    .text._ZN6Logger3logENS_8LogLevelEPKc:00000000 $t
+     /tmp/cc3qemKv.s:120    .text._ZN6Logger3logENS_8LogLevelEPKc:00000000 _ZN6Logger3logENS_8LogLevelEPKc
+     /tmp/cc3qemKv.s:242    .text._ZN6Logger3logENS_8LogLevelEPKc:0000006c $d
 .ARM.exidx.text._ZN6Logger3logENS_8LogLevelEPKc:00000000 $d
 
 UNDEFINED SYMBOLS

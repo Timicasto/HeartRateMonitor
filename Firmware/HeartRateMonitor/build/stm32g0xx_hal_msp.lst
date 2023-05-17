@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccgxv845.s 			page 1
+ARM GAS  /tmp/ccg2cc0r.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccgxv845.s 			page 1
   30:Core/Src/stm32g0xx_hal_msp.c **** 
   31:Core/Src/stm32g0xx_hal_msp.c **** /* USER CODE END TD */
   32:Core/Src/stm32g0xx_hal_msp.c **** 
-ARM GAS  /tmp/ccgxv845.s 			page 2
+ARM GAS  /tmp/ccg2cc0r.s 			page 2
 
 
   33:Core/Src/stm32g0xx_hal_msp.c **** /* Private define ------------------------------------------------------------*/
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccgxv845.s 			page 1
   42              		.cfi_def_cfa_offset 8
   43              	.LBB3:
   44              		.loc 1 70 3 view .LVU5
-ARM GAS  /tmp/ccgxv845.s 			page 3
+ARM GAS  /tmp/ccg2cc0r.s 			page 3
 
 
   45 0006 1A6C     		ldr	r2, [r3, #64]
@@ -178,20 +178,20 @@ ARM GAS  /tmp/ccgxv845.s 			page 1
   88              	.LFE420:
   90              		.text
   91              	.Letext0:
-ARM GAS  /tmp/ccgxv845.s 			page 4
+ARM GAS  /tmp/ccg2cc0r.s 			page 4
 
 
   92              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
   93              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
   94              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g030xx.h"
   95              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/ccgxv845.s 			page 5
+ARM GAS  /tmp/ccg2cc0r.s 			page 5
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_hal_msp.c
-     /tmp/ccgxv845.s:19     .text.HAL_MspInit:00000000 $t
-     /tmp/ccgxv845.s:25     .text.HAL_MspInit:00000000 HAL_MspInit
-     /tmp/ccgxv845.s:86     .text.HAL_MspInit:0000002c $d
+     /tmp/ccg2cc0r.s:19     .text.HAL_MspInit:00000000 $t
+     /tmp/ccg2cc0r.s:25     .text.HAL_MspInit:00000000 HAL_MspInit
+     /tmp/ccg2cc0r.s:86     .text.HAL_MspInit:0000002c $d
 
 NO UNDEFINED SYMBOLS

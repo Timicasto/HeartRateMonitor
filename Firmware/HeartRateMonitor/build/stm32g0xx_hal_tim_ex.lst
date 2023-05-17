@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc4okhew.s 			page 1
+ARM GAS  /tmp/ccOuvRRg.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
   30:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   [..]
   31:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     The Timer Extended features include:
   32:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     (#) Complementary outputs with programmable dead-time for :
-ARM GAS  /tmp/cc4okhew.s 			page 2
+ARM GAS  /tmp/ccOuvRRg.s 			page 2
 
 
   33:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****         (++) Output Compare
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
   87:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   */
   88:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
   89:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** /** @defgroup TIMEx TIMEx
-ARM GAS  /tmp/cc4okhew.s 			page 3
+ARM GAS  /tmp/ccOuvRRg.s 			page 3
 
 
   90:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @brief TIM Extended HAL module driver
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  144:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @note   When the timer instance is initialized in Hall Sensor Interface mode,
  145:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *         timer channels 1 and channel 2 are reserved and cannot be used for
  146:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *         other purpose.
-ARM GAS  /tmp/cc4okhew.s 			page 4
+ARM GAS  /tmp/ccOuvRRg.s 			page 4
 
 
  147:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @param  htim TIM Hall Sensor Interface handle
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  201:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Reset the IC1PSC Bits */
  202:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->Instance->CCMR1 &= ~TIM_CCMR1_IC1PSC;
  203:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Set the IC1PSC value */
-ARM GAS  /tmp/cc4okhew.s 			page 5
+ARM GAS  /tmp/ccOuvRRg.s 			page 5
 
 
  204:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->Instance->CCMR1 |= sConfig->IC1Prescaler;
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  258:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->State = HAL_TIM_STATE_BUSY;
  259:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  260:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Disable the TIM Peripheral Clock */
-ARM GAS  /tmp/cc4okhew.s 			page 6
+ARM GAS  /tmp/ccOuvRRg.s 			page 6
 
 
  261:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   __HAL_TIM_DISABLE(htim);
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  315:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
  316:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   UNUSED(htim);
  317:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 7
+ARM GAS  /tmp/ccOuvRRg.s 			page 7
 
 
  318:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* NOTE : This function should not be modified, when the callback is needed,
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  372:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  373:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Return function status */
  374:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   return HAL_OK;
-ARM GAS  /tmp/cc4okhew.s 			page 8
+ARM GAS  /tmp/ccOuvRRg.s 			page 8
 
 
  375:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  429:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  430:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Set the TIM channels state */
  431:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_BUSY);
-ARM GAS  /tmp/cc4okhew.s 			page 9
+ARM GAS  /tmp/ccOuvRRg.s 			page 9
 
 
  432:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_BUSY);
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  486:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
  487:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_2, HAL_TIM_CHANNEL_STATE_READY);
  488:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 10
+ARM GAS  /tmp/ccOuvRRg.s 			page 10
 
 
  489:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Return function status */
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  543:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  544:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Enable the DMA channel for Capture 1*/
  545:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   if (HAL_DMA_Start_IT(htim->hdma[TIM_DMA_ID_CC1], (uint32_t)&htim->Instance->CCR1, (uint32_t)pData
-ARM GAS  /tmp/cc4okhew.s 			page 11
+ARM GAS  /tmp/ccOuvRRg.s 			page 11
 
 
  546:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  600:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   return HAL_OK;
  601:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
  602:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 12
+ARM GAS  /tmp/ccOuvRRg.s 			page 12
 
 
  603:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** /**
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  657:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Enable the Main Output */
  658:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   __HAL_TIM_MOE_ENABLE(htim);
  659:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 13
+ARM GAS  /tmp/ccOuvRRg.s 			page 13
 
 
  660:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Enable the Peripheral, except in trigger mode where enable is automatically done with trigger 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  714:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be enabled
  715:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
  716:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
-ARM GAS  /tmp/cc4okhew.s 			page 14
+ARM GAS  /tmp/ccOuvRRg.s 			page 14
 
 
  717:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  771:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  772:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     /* Enable the Capture compare channel N */
  773:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     TIM_CCxNChannelCmd(htim->Instance, Channel, TIM_CCxN_ENABLE);
-ARM GAS  /tmp/cc4okhew.s 			page 15
+ARM GAS  /tmp/ccOuvRRg.s 			page 15
 
 
  774:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  828:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       __HAL_TIM_DISABLE_IT(htim, TIM_IT_CC2);
  829:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
  830:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     }
-ARM GAS  /tmp/cc4okhew.s 			page 16
+ARM GAS  /tmp/ccOuvRRg.s 			page 16
 
 
  831:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  885:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
  886:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
  887:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   uint32_t tmpsmcr;
-ARM GAS  /tmp/cc4okhew.s 			page 17
+ARM GAS  /tmp/ccOuvRRg.s 			page 17
 
 
  888:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  942:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       /* Set the DMA error callback */
  943:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC2]->XferErrorCallback = TIM_DMAErrorCCxN ;
  944:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 18
+ARM GAS  /tmp/ccOuvRRg.s 			page 18
 
 
  945:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       /* Enable the DMA channel */
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  999:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     }
 1000:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     else
 1001:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     {
-ARM GAS  /tmp/cc4okhew.s 			page 19
+ARM GAS  /tmp/ccOuvRRg.s 			page 19
 
 
 1002:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       __HAL_TIM_ENABLE(htim);
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1056:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
 1057:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   }
 1058:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 20
+ARM GAS  /tmp/ccOuvRRg.s 			page 20
 
 
 1059:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   if (status == HAL_OK)
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1113:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @brief  Starts the PWM signal generation on the complementary output.
 1114:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @param  htim TIM handle
 1115:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @param  Channel TIM Channel to be enabled
-ARM GAS  /tmp/cc4okhew.s 			page 21
+ARM GAS  /tmp/ccOuvRRg.s 			page 21
 
 
 1116:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1170:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @retval HAL status
 1171:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   */
 1172:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_PWMN_Stop(TIM_HandleTypeDef *htim, uint32_t Channel)
-ARM GAS  /tmp/cc4okhew.s 			page 22
+ARM GAS  /tmp/ccOuvRRg.s 			page 22
 
 
 1173:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1227:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
 1228:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     }
 1229:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 23
+ARM GAS  /tmp/ccOuvRRg.s 			page 23
 
 
 1230:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     case TIM_CHANNEL_2:
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1284:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
 1285:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TIM Channel 1 selected
 1286:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TIM Channel 2 selected
-ARM GAS  /tmp/cc4okhew.s 			page 24
+ARM GAS  /tmp/ccOuvRRg.s 			page 24
 
 
 1287:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_3: TIM Channel 3 selected
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1341:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     /* Disable the Peripheral */
 1342:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     __HAL_TIM_DISABLE(htim);
 1343:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 25
+ARM GAS  /tmp/ccOuvRRg.s 			page 25
 
 
 1344:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     /* Set the TIM complementary channel state */
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1398:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     {
 1399:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       /* Set the DMA compare callbacks */
 1400:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC1]->XferCpltCallback = TIM_DMADelayPulseNCplt;
-ARM GAS  /tmp/cc4okhew.s 			page 26
+ARM GAS  /tmp/ccOuvRRg.s 			page 26
 
 
 1401:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       htim->hdma[TIM_DMA_ID_CC1]->XferHalfCpltCallback = TIM_DMADelayPulseHalfCplt;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1455:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       /* Enable the TIM Capture/Compare 3 DMA request */
 1456:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       __HAL_TIM_ENABLE_DMA(htim, TIM_DMA_CC3);
 1457:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
-ARM GAS  /tmp/cc4okhew.s 			page 27
+ARM GAS  /tmp/ccOuvRRg.s 			page 27
 
 
 1458:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     }
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1512:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     case TIM_CHANNEL_1:
 1513:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     {
 1514:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       /* Disable the TIM Capture/Compare 1 DMA request */
-ARM GAS  /tmp/cc4okhew.s 			page 28
+ARM GAS  /tmp/ccOuvRRg.s 			page 28
 
 
 1515:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       __HAL_TIM_DISABLE_DMA(htim, TIM_DMA_CC1);
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1569:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****                 ##### Timer Complementary One Pulse functions #####
 1570:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   ==============================================================================
 1571:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   [..]
-ARM GAS  /tmp/cc4okhew.s 			page 29
+ARM GAS  /tmp/ccOuvRRg.s 			page 29
 
 
 1572:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     This section provides functions allowing to:
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1626:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
 1627:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Return function status */
 1628:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   return HAL_OK;
-ARM GAS  /tmp/cc4okhew.s 			page 30
+ARM GAS  /tmp/ccOuvRRg.s 			page 30
 
 
 1629:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1683:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
 1684:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
 1685:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_1_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_1);
-ARM GAS  /tmp/cc4okhew.s 			page 31
+ARM GAS  /tmp/ccOuvRRg.s 			page 31
 
 
 1686:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1740:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
 1741:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Check the parameters */
 1742:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   assert_param(IS_TIM_CCXN_INSTANCE(htim->Instance, OutputChannel));
-ARM GAS  /tmp/cc4okhew.s 			page 32
+ARM GAS  /tmp/ccOuvRRg.s 			page 32
 
 
 1743:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1797:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @brief  Configure the TIM commutation event sequence.
 1798:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @note  This function is mandatory to use the commutation event in order to
 1799:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        update the configuration at each commutation detection on the TRGI input of the Timer,
-ARM GAS  /tmp/cc4okhew.s 			page 33
+ARM GAS  /tmp/ccOuvRRg.s 			page 33
 
 
 1800:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        the typical use of this feature is with the use of another Timer(interface Timer)
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1854:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @note  This function is mandatory to use the commutation event in order to
 1855:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        update the configuration at each commutation detection on the TRGI input of the Timer,
 1856:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        the typical use of this feature is with the use of another Timer(interface Timer)
-ARM GAS  /tmp/cc4okhew.s 			page 34
+ARM GAS  /tmp/ccOuvRRg.s 			page 34
 
 
 1857:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        configured in Hall sensor interface, this interface Timer will generate the
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1911:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        update the configuration at each commutation detection on the TRGI input of the Timer,
 1912:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        the typical use of this feature is with the use of another Timer(interface Timer)
 1913:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        configured in Hall sensor interface, this interface Timer will generate the
-ARM GAS  /tmp/cc4okhew.s 			page 35
+ARM GAS  /tmp/ccOuvRRg.s 			page 35
 
 
 1914:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *        commutation at its TRGO output (connected to Timer used in this function) each time
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1968:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
 1969:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   return HAL_OK;
 1970:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
-ARM GAS  /tmp/cc4okhew.s 			page 36
+ARM GAS  /tmp/ccOuvRRg.s 			page 36
 
 
 1971:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2025:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     /* Reset the MSM Bit */
 2026:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     tmpsmcr &= ~TIM_SMCR_MSM;
 2027:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     /* Set master mode */
-ARM GAS  /tmp/cc4okhew.s 			page 37
+ARM GAS  /tmp/ccOuvRRg.s 			page 37
 
 
 2028:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     tmpsmcr |= sMasterConfig->MasterSlaveMode;
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2082:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKP, sBreakDeadTimeConfig->BreakPolarity);
 2083:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_AOE, sBreakDeadTimeConfig->AutomaticOutput);
 2084:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKF, (sBreakDeadTimeConfig->BreakFilter << TIM_BDTR_BKF_Pos));
-ARM GAS  /tmp/cc4okhew.s 			page 38
+ARM GAS  /tmp/ccOuvRRg.s 			page 38
 
 
 2085:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2139:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
 2140:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
 2141:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   uint32_t tmporx;
-ARM GAS  /tmp/cc4okhew.s 			page 39
+ARM GAS  /tmp/ccOuvRRg.s 			page 39
 
 
 2142:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   uint32_t bkin_enable_mask;
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2196:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     default:
 2197:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     {
 2198:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       bkin_enable_mask = 0U;
-ARM GAS  /tmp/cc4okhew.s 			page 40
+ARM GAS  /tmp/ccOuvRRg.s 			page 40
 
 
 2199:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       bkin_polarity_mask = 0U;
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2253:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @brief  Configures the TIMx Remapping input capabilities.
 2254:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @param  htim TIM handle.
 2255:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @param  Remap specifies the TIM remapping source.
-ARM GAS  /tmp/cc4okhew.s 			page 41
+ARM GAS  /tmp/ccOuvRRg.s 			page 41
 
 
 2256:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *         For TIM1, the parameter can take one of the following values:
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2310:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *          This parameter can be one of the following values:
 2311:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_1: TI1 input channel
 2312:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_2: TI2 input channel
-ARM GAS  /tmp/cc4okhew.s 			page 42
+ARM GAS  /tmp/ccOuvRRg.s 			page 42
 
 
 2313:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_CHANNEL_3: TI3 input channel
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2367:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_TIM16_TI1_RTC_WAKEUP:         TIM16 TI1 is connected to TRC wakeup interrup
 2368:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *            @arg TIM_TIM16_TI1_MCO2:               TIM16 TI1 is connected to MCO2          (**)
 2369:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *
-ARM GAS  /tmp/cc4okhew.s 			page 43
+ARM GAS  /tmp/ccOuvRRg.s 			page 43
 
 
 2370:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   *         For TIM17, the parameter can have the following values:
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2424:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** HAL_StatusTypeDef HAL_TIMEx_GroupChannel5(TIM_HandleTypeDef *htim, uint32_t Channels)
 2425:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
 2426:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Check parameters */
-ARM GAS  /tmp/cc4okhew.s 			page 44
+ARM GAS  /tmp/ccOuvRRg.s 			page 44
 
 
 2427:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   assert_param(IS_TIM_COMBINED3PHASEPWM_INSTANCE(htim->Instance));
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2481:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****         SET_BIT(htim->Instance->BDTR, TIM_BDTR_BKDSRM);
 2482:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       }
 2483:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
-ARM GAS  /tmp/cc4okhew.s 			page 45
+ARM GAS  /tmp/ccOuvRRg.s 			page 45
 
 
 2484:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     }
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2538:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****           if ((HAL_GetTick() - tickstart) > TIM_BREAKINPUT_REARM_TIMEOUT)
 2539:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****           {
 2540:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****             /* New check to avoid false timeout detection in case of preemption */
-ARM GAS  /tmp/cc4okhew.s 			page 46
+ARM GAS  /tmp/ccOuvRRg.s 			page 46
 
 
 2541:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****             if (READ_BIT(htim->Instance->BDTR, TIM_BDTR_BKDSRM) != 0UL)
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2595:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     (+) Timer Break callback
 2596:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
 2597:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** @endverbatim
-ARM GAS  /tmp/cc4okhew.s 			page 47
+ARM GAS  /tmp/ccOuvRRg.s 			page 47
 
 
 2598:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @{
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2652:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Prevent unused argument(s) compilation warning */
 2653:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   UNUSED(htim);
 2654:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 48
+ARM GAS  /tmp/ccOuvRRg.s 			page 48
 
 
 2655:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* NOTE : This function Should not be modified, when the callback is needed,
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2709:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** /**
 2710:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @}
 2711:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   */
-ARM GAS  /tmp/cc4okhew.s 			page 49
+ARM GAS  /tmp/ccOuvRRg.s 			page 49
 
 
 2712:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2766:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** static void TIM_DMADelayPulseNCplt(DMA_HandleTypeDef *hdma)
 2767:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
 2768:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
-ARM GAS  /tmp/cc4okhew.s 			page 50
+ARM GAS  /tmp/ccOuvRRg.s 			page 50
 
 
 2769:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2823:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   * @retval None
 2824:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   */
 2825:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** static void TIM_DMAErrorCCxN(DMA_HandleTypeDef *hdma)
-ARM GAS  /tmp/cc4okhew.s 			page 51
+ARM GAS  /tmp/ccOuvRRg.s 			page 51
 
 
 2826:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** {
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
   32              		.loc 1 2874 3 view .LVU2
   33              		.loc 1 2874 36 is_stmt 0 view .LVU3
   34 0000 1F23     		movs	r3, #31
-ARM GAS  /tmp/cc4okhew.s 			page 52
+ARM GAS  /tmp/ccOuvRRg.s 			page 52
 
 
 2871:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   uint32_t tmp;
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
   73              		.align	1
   74              		.syntax unified
   75              		.code	16
-ARM GAS  /tmp/cc4okhew.s 			page 53
+ARM GAS  /tmp/ccOuvRRg.s 			page 53
 
 
   76              		.thumb_func
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  116              		.loc 1 2856 1 is_stmt 0 view .LVU31
  117              		@ sp needed
 2852:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
-ARM GAS  /tmp/cc4okhew.s 			page 54
+ARM GAS  /tmp/ccOuvRRg.s 			page 54
 
 
  118              		.loc 1 2852 3 view .LVU32
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  158 003e 2300     		movs	r3, r4
  159 0040 0122     		movs	r2, #1
  160 0042 4633     		adds	r3, r3, #70
-ARM GAS  /tmp/cc4okhew.s 			page 55
+ARM GAS  /tmp/ccOuvRRg.s 			page 55
 
 
  161 0044 F4E7     		b	.L6
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  206              	.L10:
 2809:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  207              		.loc 1 2809 3 view .LVU58
-ARM GAS  /tmp/cc4okhew.s 			page 56
+ARM GAS  /tmp/ccOuvRRg.s 			page 56
 
 
 2814:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** #endif /* USE_HAL_TIM_REGISTER_CALLBACKS */
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2788:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
  248              		.loc 1 2788 8 is_stmt 1 view .LVU73
 2788:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
-ARM GAS  /tmp/cc4okhew.s 			page 57
+ARM GAS  /tmp/ccOuvRRg.s 			page 57
 
 
  249              		.loc 1 2788 11 is_stmt 0 view .LVU74
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  292              		.weak	HAL_TIMEx_HallSensor_MspInit
  293              		.syntax unified
  294              		.code	16
-ARM GAS  /tmp/cc4okhew.s 			page 58
+ARM GAS  /tmp/ccOuvRRg.s 			page 58
 
 
  295              		.thumb_func
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  343 0008 89B0     		sub	sp, sp, #36
  344              	.LCFI4:
  345              		.cfi_def_cfa_offset 56
-ARM GAS  /tmp/cc4okhew.s 			page 59
+ARM GAS  /tmp/ccOuvRRg.s 			page 59
 
 
  156:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  381 0028 3B70     		strb	r3, [r7]
  196:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  382              		.loc 1 196 3 is_stmt 1 view .LVU115
-ARM GAS  /tmp/cc4okhew.s 			page 60
+ARM GAS  /tmp/ccOuvRRg.s 			page 60
 
 
  383 002a 2068     		ldr	r0, [r4]
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  421 0056 1343     		orrs	r3, r2
  422 0058 4360     		str	r3, [r0, #4]
  210:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->Instance->SMCR |= TIM_TS_TI1F_ED;
-ARM GAS  /tmp/cc4okhew.s 			page 61
+ARM GAS  /tmp/ccOuvRRg.s 			page 61
 
 
  423              		.loc 1 210 3 is_stmt 1 view .LVU132
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  224:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  460              		.loc 1 224 19 view .LVU150
  461 0080 F368     		ldr	r3, [r6, #12]
-ARM GAS  /tmp/cc4okhew.s 			page 62
+ARM GAS  /tmp/ccOuvRRg.s 			page 62
 
 
  226:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  496 009e 5A60     		str	r2, [r3, #4]
  231:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  497              		.loc 1 231 3 is_stmt 1 view .LVU171
-ARM GAS  /tmp/cc4okhew.s 			page 63
+ARM GAS  /tmp/ccOuvRRg.s 			page 63
 
 
  231:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  536              	.L21:
  537 00c2 C046     		.align	2
  538              	.L20:
-ARM GAS  /tmp/cc4okhew.s 			page 64
+ARM GAS  /tmp/ccOuvRRg.s 			page 64
 
 
  539 00c4 8FFFCFFF 		.word	-3145841
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  591 0008 2B70     		strb	r3, [r5]
  261:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  592              		.loc 1 261 3 is_stmt 1 view .LVU194
-ARM GAS  /tmp/cc4okhew.s 			page 65
+ARM GAS  /tmp/ccOuvRRg.s 			page 65
 
 
  261:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  633 0036 0A3B     		subs	r3, r3, #10
  634 0038 1870     		strb	r0, [r3]
  280:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_RESET);
-ARM GAS  /tmp/cc4okhew.s 			page 66
+ARM GAS  /tmp/ccOuvRRg.s 			page 66
 
 
  635              		.loc 1 280 3 is_stmt 1 view .LVU209
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  678              	.LCFI6:
  679              		.cfi_def_cfa_offset 32
  680              		.cfi_offset 0, -32
-ARM GAS  /tmp/cc4okhew.s 			page 67
+ARM GAS  /tmp/ccOuvRRg.s 			page 67
 
 
  681              		.cfi_offset 1, -28
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  720              		.loc 1 333 31 view .LVU237
  721 0020 D2B2     		uxtb	r2, r2
  722 0022 0192     		str	r2, [sp, #4]
-ARM GAS  /tmp/cc4okhew.s 			page 68
+ARM GAS  /tmp/ccOuvRRg.s 			page 68
 
 
  723              	.LVL36:
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  763              	.LVL39:
  360:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
  764              		.loc 1 360 3 is_stmt 1 view .LVU252
-ARM GAS  /tmp/cc4okhew.s 			page 69
+ARM GAS  /tmp/ccOuvRRg.s 			page 69
 
 
  360:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  806              	.LVL44:
  807              	.LVL45:
  375:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 70
+ARM GAS  /tmp/ccOuvRRg.s 			page 70
 
 
  808              		.loc 1 375 1 view .LVU266
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  856              		.cfi_offset 4, -8
  857              		.cfi_offset 14, -4
  383:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Check the parameters */
-ARM GAS  /tmp/cc4okhew.s 			page 71
+ARM GAS  /tmp/ccOuvRRg.s 			page 71
 
 
  858              		.loc 1 383 1 view .LVU275
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  403:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  899              		.loc 1 403 1 is_stmt 0 view .LVU289
  900 0032 0020     		movs	r0, #0
-ARM GAS  /tmp/cc4okhew.s 			page 72
+ARM GAS  /tmp/ccOuvRRg.s 			page 72
 
 
  397:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  947              		.loc 1 411 1 view .LVU299
  948 0002 0400     		movs	r4, r0
  413:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
-ARM GAS  /tmp/cc4okhew.s 			page 73
+ARM GAS  /tmp/ccOuvRRg.s 			page 73
 
 
  949              		.loc 1 413 31 view .LVU300
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  988 002a EDB2     		uxtb	r5, r5
  989              	.LVL60:
  419:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 74
+ARM GAS  /tmp/ccOuvRRg.s 			page 74
 
 
  990              		.loc 1 419 3 is_stmt 1 view .LVU316
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1029              		.loc 1 445 7 is_stmt 0 view .LVU331
  1030 005a 2368     		ldr	r3, [r4]
  445:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
-ARM GAS  /tmp/cc4okhew.s 			page 75
+ARM GAS  /tmp/ccOuvRRg.s 			page 75
 
 
  1031              		.loc 1 445 6 view .LVU332
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1073 0082 FEBD     		pop	{r1, r2, r3, r4, r5, r6, r7, pc}
  1074              	.LVL69:
  1075              	.L47:
-ARM GAS  /tmp/cc4okhew.s 			page 76
+ARM GAS  /tmp/ccOuvRRg.s 			page 76
 
 
  455:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   }
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1123 0004 0400     		movs	r4, r0
  475:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  1124              		.loc 1 475 3 view .LVU354
-ARM GAS  /tmp/cc4okhew.s 			page 77
+ARM GAS  /tmp/ccOuvRRg.s 			page 77
 
 
  1125 0006 1100     		movs	r1, r2
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  485:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_CHANNEL_N_STATE_SET(htim, TIM_CHANNEL_1, HAL_TIM_CHANNEL_STATE_READY);
  1167              		.loc 1 485 3 is_stmt 1 view .LVU367
  491:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 78
+ARM GAS  /tmp/ccOuvRRg.s 			page 78
 
 
  1168              		.loc 1 491 1 is_stmt 0 view .LVU368
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1214              		.loc 1 501 1 view .LVU378
  1215 0002 0400     		movs	r4, r0
  1216 0004 0E00     		movs	r6, r1
-ARM GAS  /tmp/cc4okhew.s 			page 79
+ARM GAS  /tmp/ccOuvRRg.s 			page 79
 
 
  504:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1254              		.loc 1 520 14 view .LVU395
  1255 0024 0120     		movs	r0, #1
  1256              	.L62:
-ARM GAS  /tmp/cc4okhew.s 			page 80
+ARM GAS  /tmp/ccOuvRRg.s 			page 80
 
 
  569:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  539:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->hdma[TIM_DMA_ID_CC1]->XferHalfCpltCallback = TIM_DMACaptureHalfCplt;
  1297              		.loc 1 539 48 view .LVU410
  1298 004a C362     		str	r3, [r0, #44]
-ARM GAS  /tmp/cc4okhew.s 			page 81
+ARM GAS  /tmp/ccOuvRRg.s 			page 81
 
 
  540:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Set the DMA error callback */
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  556:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
  1338              		.loc 1 556 5 is_stmt 1 view .LVU426
  556:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     if (!IS_TIM_SLAVEMODE_TRIGGER_ENABLED(tmpsmcr))
-ARM GAS  /tmp/cc4okhew.s 			page 82
+ARM GAS  /tmp/ccOuvRRg.s 			page 82
 
 
  1339              		.loc 1 556 29 is_stmt 0 view .LVU427
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1383 00b0 00040040 		.word	1073742848
  1384 00b4 07000100 		.word	65543
  1385              		.cfi_endproc
-ARM GAS  /tmp/cc4okhew.s 			page 83
+ARM GAS  /tmp/ccOuvRRg.s 			page 83
 
 
  1386              	.LFE428:
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1430              		.loc 1 590 9 is_stmt 0 view .LVU449
  1431 001a FFF7FEFF 		bl	HAL_DMA_Abort_IT
  1432              	.LVL100:
-ARM GAS  /tmp/cc4okhew.s 			page 84
+ARM GAS  /tmp/ccOuvRRg.s 			page 84
 
 
  593:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1473              		.align	2
  1474              	.L86:
  1475 0048 FFFDFFFF 		.word	-513
-ARM GAS  /tmp/cc4okhew.s 			page 85
+ARM GAS  /tmp/ccOuvRRg.s 			page 85
 
 
  1476 004c 11110000 		.word	4369
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1520 0010 8442     		cmp	r4, r0
  1521 0012 0AD0     		beq	.L111
  1522              	.LVL105:
-ARM GAS  /tmp/cc4okhew.s 			page 86
+ARM GAS  /tmp/ccOuvRRg.s 			page 86
 
 
  1523              	.L90:
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1565              		.loc 1 661 6 is_stmt 0 view .LVU487
  1566 0042 0A4B     		ldr	r3, .L117
  1567 0044 9C42     		cmp	r4, r3
-ARM GAS  /tmp/cc4okhew.s 			page 87
+ARM GAS  /tmp/ccOuvRRg.s 			page 87
 
 
  1568 0046 02D0     		beq	.L98
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1614              		.thumb_func
  1616              	HAL_TIMEx_OCN_Stop:
  1617              	.LVL111:
-ARM GAS  /tmp/cc4okhew.s 			page 88
+ARM GAS  /tmp/ccOuvRRg.s 			page 88
 
 
  1618              	.LFB431:
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1659 0022 1149     		ldr	r1, .L127+8
  1660 0024 0B40     		ands	r3, r1
  1661 0026 6B64     		str	r3, [r5, #68]
-ARM GAS  /tmp/cc4okhew.s 			page 89
+ARM GAS  /tmp/ccOuvRRg.s 			page 89
 
 
  1662              	.L120:
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  704:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  1703              		.loc 1 704 3 discriminator 3 view .LVU523
  1704 0050 4534     		adds	r4, r4, #69
-ARM GAS  /tmp/cc4okhew.s 			page 90
+ARM GAS  /tmp/ccOuvRRg.s 			page 90
 
 
  1705              	.LVL117:
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  730:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
  1751              		.loc 1 730 3 view .LVU534
  722:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_StatusTypeDef status = HAL_OK;
-ARM GAS  /tmp/cc4okhew.s 			page 91
+ARM GAS  /tmp/ccOuvRRg.s 			page 91
 
 
  1752              		.loc 1 722 1 is_stmt 0 view .LVU535
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1795 002c 10E0     		b	.L150
  1796              	.L133:
  730:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
-ARM GAS  /tmp/cc4okhew.s 			page 92
+ARM GAS  /tmp/ccOuvRRg.s 			page 92
 
 
  1797              		.loc 1 730 46 is_stmt 0 discriminator 5 view .LVU547
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1837 0056 E268     		ldr	r2, [r4, #12]
  773:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  1838              		.loc 1 773 5 is_stmt 0 view .LVU562
-ARM GAS  /tmp/cc4okhew.s 			page 93
+ARM GAS  /tmp/ccOuvRRg.s 			page 93
 
 
  1839 0058 2000     		movs	r0, r4
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  784:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       }
  1881              		.loc 1 784 9 is_stmt 1 view .LVU575
  1882 008a 0123     		movs	r3, #1
-ARM GAS  /tmp/cc4okhew.s 			page 94
+ARM GAS  /tmp/ccOuvRRg.s 			page 94
 
 
  1883 008c 2268     		ldr	r2, [r4]
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1930 0002 0400     		movs	r4, r0
  1931 0004 0E00     		movs	r6, r1
  816:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
-ARM GAS  /tmp/cc4okhew.s 			page 95
+ARM GAS  /tmp/ccOuvRRg.s 			page 95
 
 
  1932              		.loc 1 816 3 view .LVU585
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  1972              		.loc 1 853 7 is_stmt 1 view .LVU599
  1973 0032 8021     		movs	r1, #128
  1974 0034 EA68     		ldr	r2, [r5, #12]
-ARM GAS  /tmp/cc4okhew.s 			page 96
+ARM GAS  /tmp/ccOuvRRg.s 			page 96
 
 
  1975              	.LVL137:
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  863:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   }
  2017              		.loc 1 863 5 is_stmt 0 discriminator 1 view .LVU612
  2018 006a 4434     		adds	r4, r4, #68
-ARM GAS  /tmp/cc4okhew.s 			page 97
+ARM GAS  /tmp/ccOuvRRg.s 			page 97
 
 
  2019              	.LVL138:
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2062 0090 FF7FFFFF 		.word	-32769
  2063              		.cfi_endproc
  2064              	.LFE433:
-ARM GAS  /tmp/cc4okhew.s 			page 98
+ARM GAS  /tmp/ccOuvRRg.s 			page 98
 
 
  2066              		.section	.text.HAL_TIMEx_OCN_Start_DMA,"ax",%progbits
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2109 0012 0220     		movs	r0, #2
  2110              	.LVL149:
  893:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
-ARM GAS  /tmp/cc4okhew.s 			page 99
+ARM GAS  /tmp/ccOuvRRg.s 			page 99
 
 
  2111              		.loc 1 893 46 discriminator 7 view .LVU636
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  897:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
  2154              		.loc 1 897 12 discriminator 1 view .LVU648
  2155 003c 4432     		adds	r2, r2, #68
-ARM GAS  /tmp/cc4okhew.s 			page 100
+ARM GAS  /tmp/ccOuvRRg.s 			page 100
 
 
  2156              	.LVL155:
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2198              		.loc 1 897 12 discriminator 8 view .LVU660
  2199 0062 ECE7     		b	.L210
  2200              	.L195:
-ARM GAS  /tmp/cc4okhew.s 			page 101
+ARM GAS  /tmp/ccOuvRRg.s 			page 101
 
 
  899:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     {
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2238              		.loc 1 925 10 discriminator 1 view .LVU677
  2239 008e 0028     		cmp	r0, #0
  2240 0090 DCD1     		bne	.L190
-ARM GAS  /tmp/cc4okhew.s 			page 102
+ARM GAS  /tmp/ccOuvRRg.s 			page 102
 
 
  932:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2282              	.LVL165:
  995:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       {
  2283              		.loc 1 995 7 is_stmt 1 view .LVU691
-ARM GAS  /tmp/cc4okhew.s 			page 103
+ARM GAS  /tmp/ccOuvRRg.s 			page 103
 
 
  995:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       {
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2324 00f0 154A     		ldr	r2, .L212+8
  2325 00f2 4263     		str	r2, [r0, #52]
  946:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****                            Length) != HAL_OK)
-ARM GAS  /tmp/cc4okhew.s 			page 104
+ARM GAS  /tmp/ccOuvRRg.s 			page 104
 
 
  2326              		.loc 1 946 7 is_stmt 1 view .LVU706
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  967:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****                            Length) != HAL_OK)
  2366              		.loc 1 967 7 is_stmt 1 view .LVU721
  967:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****                            Length) != HAL_OK)
-ARM GAS  /tmp/cc4okhew.s 			page 105
+ARM GAS  /tmp/ccOuvRRg.s 			page 105
 
 
  2367              		.loc 1 967 83 is_stmt 0 view .LVU722
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2416              		@ frame_needed = 0, uses_anonymous_args = 0
 1023:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  2417              		.loc 1 1023 3 view .LVU730
-ARM GAS  /tmp/cc4okhew.s 			page 106
+ARM GAS  /tmp/ccOuvRRg.s 			page 106
 
 
 1026:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2458              		.loc 1 1059 3 view .LVU744
 1062:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  2459              		.loc 1 1062 5 view .LVU745
-ARM GAS  /tmp/cc4okhew.s 			page 107
+ARM GAS  /tmp/ccOuvRRg.s 			page 107
 
 
  2460 0024 2568     		ldr	r5, [r4]
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2503 0060 002E     		cmp	r6, #0
  2504 0062 11D1     		bne	.L221
 1071:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   }
-ARM GAS  /tmp/cc4okhew.s 			page 108
+ARM GAS  /tmp/ccOuvRRg.s 			page 108
 
 
  2505              		.loc 1 1071 5 is_stmt 0 discriminator 1 view .LVU757
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2546 0080 C06A     		ldr	r0, [r0, #44]
  2547              	.LVL186:
 1049:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       (void)HAL_DMA_Abort_IT(htim->hdma[TIM_DMA_ID_CC3]);
-ARM GAS  /tmp/cc4okhew.s 			page 109
+ARM GAS  /tmp/ccOuvRRg.s 			page 109
 
 
  2548              		.loc 1 1049 7 view .LVU771
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2597              		.cfi_offset 4, -8
  2598              		.cfi_offset 14, -4
  2599 0002 FFF7FEFF 		bl	HAL_TIMEx_OCN_Start
-ARM GAS  /tmp/cc4okhew.s 			page 110
+ARM GAS  /tmp/ccOuvRRg.s 			page 110
 
 
  2600              		@ sp needed
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2657              		.code	16
  2658              		.thumb_func
  2660              	HAL_TIMEx_PWMN_Stop_IT:
-ARM GAS  /tmp/cc4okhew.s 			page 111
+ARM GAS  /tmp/ccOuvRRg.s 			page 111
 
 
  2661              	.LFB485:
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2716              		.cfi_def_cfa_offset 8
  2717              		.cfi_offset 4, -8
  2718              		.cfi_offset 14, -4
-ARM GAS  /tmp/cc4okhew.s 			page 112
+ARM GAS  /tmp/ccOuvRRg.s 			page 112
 
 
  2719 0002 FFF7FEFF 		bl	HAL_TIMEx_OCN_Stop_DMA
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2765 0010 3F30     		adds	r0, r0, #63
  2766              	.LVL193:
 1597:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
-ARM GAS  /tmp/cc4okhew.s 			page 113
+ARM GAS  /tmp/ccOuvRRg.s 			page 113
 
 
  2767              		.loc 1 1597 31 view .LVU794
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1607:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       || (complementary_channel_1_state != HAL_TIM_CHANNEL_STATE_READY)
  2807              		.loc 1 1607 7 view .LVU809
  2808 0034 019B     		ldr	r3, [sp, #4]
-ARM GAS  /tmp/cc4okhew.s 			page 114
+ARM GAS  /tmp/ccOuvRRg.s 			page 114
 
 
  2809 0036 012B     		cmp	r3, #1
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1628:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
  2850              		.loc 1 1628 10 is_stmt 0 view .LVU823
  2851 006c 0026     		movs	r6, #0
-ARM GAS  /tmp/cc4okhew.s 			page 115
+ARM GAS  /tmp/ccOuvRRg.s 			page 115
 
 
  2852              	.LVL203:
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2899              		.cfi_offset 6, -8
  2900              		.cfi_offset 14, -4
 1644:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   uint32_t input_channel = (OutputChannel == TIM_CHANNEL_1) ? TIM_CHANNEL_2 : TIM_CHANNEL_1;
-ARM GAS  /tmp/cc4okhew.s 			page 116
+ARM GAS  /tmp/ccOuvRRg.s 			page 116
 
 
  2901              		.loc 1 1644 1 view .LVU833
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2942 0034 0240     		ands	r2, r0
  2943 0036 5A64     		str	r2, [r3, #68]
  2944              	.L241:
-ARM GAS  /tmp/cc4okhew.s 			page 117
+ARM GAS  /tmp/ccOuvRRg.s 			page 117
 
 
 1655:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  2983 005e 2370     		strb	r3, [r4]
 1667:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
  2984              		.loc 1 1667 3 view .LVU863
-ARM GAS  /tmp/cc4okhew.s 			page 118
+ARM GAS  /tmp/ccOuvRRg.s 			page 118
 
 
  2985              	.LVL213:
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3032 000a 2200     		movs	r2, r4
 1685:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   HAL_TIM_ChannelStateTypeDef channel_2_state = TIM_CHANNEL_STATE_GET(htim, TIM_CHANNEL_2);
  3033              		.loc 1 1685 31 view .LVU873
-ARM GAS  /tmp/cc4okhew.s 			page 119
+ARM GAS  /tmp/ccOuvRRg.s 			page 119
 
 
  3034 000c 3E37     		adds	r7, r7, #62
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1694:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       || (channel_2_state != HAL_TIM_CHANNEL_STATE_READY)
  3074              		.loc 1 1694 3 view .LVU888
 1694:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       || (channel_2_state != HAL_TIM_CHANNEL_STATE_READY)
-ARM GAS  /tmp/cc4okhew.s 			page 120
+ARM GAS  /tmp/ccOuvRRg.s 			page 120
 
 
  3075              		.loc 1 1694 6 is_stmt 0 view .LVU889
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3114              		.loc 1 1712 3 is_stmt 1 view .LVU904
  3115 005e FB68     		ldr	r3, [r7, #12]
  3116 0060 1343     		orrs	r3, r2
-ARM GAS  /tmp/cc4okhew.s 			page 121
+ARM GAS  /tmp/ccOuvRRg.s 			page 121
 
 
  3117 0062 FB60     		str	r3, [r7, #12]
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3158              	.LVL230:
 1699:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   }
  3159              		.loc 1 1699 12 view .LVU918
-ARM GAS  /tmp/cc4okhew.s 			page 122
+ARM GAS  /tmp/ccOuvRRg.s 			page 122
 
 
  3160 008c FAE7     		b	.L246
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1748:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  3205              		.loc 1 1748 3 is_stmt 1 view .LVU930
  3206 0012 F368     		ldr	r3, [r6, #12]
-ARM GAS  /tmp/cc4okhew.s 			page 123
+ARM GAS  /tmp/ccOuvRRg.s 			page 123
 
 
  3207 0014 9218     		adds	r2, r2, r2
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3248 004a 0A42     		tst	r2, r1
  3249 004c 07D1     		bne	.L252
 1758:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 124
+ARM GAS  /tmp/ccOuvRRg.s 			page 124
 
 
  3250              		.loc 1 1758 3 discriminator 1 view .LVU944
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3290 0074 11110000 		.word	4369
  3291 0078 44040000 		.word	1092
  3292 007c FF7FFFFF 		.word	-32769
-ARM GAS  /tmp/cc4okhew.s 			page 125
+ARM GAS  /tmp/ccOuvRRg.s 			page 125
 
 
  3293              		.cfi_endproc
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1825:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  3337              		.loc 1 1825 3 is_stmt 1 discriminator 2 view .LVU971
  3338 0012 0122     		movs	r2, #1
-ARM GAS  /tmp/cc4okhew.s 			page 126
+ARM GAS  /tmp/ccOuvRRg.s 			page 126
 
 
 1827:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       (InputTrigger == TIM_TS_ITR2) || (InputTrigger == TIM_TS_ITR3))
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 1838:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
  3376              		.loc 1 1838 23 view .LVU989
  3377 0036 0421     		movs	r1, #4
-ARM GAS  /tmp/cc4okhew.s 			page 127
+ARM GAS  /tmp/ccOuvRRg.s 			page 127
 
 
 1836:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Select the Commutation event source */
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3416 005a C046     		.align	2
  3417              	.L259:
  3418 005c 8FFFCFFF 		.word	-3145841
-ARM GAS  /tmp/cc4okhew.s 			page 128
+ARM GAS  /tmp/ccOuvRRg.s 			page 128
 
 
  3419 0060 FFDFFFFF 		.word	-8193
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3463 0010 22D0     		beq	.L262
 1881:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  3464              		.loc 1 1881 3 is_stmt 1 discriminator 2 view .LVU1018
-ARM GAS  /tmp/cc4okhew.s 			page 129
+ARM GAS  /tmp/ccOuvRRg.s 			page 129
 
 
  3465 0012 0122     		movs	r2, #1
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3502 0034 0A43     		orrs	r2, r1
 1894:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
  3503              		.loc 1 1894 23 view .LVU1036
-ARM GAS  /tmp/cc4okhew.s 			page 130
+ARM GAS  /tmp/ccOuvRRg.s 			page 130
 
 
  3504 0036 0421     		movs	r1, #4
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3542              	.L266:
  3543 005a C046     		.align	2
  3544              	.L265:
-ARM GAS  /tmp/cc4okhew.s 			page 131
+ARM GAS  /tmp/ccOuvRRg.s 			page 131
 
 
  3545 005c 8FFFCFFF 		.word	-3145841
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3590 0012 0123     		movs	r3, #1
 1940:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       (InputTrigger == TIM_TS_ITR2) || (InputTrigger == TIM_TS_ITR3))
  3591              		.loc 1 1940 6 is_stmt 0 view .LVU1064
-ARM GAS  /tmp/cc4okhew.s 			page 132
+ARM GAS  /tmp/ccOuvRRg.s 			page 132
 
 
  3592 0014 0A00     		movs	r2, r1
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3629              		.loc 1 1949 23 view .LVU1081
  3630 0038 5A60     		str	r2, [r3, #4]
 1951:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   htim->Instance->CR2 |= CommutationSource;
-ARM GAS  /tmp/cc4okhew.s 			page 133
+ARM GAS  /tmp/ccOuvRRg.s 			page 133
 
 
  3631              		.loc 1 1951 3 is_stmt 1 view .LVU1082
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3669              		.loc 1 1967 3 view .LVU1098
 1967:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  3670              		.loc 1 1967 3 view .LVU1099
-ARM GAS  /tmp/cc4okhew.s 			page 134
+ARM GAS  /tmp/ccOuvRRg.s 			page 134
 
 
  3671 0066 2870     		strb	r0, [r5]
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3714 0000 F0B5     		push	{r4, r5, r6, r7, lr}
  3715              	.LCFI33:
  3716              		.cfi_def_cfa_offset 20
-ARM GAS  /tmp/cc4okhew.s 			page 135
+ARM GAS  /tmp/ccOuvRRg.s 			page 135
 
 
  3717              		.cfi_offset 4, -20
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3755              		.loc 1 2004 6 is_stmt 0 view .LVU1128
  3756 0020 B242     		cmp	r2, r6
  3757 0022 03D1     		bne	.L275
-ARM GAS  /tmp/cc4okhew.s 			page 136
+ARM GAS  /tmp/ccOuvRRg.s 			page 136
 
 
 2007:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3795              		.loc 1 2026 13 is_stmt 0 view .LVU1145
  3796 0040 8023     		movs	r3, #128
  3797 0042 9843     		bics	r0, r3
-ARM GAS  /tmp/cc4okhew.s 			page 137
+ARM GAS  /tmp/ccOuvRRg.s 			page 137
 
 
  3798              	.LVL268:
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3839              		.align	1
  3840              		.global	HAL_TIMEx_ConfigBreakDeadTime
  3841              		.syntax unified
-ARM GAS  /tmp/cc4okhew.s 			page 138
+ARM GAS  /tmp/ccOuvRRg.s 			page 138
 
 
  3842              		.code	16
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3879              		.loc 1 2071 3 view .LVU1177
  3880 000c 012B     		cmp	r3, #1
  3881 000e 39D0     		beq	.L282
-ARM GAS  /tmp/cc4okhew.s 			page 139
+ARM GAS  /tmp/ccOuvRRg.s 			page 139
 
 
 2071:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2082:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_AOE, sBreakDeadTimeConfig->AutomaticOutput);
  3921              		.loc 1 2082 3 is_stmt 1 view .LVU1193
 2081:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   MODIFY_REG(tmpbdtr, TIM_BDTR_BKP, sBreakDeadTimeConfig->BreakPolarity);
-ARM GAS  /tmp/cc4okhew.s 			page 140
+ARM GAS  /tmp/ccOuvRRg.s 			page 140
 
 
  3922              		.loc 1 2081 3 is_stmt 0 view .LVU1194
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  3963              		.loc 1 2095 3 view .LVU1207
 2098:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     assert_param(IS_TIM_BREAK2_POLARITY(sBreakDeadTimeConfig->Break2Polarity));
  3964              		.loc 1 2098 5 view .LVU1208
-ARM GAS  /tmp/cc4okhew.s 			page 141
+ARM GAS  /tmp/ccOuvRRg.s 			page 141
 
 
 2099:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****     assert_param(IS_TIM_BREAK_FILTER(sBreakDeadTimeConfig->Break2Filter));
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2105:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4003              		.loc 1 2105 5 view .LVU1225
  4004 0076 0343     		orrs	r3, r0
-ARM GAS  /tmp/cc4okhew.s 			page 142
+ARM GAS  /tmp/ccOuvRRg.s 			page 142
 
 
  4005              	.LVL299:
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4048              	.LFE450:
  4050              		.section	.text.HAL_TIMEx_ConfigBreakInput,"ax",%progbits
  4051              		.align	1
-ARM GAS  /tmp/cc4okhew.s 			page 143
+ARM GAS  /tmp/ccOuvRRg.s 			page 143
 
 
  4052              		.global	HAL_TIMEx_ConfigBreakInput
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4090              		.loc 1 2139 1 view .LVU1253
  4091 0008 0300     		movs	r3, r0
 2155:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 144
+ARM GAS  /tmp/ccOuvRRg.s 			page 144
 
 
  4092              		.loc 1 2155 3 discriminator 1 view .LVU1254
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2232:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4131              		.loc 1 2232 7 view .LVU1270
  4132 002c 4340     		eors	r3, r0
-ARM GAS  /tmp/cc4okhew.s 			page 145
+ARM GAS  /tmp/ccOuvRRg.s 			page 145
 
 
  4133 002e 1C40     		ands	r4, r3
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4172              	.LVL316:
 2214:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       tmporx |= (sBreakInputConfig->Enable << bkin_enable_bitpos) & bkin_enable_mask;
  4173              		.loc 1 2214 7 is_stmt 1 view .LVU1286
-ARM GAS  /tmp/cc4okhew.s 			page 146
+ARM GAS  /tmp/ccOuvRRg.s 			page 146
 
 
 2215:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4212 0066 F0BD     		pop	{r4, r5, r6, r7, pc}
  4213              		.cfi_endproc
  4214              	.LFE451:
-ARM GAS  /tmp/cc4okhew.s 			page 147
+ARM GAS  /tmp/ccOuvRRg.s 			page 147
 
 
  4216              		.section	.text.HAL_TIMEx_RemapConfig,"ax",%progbits
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4257              		.loc 1 2297 3 discriminator 2 view .LVU1316
 2299:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4258              		.loc 1 2299 3 view .LVU1317
-ARM GAS  /tmp/cc4okhew.s 			page 148
+ARM GAS  /tmp/ccOuvRRg.s 			page 148
 
 
  4259 0012 1B68     		ldr	r3, [r3]
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4303              		.loc 1 2387 3 view .LVU1329
 2388:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4304              		.loc 1 2388 3 view .LVU1330
-ARM GAS  /tmp/cc4okhew.s 			page 149
+ARM GAS  /tmp/ccOuvRRg.s 			page 149
 
 
 2390:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4345 0024 936E     		ldr	r3, [r2, #104]
  4346              	.LVL332:
 2395:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
-ARM GAS  /tmp/cc4okhew.s 			page 150
+ARM GAS  /tmp/ccOuvRRg.s 			page 150
 
 
  4347              		.loc 1 2395 7 view .LVU1345
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4388 003e 1B68     		ldr	r3, [r3]
  4389              	.LVL341:
 2401:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       break;
-ARM GAS  /tmp/cc4okhew.s 			page 151
+ARM GAS  /tmp/ccOuvRRg.s 			page 151
 
 
  4390              		.loc 1 2401 7 is_stmt 0 view .LVU1359
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2425:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   /* Check parameters */
  4437              		.loc 1 2425 1 view .LVU1369
  4438 0008 0D00     		movs	r5, r1
-ARM GAS  /tmp/cc4okhew.s 			page 152
+ARM GAS  /tmp/ccOuvRRg.s 			page 152
 
 
 2431:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2442:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4476              		.loc 1 2442 15 is_stmt 0 view .LVU1387
  4477 002c 0370     		strb	r3, [r0]
-ARM GAS  /tmp/cc4okhew.s 			page 153
+ARM GAS  /tmp/ccOuvRRg.s 			page 153
 
 
 2444:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4521              	.LVL351:
  4522              	.L318:
 2503:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** }
-ARM GAS  /tmp/cc4okhew.s 			page 154
+ARM GAS  /tmp/ccOuvRRg.s 			page 154
 
 
  4523              		.loc 1 2503 3 view .LVU1401
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4564              		.loc 1 2489 7 is_stmt 1 view .LVU1414
 2489:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****       if ((READ_BIT(tmpbdtr, TIM_BDTR_BK2BID) == TIM_BDTR_BK2BID) &&
  4565              		.loc 1 2489 17 is_stmt 0 view .LVU1415
-ARM GAS  /tmp/cc4okhew.s 			page 155
+ARM GAS  /tmp/ccOuvRRg.s 			page 155
 
 
  4566 002a 0368     		ldr	r3, [r0]
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2524:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4612              		.loc 1 2524 3 view .LVU1426
 2526:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   {
-ARM GAS  /tmp/cc4okhew.s 			page 156
+ARM GAS  /tmp/ccOuvRRg.s 			page 156
 
 
  4613              		.loc 1 2526 3 view .LVU1427
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4653              		.loc 1 2559 65 is_stmt 1 view .LVU1441
 2559:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****         {
  4654              		.loc 1 2559 16 is_stmt 0 view .LVU1442
-ARM GAS  /tmp/cc4okhew.s 			page 157
+ARM GAS  /tmp/ccOuvRRg.s 			page 157
 
 
  4655 0020 2368     		ldr	r3, [r4]
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4695              		.loc 1 2579 1 view .LVU1456
  4696 0046 70BD     		pop	{r4, r5, r6, pc}
  4697              	.LVL372:
-ARM GAS  /tmp/cc4okhew.s 			page 158
+ARM GAS  /tmp/ccOuvRRg.s 			page 158
 
 
  4698              	.L327:
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4736              	.L332:
 2543:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****             }
  4737              		.loc 1 2543 22 view .LVU1473
-ARM GAS  /tmp/cc4okhew.s 			page 159
+ARM GAS  /tmp/ccOuvRRg.s 			page 159
 
 
  4738 006c 0320     		movs	r0, #3
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4789              		.cfi_offset 14, -4
 2732:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4790              		.loc 1 2732 15 view .LVU1481
-ARM GAS  /tmp/cc4okhew.s 			page 160
+ARM GAS  /tmp/ccOuvRRg.s 			page 160
 
 
  4791 0008 3D33     		adds	r3, r3, #61
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4841 0002 0122     		movs	r2, #1
  4842 0004 0300     		movs	r3, r0
 2747:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c ****   TIM_HandleTypeDef *htim = (TIM_HandleTypeDef *)((DMA_HandleTypeDef *)hdma)->Parent;
-ARM GAS  /tmp/cc4okhew.s 			page 161
+ARM GAS  /tmp/ccOuvRRg.s 			page 161
 
 
  4843              		.loc 1 2747 1 view .LVU1490
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4896              		.cfi_endproc
  4897              	.LFE477:
  4899              		.section	.text.HAL_TIMEx_HallSensor_GetState,"ax",%progbits
-ARM GAS  /tmp/cc4okhew.s 			page 162
+ARM GAS  /tmp/ccOuvRRg.s 			page 162
 
 
  4900              		.align	1
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
 2705:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4947              		.loc 1 2705 3 view .LVU1506
 2705:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
-ARM GAS  /tmp/cc4okhew.s 			page 163
+ARM GAS  /tmp/ccOuvRRg.s 			page 163
 
 
  4948              		.loc 1 2705 19 is_stmt 0 view .LVU1507
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  4989              	.LVL394:
 2705:Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_hal_tim_ex.c **** 
  4990              		.loc 1 2705 19 discriminator 8 view .LVU1521
-ARM GAS  /tmp/cc4okhew.s 			page 164
+ARM GAS  /tmp/ccOuvRRg.s 			page 164
 
 
  4991 001e F2E7     		b	.L354
@@ -9796,137 +9796,137 @@ ARM GAS  /tmp/cc4okhew.s 			page 1
  5004              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h"
  5005              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  5006              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h"
-ARM GAS  /tmp/cc4okhew.s 			page 165
+ARM GAS  /tmp/ccOuvRRg.s 			page 165
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 stm32g0xx_hal_tim_ex.c
-     /tmp/cc4okhew.s:19     .text.TIM_CCxNChannelCmd:00000000 $t
-     /tmp/cc4okhew.s:24     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
-     /tmp/cc4okhew.s:73     .text.TIM_DMAErrorCCxN:00000000 $t
-     /tmp/cc4okhew.s:78     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
-     /tmp/cc4okhew.s:166    .text.TIM_DMADelayPulseNCplt:00000000 $t
-     /tmp/cc4okhew.s:171    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
-     /tmp/cc4okhew.s:291    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
-     /tmp/cc4okhew.s:297    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
-     /tmp/cc4okhew.s:313    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
-     /tmp/cc4okhew.s:319    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
-     /tmp/cc4okhew.s:539    .text.HAL_TIMEx_HallSensor_Init:000000c4 $d
-     /tmp/cc4okhew.s:545    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
-     /tmp/cc4okhew.s:551    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
-     /tmp/cc4okhew.s:564    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
-     /tmp/cc4okhew.s:570    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
-     /tmp/cc4okhew.s:655    .text.HAL_TIMEx_HallSensor_DeInit:00000048 $d
-     /tmp/cc4okhew.s:661    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
-     /tmp/cc4okhew.s:667    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
-     /tmp/cc4okhew.s:829    .text.HAL_TIMEx_HallSensor_Start:0000008c $d
-     /tmp/cc4okhew.s:836    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
-     /tmp/cc4okhew.s:842    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
-     /tmp/cc4okhew.s:914    .text.HAL_TIMEx_HallSensor_Stop:0000003c $d
-     /tmp/cc4okhew.s:920    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
-     /tmp/cc4okhew.s:926    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
-     /tmp/cc4okhew.s:1093   .text.HAL_TIMEx_HallSensor_Start_IT:00000090 $d
-     /tmp/cc4okhew.s:1100   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
-     /tmp/cc4okhew.s:1106   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
-     /tmp/cc4okhew.s:1183   .text.HAL_TIMEx_HallSensor_Stop_IT:00000044 $d
-     /tmp/cc4okhew.s:1189   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
-     /tmp/cc4okhew.s:1195   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
-     /tmp/cc4okhew.s:1379   .text.HAL_TIMEx_HallSensor_Start_DMA:000000a0 $d
-     /tmp/cc4okhew.s:1389   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
-     /tmp/cc4okhew.s:1395   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
-     /tmp/cc4okhew.s:1475   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000048 $d
-     /tmp/cc4okhew.s:1482   .text.HAL_TIMEx_OCN_Start:00000000 $t
-     /tmp/cc4okhew.s:1488   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
-     /tmp/cc4okhew.s:1603   .text.HAL_TIMEx_OCN_Start:0000006c $d
-     /tmp/cc4okhew.s:1610   .text.HAL_TIMEx_OCN_Stop:00000000 $t
-     /tmp/cc4okhew.s:1616   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
-     /tmp/cc4okhew.s:1728   .text.HAL_TIMEx_OCN_Stop:00000060 $d
-     /tmp/cc4okhew.s:1735   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
-     /tmp/cc4okhew.s:1741   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
-     /tmp/cc4okhew.s:1897   .text.HAL_TIMEx_OCN_Start_IT:00000098 $d
-     /tmp/cc4okhew.s:1904   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
-     /tmp/cc4okhew.s:1910   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
-     /tmp/cc4okhew.s:2060   .text.HAL_TIMEx_OCN_Stop_IT:00000088 $d
-     /tmp/cc4okhew.s:2067   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
-     /tmp/cc4okhew.s:2073   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
-     /tmp/cc4okhew.s:2394   .text.HAL_TIMEx_OCN_Start_DMA:00000140 $d
-     /tmp/cc4okhew.s:2404   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
-     /tmp/cc4okhew.s:2410   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
-     /tmp/cc4okhew.s:2572   .text.HAL_TIMEx_OCN_Stop_DMA:00000094 $d
-     /tmp/cc4okhew.s:2582   .text.HAL_TIMEx_PWMN_Start:00000000 $t
-     /tmp/cc4okhew.s:2588   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
-     /tmp/cc4okhew.s:2606   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
-ARM GAS  /tmp/cc4okhew.s 			page 166
+     /tmp/ccOuvRRg.s:19     .text.TIM_CCxNChannelCmd:00000000 $t
+     /tmp/ccOuvRRg.s:24     .text.TIM_CCxNChannelCmd:00000000 TIM_CCxNChannelCmd
+     /tmp/ccOuvRRg.s:73     .text.TIM_DMAErrorCCxN:00000000 $t
+     /tmp/ccOuvRRg.s:78     .text.TIM_DMAErrorCCxN:00000000 TIM_DMAErrorCCxN
+     /tmp/ccOuvRRg.s:166    .text.TIM_DMADelayPulseNCplt:00000000 $t
+     /tmp/ccOuvRRg.s:171    .text.TIM_DMADelayPulseNCplt:00000000 TIM_DMADelayPulseNCplt
+     /tmp/ccOuvRRg.s:291    .text.HAL_TIMEx_HallSensor_MspInit:00000000 $t
+     /tmp/ccOuvRRg.s:297    .text.HAL_TIMEx_HallSensor_MspInit:00000000 HAL_TIMEx_HallSensor_MspInit
+     /tmp/ccOuvRRg.s:313    .text.HAL_TIMEx_HallSensor_Init:00000000 $t
+     /tmp/ccOuvRRg.s:319    .text.HAL_TIMEx_HallSensor_Init:00000000 HAL_TIMEx_HallSensor_Init
+     /tmp/ccOuvRRg.s:539    .text.HAL_TIMEx_HallSensor_Init:000000c4 $d
+     /tmp/ccOuvRRg.s:545    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 $t
+     /tmp/ccOuvRRg.s:551    .text.HAL_TIMEx_HallSensor_MspDeInit:00000000 HAL_TIMEx_HallSensor_MspDeInit
+     /tmp/ccOuvRRg.s:564    .text.HAL_TIMEx_HallSensor_DeInit:00000000 $t
+     /tmp/ccOuvRRg.s:570    .text.HAL_TIMEx_HallSensor_DeInit:00000000 HAL_TIMEx_HallSensor_DeInit
+     /tmp/ccOuvRRg.s:655    .text.HAL_TIMEx_HallSensor_DeInit:00000048 $d
+     /tmp/ccOuvRRg.s:661    .text.HAL_TIMEx_HallSensor_Start:00000000 $t
+     /tmp/ccOuvRRg.s:667    .text.HAL_TIMEx_HallSensor_Start:00000000 HAL_TIMEx_HallSensor_Start
+     /tmp/ccOuvRRg.s:829    .text.HAL_TIMEx_HallSensor_Start:0000008c $d
+     /tmp/ccOuvRRg.s:836    .text.HAL_TIMEx_HallSensor_Stop:00000000 $t
+     /tmp/ccOuvRRg.s:842    .text.HAL_TIMEx_HallSensor_Stop:00000000 HAL_TIMEx_HallSensor_Stop
+     /tmp/ccOuvRRg.s:914    .text.HAL_TIMEx_HallSensor_Stop:0000003c $d
+     /tmp/ccOuvRRg.s:920    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 $t
+     /tmp/ccOuvRRg.s:926    .text.HAL_TIMEx_HallSensor_Start_IT:00000000 HAL_TIMEx_HallSensor_Start_IT
+     /tmp/ccOuvRRg.s:1093   .text.HAL_TIMEx_HallSensor_Start_IT:00000090 $d
+     /tmp/ccOuvRRg.s:1100   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 $t
+     /tmp/ccOuvRRg.s:1106   .text.HAL_TIMEx_HallSensor_Stop_IT:00000000 HAL_TIMEx_HallSensor_Stop_IT
+     /tmp/ccOuvRRg.s:1183   .text.HAL_TIMEx_HallSensor_Stop_IT:00000044 $d
+     /tmp/ccOuvRRg.s:1189   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:1195   .text.HAL_TIMEx_HallSensor_Start_DMA:00000000 HAL_TIMEx_HallSensor_Start_DMA
+     /tmp/ccOuvRRg.s:1379   .text.HAL_TIMEx_HallSensor_Start_DMA:000000a0 $d
+     /tmp/ccOuvRRg.s:1389   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:1395   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000000 HAL_TIMEx_HallSensor_Stop_DMA
+     /tmp/ccOuvRRg.s:1475   .text.HAL_TIMEx_HallSensor_Stop_DMA:00000048 $d
+     /tmp/ccOuvRRg.s:1482   .text.HAL_TIMEx_OCN_Start:00000000 $t
+     /tmp/ccOuvRRg.s:1488   .text.HAL_TIMEx_OCN_Start:00000000 HAL_TIMEx_OCN_Start
+     /tmp/ccOuvRRg.s:1603   .text.HAL_TIMEx_OCN_Start:0000006c $d
+     /tmp/ccOuvRRg.s:1610   .text.HAL_TIMEx_OCN_Stop:00000000 $t
+     /tmp/ccOuvRRg.s:1616   .text.HAL_TIMEx_OCN_Stop:00000000 HAL_TIMEx_OCN_Stop
+     /tmp/ccOuvRRg.s:1728   .text.HAL_TIMEx_OCN_Stop:00000060 $d
+     /tmp/ccOuvRRg.s:1735   .text.HAL_TIMEx_OCN_Start_IT:00000000 $t
+     /tmp/ccOuvRRg.s:1741   .text.HAL_TIMEx_OCN_Start_IT:00000000 HAL_TIMEx_OCN_Start_IT
+     /tmp/ccOuvRRg.s:1897   .text.HAL_TIMEx_OCN_Start_IT:00000098 $d
+     /tmp/ccOuvRRg.s:1904   .text.HAL_TIMEx_OCN_Stop_IT:00000000 $t
+     /tmp/ccOuvRRg.s:1910   .text.HAL_TIMEx_OCN_Stop_IT:00000000 HAL_TIMEx_OCN_Stop_IT
+     /tmp/ccOuvRRg.s:2060   .text.HAL_TIMEx_OCN_Stop_IT:00000088 $d
+     /tmp/ccOuvRRg.s:2067   .text.HAL_TIMEx_OCN_Start_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:2073   .text.HAL_TIMEx_OCN_Start_DMA:00000000 HAL_TIMEx_OCN_Start_DMA
+     /tmp/ccOuvRRg.s:2394   .text.HAL_TIMEx_OCN_Start_DMA:00000140 $d
+     /tmp/ccOuvRRg.s:2404   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:2410   .text.HAL_TIMEx_OCN_Stop_DMA:00000000 HAL_TIMEx_OCN_Stop_DMA
+     /tmp/ccOuvRRg.s:2572   .text.HAL_TIMEx_OCN_Stop_DMA:00000094 $d
+     /tmp/ccOuvRRg.s:2582   .text.HAL_TIMEx_PWMN_Start:00000000 $t
+     /tmp/ccOuvRRg.s:2588   .text.HAL_TIMEx_PWMN_Start:00000000 HAL_TIMEx_PWMN_Start
+     /tmp/ccOuvRRg.s:2606   .text.HAL_TIMEx_PWMN_Stop:00000000 $t
+ARM GAS  /tmp/ccOuvRRg.s 			page 166
 
 
-     /tmp/cc4okhew.s:2612   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
-     /tmp/cc4okhew.s:2630   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
-     /tmp/cc4okhew.s:2636   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
-     /tmp/cc4okhew.s:2654   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
-     /tmp/cc4okhew.s:2660   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
-     /tmp/cc4okhew.s:2678   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
-     /tmp/cc4okhew.s:2684   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
-     /tmp/cc4okhew.s:2702   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
-     /tmp/cc4okhew.s:2708   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
-     /tmp/cc4okhew.s:2726   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
-     /tmp/cc4okhew.s:2732   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
-     /tmp/cc4okhew.s:2879   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
-     /tmp/cc4okhew.s:2885   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
-     /tmp/cc4okhew.s:2991   .text.HAL_TIMEx_OnePulseN_Stop:00000064 $d
-     /tmp/cc4okhew.s:2998   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
-     /tmp/cc4okhew.s:3004   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
-     /tmp/cc4okhew.s:3165   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
-     /tmp/cc4okhew.s:3171   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
-     /tmp/cc4okhew.s:3290   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000074 $d
-     /tmp/cc4okhew.s:3297   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
-     /tmp/cc4okhew.s:3303   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
-     /tmp/cc4okhew.s:3418   .text.HAL_TIMEx_ConfigCommutEvent:0000005c $d
-     /tmp/cc4okhew.s:3424   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
-     /tmp/cc4okhew.s:3430   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
-     /tmp/cc4okhew.s:3545   .text.HAL_TIMEx_ConfigCommutEvent_IT:0000005c $d
-     /tmp/cc4okhew.s:3551   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
-     /tmp/cc4okhew.s:3557   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
-     /tmp/cc4okhew.s:3685   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000006c $d
-     /tmp/cc4okhew.s:4769   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
-     /tmp/cc4okhew.s:4828   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
-     /tmp/cc4okhew.s:3693   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
-     /tmp/cc4okhew.s:3699   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
-     /tmp/cc4okhew.s:3832   .text.HAL_TIMEx_MasterConfigSynchronization:00000054 $d
-     /tmp/cc4okhew.s:3839   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
-     /tmp/cc4okhew.s:3845   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
-     /tmp/cc4okhew.s:4034   .text.HAL_TIMEx_ConfigBreakDeadTime:00000088 $d
-     /tmp/cc4okhew.s:4051   .text.HAL_TIMEx_ConfigBreakInput:00000000 $t
-     /tmp/cc4okhew.s:4057   .text.HAL_TIMEx_ConfigBreakInput:00000000 HAL_TIMEx_ConfigBreakInput
-     /tmp/cc4okhew.s:4217   .text.HAL_TIMEx_RemapConfig:00000000 $t
-     /tmp/cc4okhew.s:4223   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
-     /tmp/cc4okhew.s:4284   .text.HAL_TIMEx_RemapConfig:00000024 $d
-     /tmp/cc4okhew.s:4289   .text.HAL_TIMEx_TISelection:00000000 $t
-     /tmp/cc4okhew.s:4295   .text.HAL_TIMEx_TISelection:00000000 HAL_TIMEx_TISelection
-     /tmp/cc4okhew.s:4403   .text.HAL_TIMEx_TISelection:0000004c $d
-     /tmp/cc4okhew.s:4409   .text.HAL_TIMEx_GroupChannel5:00000000 $t
-     /tmp/cc4okhew.s:4415   .text.HAL_TIMEx_GroupChannel5:00000000 HAL_TIMEx_GroupChannel5
-     /tmp/cc4okhew.s:4497   .text.HAL_TIMEx_DisarmBreakInput:00000000 $t
-     /tmp/cc4okhew.s:4503   .text.HAL_TIMEx_DisarmBreakInput:00000000 HAL_TIMEx_DisarmBreakInput
-     /tmp/cc4okhew.s:4590   .text.HAL_TIMEx_DisarmBreakInput:00000044 $d
-     /tmp/cc4okhew.s:4596   .text.HAL_TIMEx_ReArmBreakInput:00000000 $t
-     /tmp/cc4okhew.s:4602   .text.HAL_TIMEx_ReArmBreakInput:00000000 HAL_TIMEx_ReArmBreakInput
-     /tmp/cc4okhew.s:4744   .text.HAL_TIMEx_CommutCallback:00000000 $t
-     /tmp/cc4okhew.s:4750   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
-     /tmp/cc4okhew.s:4763   .text.TIMEx_DMACommutationCplt:00000000 $t
-     /tmp/cc4okhew.s:4803   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
-     /tmp/cc4okhew.s:4809   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
-     /tmp/cc4okhew.s:4822   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
-ARM GAS  /tmp/cc4okhew.s 			page 167
+     /tmp/ccOuvRRg.s:2612   .text.HAL_TIMEx_PWMN_Stop:00000000 HAL_TIMEx_PWMN_Stop
+     /tmp/ccOuvRRg.s:2630   .text.HAL_TIMEx_PWMN_Start_IT:00000000 $t
+     /tmp/ccOuvRRg.s:2636   .text.HAL_TIMEx_PWMN_Start_IT:00000000 HAL_TIMEx_PWMN_Start_IT
+     /tmp/ccOuvRRg.s:2654   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 $t
+     /tmp/ccOuvRRg.s:2660   .text.HAL_TIMEx_PWMN_Stop_IT:00000000 HAL_TIMEx_PWMN_Stop_IT
+     /tmp/ccOuvRRg.s:2678   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:2684   .text.HAL_TIMEx_PWMN_Start_DMA:00000000 HAL_TIMEx_PWMN_Start_DMA
+     /tmp/ccOuvRRg.s:2702   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:2708   .text.HAL_TIMEx_PWMN_Stop_DMA:00000000 HAL_TIMEx_PWMN_Stop_DMA
+     /tmp/ccOuvRRg.s:2726   .text.HAL_TIMEx_OnePulseN_Start:00000000 $t
+     /tmp/ccOuvRRg.s:2732   .text.HAL_TIMEx_OnePulseN_Start:00000000 HAL_TIMEx_OnePulseN_Start
+     /tmp/ccOuvRRg.s:2879   .text.HAL_TIMEx_OnePulseN_Stop:00000000 $t
+     /tmp/ccOuvRRg.s:2885   .text.HAL_TIMEx_OnePulseN_Stop:00000000 HAL_TIMEx_OnePulseN_Stop
+     /tmp/ccOuvRRg.s:2991   .text.HAL_TIMEx_OnePulseN_Stop:00000064 $d
+     /tmp/ccOuvRRg.s:2998   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 $t
+     /tmp/ccOuvRRg.s:3004   .text.HAL_TIMEx_OnePulseN_Start_IT:00000000 HAL_TIMEx_OnePulseN_Start_IT
+     /tmp/ccOuvRRg.s:3165   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 $t
+     /tmp/ccOuvRRg.s:3171   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000000 HAL_TIMEx_OnePulseN_Stop_IT
+     /tmp/ccOuvRRg.s:3290   .text.HAL_TIMEx_OnePulseN_Stop_IT:00000074 $d
+     /tmp/ccOuvRRg.s:3297   .text.HAL_TIMEx_ConfigCommutEvent:00000000 $t
+     /tmp/ccOuvRRg.s:3303   .text.HAL_TIMEx_ConfigCommutEvent:00000000 HAL_TIMEx_ConfigCommutEvent
+     /tmp/ccOuvRRg.s:3418   .text.HAL_TIMEx_ConfigCommutEvent:0000005c $d
+     /tmp/ccOuvRRg.s:3424   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 $t
+     /tmp/ccOuvRRg.s:3430   .text.HAL_TIMEx_ConfigCommutEvent_IT:00000000 HAL_TIMEx_ConfigCommutEvent_IT
+     /tmp/ccOuvRRg.s:3545   .text.HAL_TIMEx_ConfigCommutEvent_IT:0000005c $d
+     /tmp/ccOuvRRg.s:3551   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 $t
+     /tmp/ccOuvRRg.s:3557   .text.HAL_TIMEx_ConfigCommutEvent_DMA:00000000 HAL_TIMEx_ConfigCommutEvent_DMA
+     /tmp/ccOuvRRg.s:3685   .text.HAL_TIMEx_ConfigCommutEvent_DMA:0000006c $d
+     /tmp/ccOuvRRg.s:4769   .text.TIMEx_DMACommutationCplt:00000000 TIMEx_DMACommutationCplt
+     /tmp/ccOuvRRg.s:4828   .text.TIMEx_DMACommutationHalfCplt:00000000 TIMEx_DMACommutationHalfCplt
+     /tmp/ccOuvRRg.s:3693   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 $t
+     /tmp/ccOuvRRg.s:3699   .text.HAL_TIMEx_MasterConfigSynchronization:00000000 HAL_TIMEx_MasterConfigSynchronization
+     /tmp/ccOuvRRg.s:3832   .text.HAL_TIMEx_MasterConfigSynchronization:00000054 $d
+     /tmp/ccOuvRRg.s:3839   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 $t
+     /tmp/ccOuvRRg.s:3845   .text.HAL_TIMEx_ConfigBreakDeadTime:00000000 HAL_TIMEx_ConfigBreakDeadTime
+     /tmp/ccOuvRRg.s:4034   .text.HAL_TIMEx_ConfigBreakDeadTime:00000088 $d
+     /tmp/ccOuvRRg.s:4051   .text.HAL_TIMEx_ConfigBreakInput:00000000 $t
+     /tmp/ccOuvRRg.s:4057   .text.HAL_TIMEx_ConfigBreakInput:00000000 HAL_TIMEx_ConfigBreakInput
+     /tmp/ccOuvRRg.s:4217   .text.HAL_TIMEx_RemapConfig:00000000 $t
+     /tmp/ccOuvRRg.s:4223   .text.HAL_TIMEx_RemapConfig:00000000 HAL_TIMEx_RemapConfig
+     /tmp/ccOuvRRg.s:4284   .text.HAL_TIMEx_RemapConfig:00000024 $d
+     /tmp/ccOuvRRg.s:4289   .text.HAL_TIMEx_TISelection:00000000 $t
+     /tmp/ccOuvRRg.s:4295   .text.HAL_TIMEx_TISelection:00000000 HAL_TIMEx_TISelection
+     /tmp/ccOuvRRg.s:4403   .text.HAL_TIMEx_TISelection:0000004c $d
+     /tmp/ccOuvRRg.s:4409   .text.HAL_TIMEx_GroupChannel5:00000000 $t
+     /tmp/ccOuvRRg.s:4415   .text.HAL_TIMEx_GroupChannel5:00000000 HAL_TIMEx_GroupChannel5
+     /tmp/ccOuvRRg.s:4497   .text.HAL_TIMEx_DisarmBreakInput:00000000 $t
+     /tmp/ccOuvRRg.s:4503   .text.HAL_TIMEx_DisarmBreakInput:00000000 HAL_TIMEx_DisarmBreakInput
+     /tmp/ccOuvRRg.s:4590   .text.HAL_TIMEx_DisarmBreakInput:00000044 $d
+     /tmp/ccOuvRRg.s:4596   .text.HAL_TIMEx_ReArmBreakInput:00000000 $t
+     /tmp/ccOuvRRg.s:4602   .text.HAL_TIMEx_ReArmBreakInput:00000000 HAL_TIMEx_ReArmBreakInput
+     /tmp/ccOuvRRg.s:4744   .text.HAL_TIMEx_CommutCallback:00000000 $t
+     /tmp/ccOuvRRg.s:4750   .text.HAL_TIMEx_CommutCallback:00000000 HAL_TIMEx_CommutCallback
+     /tmp/ccOuvRRg.s:4763   .text.TIMEx_DMACommutationCplt:00000000 $t
+     /tmp/ccOuvRRg.s:4803   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 $t
+     /tmp/ccOuvRRg.s:4809   .text.HAL_TIMEx_CommutHalfCpltCallback:00000000 HAL_TIMEx_CommutHalfCpltCallback
+     /tmp/ccOuvRRg.s:4822   .text.TIMEx_DMACommutationHalfCplt:00000000 $t
+ARM GAS  /tmp/ccOuvRRg.s 			page 167
 
 
-     /tmp/cc4okhew.s:4862   .text.HAL_TIMEx_BreakCallback:00000000 $t
-     /tmp/cc4okhew.s:4868   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
-     /tmp/cc4okhew.s:4881   .text.HAL_TIMEx_Break2Callback:00000000 $t
-     /tmp/cc4okhew.s:4887   .text.HAL_TIMEx_Break2Callback:00000000 HAL_TIMEx_Break2Callback
-     /tmp/cc4okhew.s:4900   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
-     /tmp/cc4okhew.s:4906   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
-     /tmp/cc4okhew.s:4931   .text.HAL_TIMEx_GetChannelNState:00000000 $t
-     /tmp/cc4okhew.s:4937   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
+     /tmp/ccOuvRRg.s:4862   .text.HAL_TIMEx_BreakCallback:00000000 $t
+     /tmp/ccOuvRRg.s:4868   .text.HAL_TIMEx_BreakCallback:00000000 HAL_TIMEx_BreakCallback
+     /tmp/ccOuvRRg.s:4881   .text.HAL_TIMEx_Break2Callback:00000000 $t
+     /tmp/ccOuvRRg.s:4887   .text.HAL_TIMEx_Break2Callback:00000000 HAL_TIMEx_Break2Callback
+     /tmp/ccOuvRRg.s:4900   .text.HAL_TIMEx_HallSensor_GetState:00000000 $t
+     /tmp/ccOuvRRg.s:4906   .text.HAL_TIMEx_HallSensor_GetState:00000000 HAL_TIMEx_HallSensor_GetState
+     /tmp/ccOuvRRg.s:4931   .text.HAL_TIMEx_GetChannelNState:00000000 $t
+     /tmp/ccOuvRRg.s:4937   .text.HAL_TIMEx_GetChannelNState:00000000 HAL_TIMEx_GetChannelNState
 
 UNDEFINED SYMBOLS
 HAL_TIM_ErrorCallback

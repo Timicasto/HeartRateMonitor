@@ -39,7 +39,7 @@ build/main.o: Core/Src/main.cpp Core/Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h Core/Inc/adc.h \
  Core/Inc/main.h Core/Inc/dma.h Core/Inc/i2c.h Core/Inc/spi.h \
  Core/Inc/tim.h Core/Inc/usart.h Core/Inc/gpio.h Core/Inc/beat.h \
- Core/Inc/logger.h Core/Inc/screen.h
+ Core/Inc/logger.h Core/Inc/screen.h Core/Inc/color.h
 Core/Inc/main.h:
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 Core/Inc/stm32g0xx_hal_conf.h:
@@ -91,3 +91,4 @@ Core/Inc/gpio.h:
 Core/Inc/beat.h:
 Core/Inc/logger.h:
 Core/Inc/screen.h:
+Core/Inc/color.h:

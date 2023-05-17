@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccEQjZ0t.s 			page 1
+ARM GAS  /tmp/ccxFTUsL.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
    6:Core/Src/beat.cpp ****         max = 0;
   50              		.loc 1 6 9 is_stmt 1 view .LVU6
   51              		.loc 1 6 13 is_stmt 0 view .LVU7
-ARM GAS  /tmp/ccEQjZ0t.s 			page 2
+ARM GAS  /tmp/ccxFTUsL.s 			page 2
 
 
   52 000e 0381     		strh	r3, [r0, #8]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
   31:Core/Src/beat.cpp ****     }
   32:Core/Src/beat.cpp ****     c++;
   76              		.loc 1 32 5 is_stmt 1 view .LVU20
-ARM GAS  /tmp/ccEQjZ0t.s 			page 3
+ARM GAS  /tmp/ccxFTUsL.s 			page 3
 
 
   77              		.loc 1 32 6 is_stmt 0 view .LVU21
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
  116              		.loc 1 20 45 is_stmt 0 view .LVU36
  117 0046 FA25     		movs	r5, #250
  118 0048 ED00     		lsls	r5, r5, #3
-ARM GAS  /tmp/ccEQjZ0t.s 			page 4
+ARM GAS  /tmp/ccxFTUsL.s 			page 4
 
 
  119 004a 4D19     		adds	r5, r1, r5
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
  161              		.thumb_func
  163              	_ZN4Beat7getRateEv:
  164              		.fnstart
-ARM GAS  /tmp/ccEQjZ0t.s 			page 5
+ARM GAS  /tmp/ccxFTUsL.s 			page 5
 
 
  165              	.LVL4:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
   38:Core/Src/beat.cpp ****         counter += rate;
  207              		.loc 1 38 20 is_stmt 1 view .LVU66
  208 0014 8B42     		cmp	r3, r1
-ARM GAS  /tmp/ccEQjZ0t.s 			page 6
+ARM GAS  /tmp/ccxFTUsL.s 			page 6
 
 
  209 0016 F9D9     		bls	.L14
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
  254              	.LFE422:
  255              		.cantunwind
  256              		.fnend
-ARM GAS  /tmp/ccEQjZ0t.s 			page 7
+ARM GAS  /tmp/ccxFTUsL.s 			page 7
 
 
  258              		.text
@@ -367,21 +367,21 @@ ARM GAS  /tmp/ccEQjZ0t.s 			page 1
  261              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
  262              		.file 4 "Core/Src/../Inc/beat.h"
  263              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/ccEQjZ0t.s 			page 8
+ARM GAS  /tmp/ccxFTUsL.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 beat.cpp
-     /tmp/ccEQjZ0t.s:19     .text._ZN4Beat6updateEt:00000000 $t
-     /tmp/ccEQjZ0t.s:25     .text._ZN4Beat6updateEt:00000000 _ZN4Beat6updateEt
-     /tmp/ccEQjZ0t.s:150    .text._ZN4Beat6updateEt:00000064 $d
+     /tmp/ccxFTUsL.s:19     .text._ZN4Beat6updateEt:00000000 $t
+     /tmp/ccxFTUsL.s:25     .text._ZN4Beat6updateEt:00000000 _ZN4Beat6updateEt
+     /tmp/ccxFTUsL.s:150    .text._ZN4Beat6updateEt:00000064 $d
 .ARM.exidx.text._ZN4Beat6updateEt:00000000 $d
-     /tmp/ccEQjZ0t.s:157    .text._ZN4Beat7getRateEv:00000000 $t
-     /tmp/ccEQjZ0t.s:163    .text._ZN4Beat7getRateEv:00000000 _ZN4Beat7getRateEv
-     /tmp/ccEQjZ0t.s:224    .text._ZN4Beat7getRateEv:00000020 $d
+     /tmp/ccxFTUsL.s:157    .text._ZN4Beat7getRateEv:00000000 $t
+     /tmp/ccxFTUsL.s:163    .text._ZN4Beat7getRateEv:00000000 _ZN4Beat7getRateEv
+     /tmp/ccxFTUsL.s:224    .text._ZN4Beat7getRateEv:00000020 $d
 .ARM.exidx.text._ZN4Beat7getRateEv:00000000 $d
-     /tmp/ccEQjZ0t.s:231    .text._ZNK4Beat7isValidEv:00000000 $t
-     /tmp/ccEQjZ0t.s:237    .text._ZNK4Beat7isValidEv:00000000 _ZNK4Beat7isValidEv
+     /tmp/ccxFTUsL.s:231    .text._ZNK4Beat7isValidEv:00000000 $t
+     /tmp/ccxFTUsL.s:237    .text._ZNK4Beat7isValidEv:00000000 _ZNK4Beat7isValidEv
 .ARM.exidx.text._ZNK4Beat7isValidEv:00000000 $d
 
 NO UNDEFINED SYMBOLS

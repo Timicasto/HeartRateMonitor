@@ -158,6 +158,7 @@ void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t 
 	sendData(endY + 3);
 
 	sendCommand(0x2C);
+	sendData(0x00);
 
 	for (int i = 0; i < (endX - startX); ++i) {
 		for (int j = 0; j < (endY - startY); ++j) {
@@ -175,8 +176,11 @@ void Screen::reset() {
 
 void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_t color) {
 	uint16_t currentX = x;
+	
 	for (int i = 0 ; i < length ; ++i) {
 		setRegion(currentX, y, currentX + 16, y + 30);
+		sendData(0x00);
+		
 		if (str[i] == '.') {
 			for (const auto& item : fonts[10]) {
 				sendWdata(((item >> 7) & 0x01) ? 0x0000 : color);
@@ -200,6 +204,7 @@ void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_
 				sendWdata((item & 0x01) ? 0x0000 : color);
 			}
 		}
+		currentX += 16;
 	}
 }
 
@@ -208,13 +213,13 @@ void Screen::setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_
 	sendData(0x00);
 	sendData(startX + 2);
 	sendData(0x00);
-	sendData(stopX + 2);
+	sendData(stopX + 1);
 	
 	sendCommand(0x2B);
 	sendData(0x00);
 	sendData(startY + 3);
 	sendData(0x00);
-	sendData(stopY + 3);
+	sendData(stopY + 2);
 	
 	sendCommand(0x2C);
 }

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccTl6GWR.s 			page 1
+ARM GAS  /tmp/ccCt0Q1I.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  /tmp/ccTl6GWR.s 			page 2
+ARM GAS  /tmp/ccCt0Q1I.s 			page 2
 
 
   33:Core/Src/gpio.c **** /* USER CODE END 1 */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
   60              	.LBE3:
   61              	.LBB4:
   50:Core/Src/gpio.c ****   __HAL_RCC_GPIOC_CLK_ENABLE();
-ARM GAS  /tmp/ccTl6GWR.s 			page 3
+ARM GAS  /tmp/ccCt0Q1I.s 			page 3
 
 
   62              		.loc 1 50 3 view .LVU8
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
   94              	.LBE7:
   64:Core/Src/gpio.c ****   GPIO_InitStruct.Pull = GPIO_NOPULL;
   95              		.loc 1 64 24 is_stmt 0 view .LVU20
-ARM GAS  /tmp/ccTl6GWR.s 			page 4
+ARM GAS  /tmp/ccCt0Q1I.s 			page 4
 
 
   96 0030 0327     		movs	r7, #3
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
  135 004c 0902     		lsls	r1, r1, #8
  136              	.LBB13:
   52:Core/Src/gpio.c **** 
-ARM GAS  /tmp/ccTl6GWR.s 			page 5
+ARM GAS  /tmp/ccCt0Q1I.s 			page 5
 
 
  137              		.loc 1 52 3 view .LVU36
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
  172              		.loc 1 69 23 view .LVU52
  173 0072 1B02     		lsls	r3, r3, #8
  174              		.loc 1 73 3 view .LVU53
-ARM GAS  /tmp/ccTl6GWR.s 			page 6
+ARM GAS  /tmp/ccCt0Q1I.s 			page 6
 
 
  175 0074 0E48     		ldr	r0, .L2+4
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
  208 0090 FFF7FEFF 		bl	HAL_GPIO_Init
  209              	.LVL5:
   81:Core/Src/gpio.c **** 
-ARM GAS  /tmp/ccTl6GWR.s 			page 7
+ARM GAS  /tmp/ccCt0Q1I.s 			page 7
 
 
   82:Core/Src/gpio.c ****   /*Configure GPIO pins : PA8 PA15 */
@@ -415,14 +415,14 @@ ARM GAS  /tmp/ccTl6GWR.s 			page 1
  249              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
  250              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  251              		.file 7 "<built-in>"
-ARM GAS  /tmp/ccTl6GWR.s 			page 8
+ARM GAS  /tmp/ccCt0Q1I.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-     /tmp/ccTl6GWR.s:19     .text.MX_GPIO_Init:00000000 $t
-     /tmp/ccTl6GWR.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-     /tmp/ccTl6GWR.s:237    .text.MX_GPIO_Init:000000ac $d
+     /tmp/ccCt0Q1I.s:19     .text.MX_GPIO_Init:00000000 $t
+     /tmp/ccCt0Q1I.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+     /tmp/ccCt0Q1I.s:237    .text.MX_GPIO_Init:000000ac $d
 
 UNDEFINED SYMBOLS
 memset
