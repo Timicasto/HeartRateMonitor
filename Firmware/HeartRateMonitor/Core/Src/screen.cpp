@@ -158,13 +158,9 @@ void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t 
 	sendData(endY + 3);
 
 	sendCommand(0x2C);
-	sendData(0x00);
+//	sendData(0x00);
 
-	for (int i = 0; i < (endX - startX); ++i) {
-		for (int j = 0; j < (endY - startY); ++j) {
-			sendWdata(color);
-		}
-	}
+	sendWdata(color, (endX-startX+1)*(endY-startY+1));
 }
 
 void Screen::reset() {
@@ -177,33 +173,35 @@ void Screen::reset() {
 void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_t color) {
 	uint16_t currentX = x;
 	
-	for (int i = 0 ; i < length ; ++i) {
+	for (int j = 0 ; j < length ; ++j) {
 		setRegion(currentX, y, currentX + 16, y + 30);
-		sendData(0x00);
+//		sendData(0x00);
 		
-		if (str[i] == '.') {
-			for (const auto& item : fonts[10]) {
-				sendWdata(((item >> 7) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 6) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 5) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 4) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 3) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 2) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 1) & 0x01) ? 0x0000 : color);
-				sendWdata((item & 0x01) ? 0x0000 : color);
+		uint16_t bmp[480];
+		if (str[j] == '.') {
+			for (uint16_t i = 0; i < 60; i++) {
+				bmp[i*8  ] = (fonts[10][i] >> 7 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+1] = (fonts[10][i] >> 6 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+2] = (fonts[10][i] >> 5 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+3] = (fonts[10][i] >> 4 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+4] = (fonts[10][i] >> 3 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+5] = (fonts[10][i] >> 2 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+6] = (fonts[10][i] >> 1 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+7] = (fonts[10][i]      & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
 			}
 		} else {
-			for (const auto& item : fonts[str[i] - '0']) {
-				sendWdata(((item >> 7) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 6) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 5) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 4) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 3) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 2) & 0x01) ? 0x0000 : color);
-				sendWdata(((item >> 1) & 0x01) ? 0x0000 : color);
-				sendWdata((item & 0x01) ? 0x0000 : color);
+			for (uint16_t i = 0; i < 60; i++) {
+				bmp[i*8  ] = (fonts[str[j] - '0'][i] >> 7 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+1] = (fonts[str[j] - '0'][i] >> 6 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+2] = (fonts[str[j] - '0'][i] >> 5 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+3] = (fonts[str[j] - '0'][i] >> 4 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+4] = (fonts[str[j] - '0'][i] >> 3 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+5] = (fonts[str[j] - '0'][i] >> 2 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+6] = (fonts[str[j] - '0'][i] >> 1 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8+7] = (fonts[str[j] - '0'][i]      & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
 			}
 		}
+		sendWdata(bmp, 480);
 		currentX += 16;
 	}
 }
@@ -241,7 +239,29 @@ void Screen::sendData(uint8_t data) {
 void Screen::sendWdata(uint16_t data) {
 	this -> CS.reset();
 	this -> DC.set();
-	HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(&data), 2, 1000);
+	data = (data<<8)|(data >>8);
+	HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), 2, 1000);
+	this -> CS.set();
+}
+
+void Screen::sendWdata(uint16_t *data, uint16_t count) {
+	this -> CS.reset();
+	this -> DC.set();
+	if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), count*2, HAL_MAX_DELAY)!=HAL_OK) {
+		__NOP();
+	}
+	this -> CS.set();	
+}
+
+void Screen::sendWdata(uint16_t data, uint16_t count) {
+	this -> CS.reset();
+	this -> DC.set();
+	data = (data<<8)|(data >>8);
+	for(uint16_t i = 0; i < count; i++) {
+		if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), 2, 1000)!=HAL_OK) {
+			__NOP();
+		}
+	}
 	this -> CS.set();
 }
 

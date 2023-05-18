@@ -113,7 +113,7 @@ int main()
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
 	
 	char str[5] = {'0', '1', '2', '3', '4'};
-//	screen.drawFont(0, 0, str, 5, YELLOW);
+	screen.drawFont(0, 0, str, 5, YELLOW);
 	screen.fillArea(0,0,31,31,YELLOW);
 	screen.fillArea(32,0,63,31,WHITE);
 	screen.fillArea(64,0,95,31,RED);
