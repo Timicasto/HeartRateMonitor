@@ -39,7 +39,7 @@ private:
 	void sendCommand(uint8_t command);
 	void sendData(uint8_t data);
 	void sendWdata(uint16_t data);
-	void sendWdata(uint16_t *data, uint16_t count);
+	void sendWdata(uint16_t *data, size_t size);
 	void sendWdata(uint16_t data, uint16_t count);
 	void writeRegister(uint8_t address, uint8_t data);
 	void setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_t stopY);

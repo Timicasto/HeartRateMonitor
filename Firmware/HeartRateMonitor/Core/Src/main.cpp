@@ -108,6 +108,10 @@ int main()
 //	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
 	auto logger = Logger(&huart1);
 	logger.log(Logger::INFO, "Logger Initialized");
+	
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+	
 	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
 			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();

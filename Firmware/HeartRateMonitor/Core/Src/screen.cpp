@@ -145,22 +145,17 @@ void Screen::switchBacklight(bool enable) {
 }
 
 void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color) {
-	sendCommand(0x2A);
-	sendData(0x00);
-	sendData(startX + 2);
-	sendData(0x00);
-	sendData(endX + 2);
-
-	sendCommand(0x2B);
-	sendData(0x00);
-	sendData(startY + 3);
-	sendData(0x00);
-	sendData(endY + 3);
-
-	sendCommand(0x2C);
+	setRegion(startX, startY, endX, endY);
 //	sendData(0x00);
 
-	sendWdata(color, (endX-startX+1)*(endY-startY+1));
+	size_t size = (endX-startX+1)*(endY-startY+1);
+	uint16_t buffer[size];
+	
+	for (auto &item: buffer) {
+		item = (color >> 8) | (color << 8);
+	}
+
+	sendWdata(buffer, size);
 }
 
 void Screen::reset() {
@@ -244,10 +239,10 @@ void Screen::sendWdata(uint16_t data) {
 	this -> CS.set();
 }
 
-void Screen::sendWdata(uint16_t *data, uint16_t count) {
+void Screen::sendWdata(uint16_t *data, size_t size) {
 	this -> CS.reset();
 	this -> DC.set();
-	if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), count*2, HAL_MAX_DELAY)!=HAL_OK) {
+	if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), size*2, HAL_MAX_DELAY)!=HAL_OK) {
 		__NOP();
 	}
 	this -> CS.set();	
