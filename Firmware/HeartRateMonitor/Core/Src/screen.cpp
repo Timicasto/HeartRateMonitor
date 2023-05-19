@@ -1,5 +1,6 @@
 #include "screen.h"
 #include "numfonts.h"
+#include "color.h"
 
 IO_Pin::IO_Pin(GPIO gpio): _gpio(gpio) {
 
@@ -175,25 +176,25 @@ void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_
 		uint16_t bmp[480];
 		if (str[j] == '.') {
 			for (uint16_t i = 0; i < 60; i++) {
-				bmp[i*8  ] = (fonts[10][i] >> 7 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+1] = (fonts[10][i] >> 6 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+2] = (fonts[10][i] >> 5 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+3] = (fonts[10][i] >> 4 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+4] = (fonts[10][i] >> 3 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+5] = (fonts[10][i] >> 2 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+6] = (fonts[10][i] >> 1 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+7] = (fonts[10][i]      & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8  ] = (fonts[10][i] >> 7 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+1] = (fonts[10][i] >> 6 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+2] = (fonts[10][i] >> 5 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+3] = (fonts[10][i] >> 4 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+4] = (fonts[10][i] >> 3 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+5] = (fonts[10][i] >> 2 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+6] = (fonts[10][i] >> 1 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+7] = (fonts[10][i]      & 0x01) ? YELLOW : ((color>>8)|(color<<8));
 			}
 		} else {
 			for (uint16_t i = 0; i < 60; i++) {
-				bmp[i*8  ] = (fonts[str[j] - '0'][i] >> 7 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+1] = (fonts[str[j] - '0'][i] >> 6 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+2] = (fonts[str[j] - '0'][i] >> 5 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+3] = (fonts[str[j] - '0'][i] >> 4 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+4] = (fonts[str[j] - '0'][i] >> 3 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+5] = (fonts[str[j] - '0'][i] >> 2 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+6] = (fonts[str[j] - '0'][i] >> 1 & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
-				bmp[i*8+7] = (fonts[str[j] - '0'][i]      & 0x01) ? 0x0000 : ((color>>8)|(color<<8));
+				bmp[i*8  ] = (fonts[str[j] - '0'][i] >> 7 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+1] = (fonts[str[j] - '0'][i] >> 6 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+2] = (fonts[str[j] - '0'][i] >> 5 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+3] = (fonts[str[j] - '0'][i] >> 4 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+4] = (fonts[str[j] - '0'][i] >> 3 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+5] = (fonts[str[j] - '0'][i] >> 2 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+6] = (fonts[str[j] - '0'][i] >> 1 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8+7] = (fonts[str[j] - '0'][i]      & 0x01) ? YELLOW : ((color>>8)|(color<<8));
 			}
 		}
 		sendWdata(bmp, 480);
