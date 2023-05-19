@@ -9,8 +9,8 @@ Logger::Logger(UART_HandleTypeDef* huart): uart(huart) {
 void Logger::log(Logger::LogLevel level, const char* msg) {
 	auto time = HAL_GetTick();
 	auto levelstr = (level & 0x01) ? "INFO] " : (level >> 1 & 0x01) ? "WARN] " : (level >> 2 & 0x01) ? "ERROR]" : "FATAL]";
-	size_t size = 24 + strlen(msg);
+	size_t size = 25 + strlen(msg);
 	char out[size];
-	sprintf(out, "%s%lu%s%s%s%s\n", "[", time, "] [", levelstr, " ", msg);
+	sprintf(out, "%s%lu%s%s%s%s\r\n", "[", time, "] [", levelstr, " ", msg);
 	HAL_UART_Transmit(uart, reinterpret_cast<const uint8_t *>(out), strlen(out), 1000);
 }

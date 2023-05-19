@@ -56,6 +56,8 @@
 volatile uint16_t dmabuf[256] = {0};
 Beat beat = Beat();
 
+bool isConversionFinished = false;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,7 +99,7 @@ int main()
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-//  MX_ADC1_Init();
+  MX_ADC1_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
 //  MX_DMA_Init();
@@ -125,12 +127,29 @@ int main()
 	screen.fillArea(64,0,96,32,RED);
 	screen.fillArea(0,32,32,64,BLUE);
 	screen.fillArea(32,32,64,64,BLACK);
+	
+	HAL_ADCEx_Calibration_Start(&hadc1);
+	
+	HAL_Delay(100);
+	
+	HAL_ADC_Start_IT(&hadc1);
+	HAL_TIM_Base_Start(&htim3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if (isConversionFinished) {
+		  isConversionFinished = false;
+		  uint16_t val = HAL_ADC_GetValue(&hadc1);
+		  uint8_t send[4];
+		  send[0] = val >> 8;
+		  send[1] = val & 0xFF;
+		  send[2] = '\r';
+		  send[3] = '\n';
+		  HAL_UART_Transmit(&huart1, send, 4, HAL_MAX_DELAY);
+	  }
     /* USER CODE END WHILE */
 
 //	uint8_t rate = beat.getRate();
