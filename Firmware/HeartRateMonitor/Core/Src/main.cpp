@@ -28,6 +28,9 @@
 #include "logger.h"
 #include "screen.h"
 #include "color.h"
+#include "printf.h"
+#include "print.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -139,15 +142,15 @@ int main()
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+  	HAL_Delay(1);
 	  if (isConversionFinished) {
 		  isConversionFinished = false;
 		  uint16_t val = HAL_ADC_GetValue(&hadc1);
-		  uint8_t send[4];
-		  send[0] = val >> 8;
-		  send[1] = val & 0xFF;
-		  send[2] = '\r';
-		  send[3] = '\n';
-		  HAL_UART_Transmit(&huart1, send, 4, HAL_MAX_DELAY);
+
+		  char buffer[8]={0};
+		  Print print(buffer, 8);
+		  print.uint16(val).carriagereturn().newline();
+		  HAL_UART_Transmit(&huart1, (uint8_t*)buffer, 8, HAL_MAX_DELAY);
 	  }
     /* USER CODE END WHILE */
 

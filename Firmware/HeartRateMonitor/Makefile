@@ -78,7 +78,8 @@ Core/Src/beat.cpp \
 Core/Src/logger.cpp \
 Core/Src/main.cpp \
 Core/Src/stm32g0xx_it.cpp \
-Core/Src/screen.cpp
+Core/Src/screen.cpp \
+Core/Src/print.cpp
 
 # ASM sources
 ASM_SOURCES =  \
