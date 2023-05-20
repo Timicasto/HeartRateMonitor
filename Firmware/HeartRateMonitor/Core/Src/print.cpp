@@ -41,11 +41,11 @@ Print Print::uint16(uint16_t n) {
 		AddNumChars(num, "00001", 5);
 
 	bool ishead = true;
-	for(uint8_t i = 0; i < 5; i++) {
-		if((num[i] == '0') & ishead) {
+	for(char i : num) {
+		if((i == '0') & ishead) {
 			*(this->next) = ' ';
 		} else {
-			*(this->next) = num[i];
+			*(this->next) = i;
 			ishead = false;
 		}
 		this->next++;
@@ -110,12 +110,12 @@ Print Print::carriagereturn() {
 int16_t Print::end() {
 	*(this->next) = '\000';
 	this->next++;
-	return (int16_t)(this->next - this->buffer - size);
+	return static_cast<int16_t>(this->next - this->buffer - size);
 }
 
 void Print::AddNumChars(char *const a,const char *const b, size_t size) {
 	char carry = '0';
-	for(uint16_t i = 0; i < size; i++) {
+	for(size_t i = 0; i < size; i++) {
 		*(a + i) += *(b + i) - '0' + carry - '0';
 		carry = '0';
 		if(*(a + i) > '9') {

@@ -16,7 +16,7 @@ private:
 	char* buffer;
 	char* next;
 	size_t size;
-	void AddNumChars(char *const, const char *const, size_t);
+	static void AddNumChars(char *, const char *, size_t);
 };
 
 #endif //HEARTRATEMONITOR_PRINT_H
