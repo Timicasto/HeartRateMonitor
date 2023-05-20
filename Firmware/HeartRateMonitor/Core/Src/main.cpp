@@ -149,7 +149,7 @@ int main()
 
 		  char buffer[8]={0};
 		  Print print(buffer, 8);
-		  print.uint16(val).carriagereturn().newline();
+		  print.uint16(val).carriagereturn().newline().end();
 		  HAL_UART_Transmit(&huart1, (uint8_t*)buffer, 8, HAL_MAX_DELAY);
 	  }
     /* USER CODE END WHILE */

@@ -8,9 +8,10 @@ public:
 	Print(char*, size_t);
 	Print uint16(uint16_t);
 	Print uint8(uint8_t);
-	Print string(char*, size_t);
+	Print string(const char *, size_t);
 	Print newline();
 	Print carriagereturn();
+	int16_t end();
 private:
 	char* buffer;
 	char* next;

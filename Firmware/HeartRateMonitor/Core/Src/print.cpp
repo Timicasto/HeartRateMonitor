@@ -54,11 +54,45 @@ Print Print::uint16(uint16_t n) {
 }
 
 Print Print::uint8(uint8_t n) {
+char num[3]={'0','0','0'};
 
+	if(n >>  7)
+		AddNumChars(num, "128", 5);
+	if(n >>  6)
+		AddNumChars(num, "064", 5);
+	if(n >>  5)
+		AddNumChars(num, "032", 5);
+	if(n >>  4)
+		AddNumChars(num, "016", 5);
+	if(n >>  3)
+		AddNumChars(num, "008", 5);
+	if(n >>  2)
+		AddNumChars(num, "004", 5);
+	if(n >>  1)
+		AddNumChars(num, "002", 5);
+	if(n      )
+		AddNumChars(num, "001", 5);
+
+	bool ishead = true;
+	for(char i : num) {
+		if((i == '0') & ishead) {
+			*(this->next) = ' ';
+		} else {
+			*(this->next) = i;
+			ishead = false;
+		}
+		this->next++;
+	}
+	return *this;
 }
 
-Print Print::string(char* str, size_t size) {
-
+Print Print::string(const char *const str, size_t size) {
+	const char *p = str;
+	while(*p != '\000') {
+		*(this->next) = *p;
+		this->next++;
+	}
+	return *this;
 }
 
 Print Print::newline() {
@@ -71,6 +105,12 @@ Print Print::carriagereturn() {
 	*(this->next) = '\r';
 	this->next++;
 	return *this;
+}
+
+int16_t Print::end() {
+	*(this->next) = '\000';
+	this->next++;
+	return (int16_t)(this->next - this->buffer - size);
 }
 
 void Print::AddNumChars(char *const a,const char *const b, size_t size) {
