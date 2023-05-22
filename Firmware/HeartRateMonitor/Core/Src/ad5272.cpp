@@ -2,6 +2,7 @@
 
 AD5272::AD5272(AD5272::AD5272AddrMode addrMode, I2C_HandleTypeDef* hi2c, Logger log, uint16_t maxR): address(addrMode), i2c(hi2c),
                                                                                       logger(log), maxResistance(maxR) {
+	sendCommandWithData(AD5272Commands::COMM, AD5272Controls::RDAC_WP_REN);
 	logger.log(Logger::INFO, "Initialized AD5272.");
 }
 

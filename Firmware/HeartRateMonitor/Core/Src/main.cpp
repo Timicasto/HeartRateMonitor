@@ -28,7 +28,7 @@
 #include "logger.h"
 #include "screen.h"
 #include "color.h"
-#include "printf.h"
+#include "ad5272.h"
 #include "print.h"
 
 
@@ -120,15 +120,32 @@ int main()
 			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
 	screen.switchBacklight(true);
+	HAL_Delay(10);
+	screen.fillArea( 0,  0,  32,  32, YELLOW);
+	screen.fillArea(32,  0,  64,  32, WHITE);
+	screen.fillArea(64,  0,  96,  32, WHITE);
+	screen.fillArea(96,  0, 128,  32, WHITE);
+	screen.fillArea( 0, 32,  32,  64, WHITE);
+	screen.fillArea(32, 32,  64,  64, WHITE);
+	screen.fillArea(64, 32,  96,  64, WHITE);
+	screen.fillArea(96, 32, 128,  64, WHITE);
+	screen.fillArea( 0, 64,  32,  96, WHITE);
+	screen.fillArea(32, 64,  64,  96, WHITE);
+	screen.fillArea(64, 64,  96,  96, WHITE);
+	screen.fillArea(96, 64, 128,  96, WHITE);
+	screen.fillArea( 0, 96,  32, 128, WHITE);
+	screen.fillArea(32, 96,  64, 128, WHITE);
+	screen.fillArea(64, 96,  96, 128, WHITE);
+	screen.fillArea(96, 96, 128, 128, WHITE);
 	
 	char str[5] = {'0', '1', '2', '3', '4'};
 	screen.drawFont(0, 0, str, 5, WHITE);
-	screen.fillArea(0,0,32,32,YELLOW);
-	screen.fillArea(32,0,64,32,WHITE);
-	screen.fillArea(96,0,128,32,GREEN);
-	screen.fillArea(64,0,96,32,RED);
-	screen.fillArea(0,32,32,64,BLUE);
-	screen.fillArea(32,32,64,64,BLACK);
+//	screen.fillArea(0,0,32,32,YELLOW);
+//	screen.fillArea(32,0,64,32,WHITE);
+//	screen.fillArea(96,0,128,32,GREEN);
+//	screen.fillArea(64,0,96,32,RED);
+//	screen.fillArea(0,32,32,64,BLUE);
+//	screen.fillArea(32,32,64,64,BLACK);
 	
 	HAL_ADCEx_Calibration_Start(&hadc1);
 	
@@ -136,6 +153,17 @@ int main()
 	
 	HAL_ADC_Start_IT(&hadc1);
 	HAL_TIM_Base_Start(&htim3);
+	
+	AD5272 PGA(AD5272::AD5272AddrMode::NC, &hi2c2, logger, 20);
+	
+	auto res = PGA.readResistance();
+	PGA.sendCommand(AD5272::AD5272Commands::R_RELOAD);
+	PGA.readResistance();
+	PGA.setResistance(5);
+	PGA.readResistance();
+	PGA.setResistance(0);
+	PGA.readResistance();
+	//the other resistance is 1K
   /* USER CODE END 2 */
 
   /* Infinite loop */
