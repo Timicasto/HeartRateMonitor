@@ -28,7 +28,7 @@
 #include "logger.h"
 #include "screen.h"
 #include "color.h"
-#include "ad5272.h"
+#include "PGA.h"
 #include "print.h"
 
 
@@ -154,16 +154,9 @@ int main()
 	HAL_ADC_Start_IT(&hadc1);
 	HAL_TIM_Base_Start(&htim3);
 	
-	AD5272 PGA(AD5272::AD5272AddrMode::NC, &hi2c2, logger, 20);
+	PGA pga(1, 20, 1024, &hi2c2, PGA::AddrMode::NC, logger);
 	
-	auto res = PGA.readResistance();
-	PGA.sendCommand(AD5272::AD5272Commands::R_RELOAD);
-	PGA.readResistance();
-	PGA.setResistance(5);
-	PGA.readResistance();
-	PGA.setResistance(0);
-	PGA.readResistance();
-	//the other resistance is 1K
+
   /* USER CODE END 2 */
 
   /* Infinite loop */

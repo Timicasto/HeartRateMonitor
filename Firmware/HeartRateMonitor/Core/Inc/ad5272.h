@@ -30,7 +30,7 @@ public:
 		CAL_REN = 0b100
 	} AD5272Operations;
 	
-	AD5272(AD5272AddrMode addrMode, I2C_HandleTypeDef* hi2c, Logger log, uint16_t maxR);
+	AD5272(AD5272AddrMode addrMode, I2C_HandleTypeDef* hi2c, Logger log, uint16_t maxR, uint16_t acc);
 
 	void sendCommand(AD5272Commands com);
 	void setResistance(double resistance);
@@ -40,6 +40,7 @@ private:
 	uint8_t address;
 	I2C_HandleTypeDef* i2c;
 	Logger logger;
+	uint16_t accuracy;
 	uint16_t maxResistance;
 
 	void sendCommandWithData(AD5272Commands com, uint16_t data);
