@@ -7,17 +7,17 @@ PGA::PGA(uint16_t R_const, uint16_t R_var_max, uint16_t acc, I2C_HandleTypeDef *
 }
 
 void PGA::setMagnification(float m) {
-	wiper = m * (r_const / r_var_max * accuracy);
+	uint16_t wiper = m * (r_const / r_var_max * accuracy);
 	writeWiper(wiper);
 }
 
 float PGA::getMagnification() {
-	wiper = readWiper();
+	uint16_t wiper = readWiper();
 	return wiper * (r_var_max / accuracy / r_const);
 }
 
 void PGA::Inc() {
-	wiper = readWiper();
+	uint16_t wiper = readWiper();
 	if(wiper >= accuracy -1) {
 		logger.log(Logger::WARN, "Wiper reached MAX.");
 	}
@@ -26,7 +26,7 @@ void PGA::Inc() {
 }
 
 void PGA::Dec() {
-	wiper = readWiper();
+	uint16_t wiper = readWiper();
 	if(wiper == 0) {
 		logger.log(Logger::WARN, "Wiper reached MIN.");
 	}
