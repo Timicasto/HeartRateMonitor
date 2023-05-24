@@ -119,9 +119,14 @@ int main()
 	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
 			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
+	HAL_Delay(50);
+	screen.reset();
+	HAL_Delay(50);
+	screen.Init();
+	
 	screen.switchBacklight(true);
-	HAL_Delay(10);
-	screen.fillArea( 0,  0,  32,  32, YELLOW);
+	HAL_Delay(100);
+	screen.fillArea( 0,  0,  32,  32, WHITE);
 	screen.fillArea(32,  0,  64,  32, WHITE);
 	screen.fillArea(64,  0,  96,  32, WHITE);
 	screen.fillArea(96,  0, 128,  32, WHITE);
@@ -155,7 +160,7 @@ int main()
 	HAL_TIM_Base_Start(&htim3);
 	
 	PGA pga(1, 20, 1024, &hi2c2, PGA::AddrMode::NC, logger);
-	
+	pga.setMagnification(20);
 
   /* USER CODE END 2 */
 
