@@ -1,4 +1,4 @@
-#include "../Inc/beat.h"
+#include "beat.h"
 
 void Beat::update(uint16_t s) {
     if (c == 1999) {

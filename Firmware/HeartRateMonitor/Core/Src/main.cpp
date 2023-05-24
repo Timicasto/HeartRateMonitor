@@ -55,7 +55,6 @@
 
 /* USER CODE BEGIN PV */
 
-volatile uint16_t dmabuf[256] = {0};
 Beat beat = Beat();
 
 bool isConversionFinished = false;
@@ -101,10 +100,9 @@ int main()
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ADC1_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
-//  MX_DMA_Init();
+  MX_ADC1_Init();
   MX_I2C2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
@@ -155,11 +153,11 @@ int main()
 	
 	HAL_Delay(100);
 	
-	HAL_ADC_Start_IT(&hadc1);
-	HAL_TIM_Base_Start(&htim3);
-	
 	PGA pga(1, 20, 1024, &hi2c2, PGA::AddrMode::NC, logger);
 	pga.setMagnification(20);
+	
+	HAL_ADC_Start_IT(&hadc1);
+	HAL_TIM_Base_Start(&htim3);
 
   /* USER CODE END 2 */
 
@@ -171,11 +169,15 @@ int main()
 	  if (isConversionFinished) {
 		  isConversionFinished = false;
 		  uint16_t val = HAL_ADC_GetValue(&hadc1);
-
-		  char buffer[8]={0};
-		  Print print(buffer, 8);
-		  print.uint16(val).carriagereturn().newline().end();
-		  HAL_UART_Transmit(&huart1, reinterpret_cast<uint8_t*>(buffer), 8, HAL_MAX_DELAY);
+		  
+		  beat.update(val);
+	  }
+	  
+	  if (beat.isValid()) {
+		  char buffer[6] = {0};
+		  Print print(buffer, 6);
+		  print.uint8(beat.getRate()).carriagereturn().newline().end();
+		  HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t*>(buffer), 6, HAL_MAX_DELAY);
 	  }
     /* USER CODE END WHILE */
 
