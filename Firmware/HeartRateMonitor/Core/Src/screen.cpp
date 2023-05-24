@@ -48,7 +48,7 @@ void Screen::reset() {
 	this -> RES.reset();
 	HAL_Delay(100);
 	this -> RES.set();
-	HAL_Delay(50);
+	HAL_Delay(120);
 }
 
 void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_t color) {

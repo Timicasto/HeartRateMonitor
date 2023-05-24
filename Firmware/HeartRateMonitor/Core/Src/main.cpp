@@ -119,18 +119,17 @@ int main()
 	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
 			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
-	HAL_Delay(50);
+	HAL_Delay(100);
 	screen.reset();
-	HAL_Delay(50);
 	screen.Init();
 	
 	screen.switchBacklight(true);
 	HAL_Delay(100);
-	screen.fillArea( 0,  0,  32,  32, WHITE);
-	screen.fillArea(32,  0,  64,  32, WHITE);
-	screen.fillArea(64,  0,  96,  32, WHITE);
-	screen.fillArea(96,  0, 128,  32, WHITE);
-	screen.fillArea( 0, 32,  32,  64, WHITE);
+//	screen.fillArea( 0,  0,  32,  32, WHITE);
+//	screen.fillArea(32,  0,  64,  32, WHITE);
+//	screen.fillArea(64,  0,  96,  32, WHITE);
+//	screen.fillArea(96,  0, 128,  32, WHITE);
+//	screen.fillArea( 0, 32,  32,  64, WHITE);
 	screen.fillArea(32, 32,  64,  64, WHITE);
 	screen.fillArea(64, 32,  96,  64, WHITE);
 	screen.fillArea(96, 32, 128,  64, WHITE);
