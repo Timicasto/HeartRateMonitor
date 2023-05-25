@@ -111,15 +111,13 @@ int main()
 	auto logger = Logger(&huart1);
 	logger.log(Logger::INFO, "Logger Initialized");
 	
-	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
-	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 	
 	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
 			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
 	HAL_Delay(100);
-	screen.reset();
-	screen.Init();
 	
 	screen.switchBacklight(true);
 	HAL_Delay(100);
@@ -128,6 +126,7 @@ int main()
 //	screen.fillArea(64,  0,  96,  32, WHITE);
 //	screen.fillArea(96,  0, 128,  32, WHITE);
 //	screen.fillArea( 0, 32,  32,  64, WHITE);
+	screen.fillArea( 5,  5,  10,  10, WHITE)
 	screen.fillArea(32, 32,  64,  64, WHITE);
 	screen.fillArea(64, 32,  96,  64, WHITE);
 	screen.fillArea(96, 32, 128,  64, WHITE);
@@ -148,6 +147,9 @@ int main()
 //	screen.fillArea(64,0,96,32,RED);
 //	screen.fillArea(0,32,32,64,BLUE);
 //	screen.fillArea(32,32,64,64,BLACK);
+
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
 	
 	HAL_ADCEx_Calibration_Start(&hadc1);
 	
