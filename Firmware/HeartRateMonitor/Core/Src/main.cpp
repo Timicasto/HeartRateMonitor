@@ -163,29 +163,34 @@ int main()
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-  	HAL_Delay(1);
-	  if (isConversionFinished) {
-		  isConversionFinished = false;
-		  uint16_t val = HAL_ADC_GetValue(&hadc1);
-		  
-		  beat.update(val);
-	  }
-	  
-	  if (beat.isValid()) {
-		  char buffer[6] = {0};
-		  Print print(buffer, 6);
-		  print.uint8(beat.getRate()).carriagereturn().newline().end();
-		  HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t*>(buffer), 6, HAL_MAX_DELAY);
-	  }
+	while (1)
+	{
+		HAL_Delay(1);
+		if (isConversionFinished)
+		{
+			isConversionFinished = false;
+			uint16_t val = HAL_ADC_GetValue(&hadc1);
+		
+//			if(beat.update(val))
+//			{
+//				char buffer[11] = {0};
+//				Print print(buffer, 11);
+//				print.uint8(beat.getRate()).uint16(val).carriagereturn().newline().end();
+//				HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t *>(buffer), 11, HAL_MAX_DELAY);
+//			}
+			char bufferval[8]={0};
+			Print printval(bufferval, 8);
+			printval.uint16(val).carriagereturn().newline().end();
+			HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t *>(bufferval), 8, HAL_MAX_DELAY);
+		}
+	
     /* USER CODE END WHILE */
 
-//	uint8_t rate = beat.getRate();
+
 	// send this to screen
 	
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 

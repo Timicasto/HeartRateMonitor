@@ -1,48 +1,101 @@
 #include "beat.h"
 
-void Beat::update(uint16_t s) {
-    if (c == 1999) {
-        c = 0;
-        max = 0;
-    }
-    if (s >= max) {
-        max = s;
-        beat = c;
-        down_flag = 1;
-        stop = 0;
-    }
-    else {
-        if (stop == 0) {
-            down_flag = down_flag << 1;
-            if (down_flag > 0x0F) {
-                down_flag = 1;
-                if (beat < last_beat) {
-                    rate = 2000 - last_beat + beat;
-                } else {
-                    rate = beat - last_beat;
-                }
-                last_beat = beat;
-                max = max >> 5;
-                stop = 1;
-				valid = 1;
-            }
-        
-        }
-    }
-    c++;
+bool MaxDetector::update(uint16_t sample, uint16_t time)
+{
+	if(sample > s)
+	{
+		s = sample;
+		t = time;
+		return false;
+	}
+	else
+	{
+		max_s = s;
+		max_t = t;
+		s = 0;
+		return true;
+	}
 }
 
-uint8_t Beat::getRate() {
-    uint8_t r = 0;
-    uint16_t counter = 0;
-    while (counter < 60000) {
-        counter += rate;
-        r++;
-    }
-	valid = 0;
-    return r;
+uint16_t MaxDetector::getSample()
+{
+	return max_s;
 }
 
-uint8_t Beat::isValid() const {
-	return valid;
+uint16_t MaxDetector::getTime()
+{
+	return max_t;
 }
+
+bool Beat::update(uint16_t sample)
+{
+	if(t >= 2048)
+	{
+		t = 0;
+	}
+	
+	bool isDetected = false;
+	uint8_t i = 0;
+	uint16_t interSample = sample;
+	uint16_t interTime = t;
+	
+	t = t + 1;
+	
+	do
+	{
+		isDetected = detector[i].update(interSample, interTime);
+		interSample = detector[i].getSample();
+		interTime = detector[i].getTime();
+		i++;
+	} while(isDetected & (i < 8));
+	
+	if(i == 1)
+		return false;
+	
+	if(isDetected)
+		i = 7;
+	else
+		i = i - 2;
+	
+	last_beat_s = beat_s;
+	last_beat_t = beat_t;
+	beat_s = detector[i].getSample();
+	beat_t = detector[i].getTime();
+	
+	if(beat_t > last_beat_t)
+	{
+		T = beat_t - last_beat_t;
+	}
+	else
+	{
+		T = 2048 -last_beat_t + beat_t;
+	}
+	
+	if((T >= 300) & (T <= 2000))
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+uint8_t Beat::getRate()
+{
+	if((T >= 300) | (T <= 2000))
+	{
+		uint16_t time = 0;
+		uint8_t r = 0;
+		while(time < 60000)
+		{
+			r = r + 1;
+			time = time + T;
+		}
+		return r;
+	}
+	else
+		return 0xFF;
+}
+
+

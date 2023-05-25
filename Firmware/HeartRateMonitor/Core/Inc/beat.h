@@ -2,24 +2,34 @@
 #define HEARTRATEMONITOR_BEAT_H
 
 #include "stm32g0xx.h"
-
-class Beat {
+class MaxDetector {
 public:
-    uint8_t getRate();
-    void update(uint16_t s);
+	bool update(uint16_t sample, uint16_t t);
+	uint16_t getSample();
+	uint16_t getTime();
 private:
-    uint16_t rate = 0;
-    uint16_t c = 0;
-    uint16_t beat = 0;
-    uint16_t last_beat = 0;
-    uint16_t max = 0;
-public:
-	uint8_t isValid() const;
+	uint16_t max_s = 0;
+	uint16_t max_t = 0;
+	uint16_t s = 0;
+	uint16_t t = 0;
+};
 
+class Beat
+{
+public:
+	bool update(uint16_t sample);
+	uint8_t getRate();
 private:
-	uint8_t down_flag = 1;
-    uint8_t stop = 0;
-	uint8_t valid = 0;
+	MaxDetector detector[8];
+	
+	uint16_t t = 0;
+	
+	uint16_t last_beat_s = 0;
+	uint16_t last_beat_t = 0;
+	uint16_t beat_s = 0;
+	uint16_t beat_t = 0;
+	
+	uint16_t T = 0;
 };
 
 #endif
