@@ -60,13 +60,6 @@ bool Beat::update(uint16_t sample)
 	do
 	{
 		isDetected = detector[i].update(interSample, interTime);
-		if(isDetected)
-		{
-			if((detector[i].getDeltaTime() >= 2000) | (detector[i].getDeltaTime() <= 300))
-			{
-				isDetected = false;
-			}
-		}
 		interSample = detector[i].getSample();
 		interTime = detector[i].getTime();
 		i++;
@@ -80,10 +73,16 @@ bool Beat::update(uint16_t sample)
 	else
 		i = i - 2;
 	
+	uint8_t j = 0;
+	while((j <= i) & (detector[j].getDeltaTime() < 300))
+	{
+		j = j + 1;
+	}
+	
 	last_beat_s = beat_s;
 	last_beat_t = beat_t;
-	beat_s = detector[i].getSample();
-	beat_t = detector[i].getTime();
+	beat_s = detector[j].getSample();
+	beat_t = detector[j].getTime();
 	
 	if(beat_t > last_beat_t)
 	{
