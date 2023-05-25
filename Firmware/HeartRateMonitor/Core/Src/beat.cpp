@@ -43,6 +43,16 @@ void Beat::poll() {
 }
 
 uint8_t Beat::getRate() {
-	// TODO: Rate calculation
+	if(T = 0) {
+		return 0;
+	}
+	uint8_t r = 0;
+	uint16_t time = 0;
+	while(time < 60000)
+	{
+		r = r + 1;
+		time = time + T;
+	}
+	return r;
 }
 
