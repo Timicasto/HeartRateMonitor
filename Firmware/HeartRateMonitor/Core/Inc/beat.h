@@ -7,11 +7,14 @@ public:
 	bool update(uint16_t sample, uint16_t t);
 	uint16_t getSample();
 	uint16_t getTime();
+	uint16_t getDeltaTime();
 private:
 	uint16_t max_s = 0;
 	uint16_t max_t = 0;
 	uint16_t s = 0;
 	uint16_t t = 0;
+	uint16_t last_max_s = 0;
+	uint16_t last_max_t = 0;
 };
 
 class Beat

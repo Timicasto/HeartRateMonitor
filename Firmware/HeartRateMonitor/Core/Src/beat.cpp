@@ -10,11 +10,27 @@ bool MaxDetector::update(uint16_t sample, uint16_t time)
 	}
 	else
 	{
+		last_max_s = max_s;
+		last_max_t = max_t;
 		max_s = s;
 		max_t = t;
 		s = 0;
 		return true;
 	}
+}
+
+uint16_t MaxDetector::getDeltaTime(uint16_t scale)
+{
+	uint16_t delta = 0;
+	if(max_t > last_max_t)
+	{
+		delta = max_t - last_max_t;
+	}
+	else
+	{
+		delta = scale - last_max_t + max_t;
+	}
+	return delta;
 }
 
 uint16_t MaxDetector::getSample()
@@ -44,6 +60,13 @@ bool Beat::update(uint16_t sample)
 	do
 	{
 		isDetected = detector[i].update(interSample, interTime);
+		if(isDetected)
+		{
+			if((detector[i].getDeltaTime() >= 2000) | (detector[i].getDeltaTime() <= 300))
+			{
+				isDetected = false;
+			}
+		}
 		interSample = detector[i].getSample();
 		interTime = detector[i].getTime();
 		i++;
