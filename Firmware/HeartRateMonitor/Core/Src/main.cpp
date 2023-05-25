@@ -165,7 +165,8 @@ int main()
   /* USER CODE BEGIN WHILE */
 	while (1)
 	{
-		HAL_Delay(1);
+		__NOP();
+		__NOP();
 		if (isConversionFinished)
 		{
 			isConversionFinished = false;
