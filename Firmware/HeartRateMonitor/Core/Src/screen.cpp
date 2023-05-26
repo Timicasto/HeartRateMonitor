@@ -40,7 +40,7 @@ Screen::Screen(IO_Pin scl, IO_Pin sda, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin 
 
 void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color) {
 
-	size_t size = (endX-startX+1)*(endY-startY+1);
+	size_t size = (endX-startX)*(endY-startY);
 	uint16_t buffer[size];
 	
 	for (auto &item: buffer) {
