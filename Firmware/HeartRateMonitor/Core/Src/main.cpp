@@ -112,7 +112,7 @@ int main()
 	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
 	
-	Screen screen = ScreenFactory().spi(&hspi1).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
+	Screen screen = ScreenFactory().scl(SCREEN_SCL_GPIO_Port, SCREEN_SCL_Pin).sda(SCREEN_SDA_GPIO_Port, SCREEN_SDA_Pin).cs(SCREEN_CS_GPIO_Port, SCREEN_CS_Pin)
 			.dc(SCREEN_DC_GPIO_Port, SCREEN_DC_Pin).res(SCREEN_RES_GPIO_Port, SCREEN_RES_Pin)
 			.bklt(SCREEN_BLK_GPIO_Port, SCREEN_BLK_Pin).build();
 	HAL_Delay(100);
