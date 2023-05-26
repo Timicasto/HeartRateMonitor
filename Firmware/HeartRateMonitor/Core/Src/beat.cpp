@@ -32,7 +32,7 @@ bool Beat::update(uint16_t sample) {
 	++t;
 	last_s = sample;
 	
-	return false;
+	return isValid;
 }
 
 void Beat::poll() {
@@ -43,7 +43,8 @@ void Beat::poll() {
 }
 
 uint8_t Beat::getRate() {
-	if(T = 0) {
+	isValid = false;
+	if(T == 0) {
 		return 0;
 	}
 	uint8_t r = 0;
