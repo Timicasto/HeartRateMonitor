@@ -119,12 +119,12 @@ int main()
 	
 	screen.switchBacklight(true);
 	HAL_Delay(100);
-//	screen.fillArea( 0,  0,  32,  32, WHITE);
-//	screen.fillArea(32,  0,  64,  32, WHITE);
-//	screen.fillArea(64,  0,  96,  32, WHITE);
-//	screen.fillArea(96,  0, 128,  32, WHITE);
-//	screen.fillArea( 0, 32,  32,  64, WHITE);
-	screen.fillArea( 5,  5,  10,  10, WHITE);
+	screen.fillArea( 0,  0,  32,  32, WHITE);
+	screen.fillArea(32,  0,  64,  32, WHITE);
+	screen.fillArea(64,  0,  96,  32, WHITE);
+	screen.fillArea(96,  0, 128,  32, WHITE);
+	screen.fillArea( 0, 32,  32,  64, WHITE);
+//	screen.fillArea( 5,  5,  10,  10, WHITE);
 	screen.fillArea(32, 32,  64,  64, WHITE);
 	screen.fillArea(64, 32,  96,  64, WHITE);
 	screen.fillArea(96, 32, 128,  64, WHITE);
@@ -137,8 +137,8 @@ int main()
 	screen.fillArea(64, 96,  96, 128, WHITE);
 	screen.fillArea(96, 96, 128, 128, WHITE);
 	
-	char str[5] = {'0', '1', '2', '3', '4'};
-	screen.drawFont(0, 0, str, 5, WHITE);
+	char str[3] = {'0', '0', '0'};
+	screen.drawFont(0, 0, str, 3, WHITE, YELLOW);
 //	screen.fillArea(0,0,32,32,YELLOW);
 //	screen.fillArea(32,0,64,32,WHITE);
 //	screen.fillArea(96,0,128,32,GREEN);
@@ -178,6 +178,7 @@ int main()
 				Print print(buffer, 11);
 				print.uint8(beat.getRate()).uint16(val).carriagereturn().newline().end();
 				HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t *>(buffer), 11, HAL_MAX_DELAY);
+				screen.drawFont(0, 0, buffer, 3, WHITE, YELLOW);
 			}
 //			char bufferval[8]={0};
 //			Print printval(bufferval, 8);

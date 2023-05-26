@@ -30,7 +30,7 @@ public:
 	void switchBacklight(bool enable);
 	void fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color);
 	void reset();
-	void drawFont(uint16_t x, uint16_t y, const char* str, uint8_t length, uint16_t color);
+	void drawFont(uint16_t x, uint16_t y, const char* str, uint8_t length, uint16_t color, uint16_t background);
 	void drawString(const char *);
 private:
 //	SPI_HandleTypeDef* spi;

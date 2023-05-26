@@ -49,6 +49,7 @@ void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t 
 
 	setRegion(startX, startY, endX, endY);
 	sendWdata(buffer, size);
+	sendCommand(0x29);
 }
 
 void Screen::reset() {
@@ -58,39 +59,43 @@ void Screen::reset() {
 	HAL_Delay(120);
 }
 
-void Screen::drawFont(uint16_t x, uint16_t y, const char *str, uint8_t length, uint16_t color) {
+void Screen::drawFont(uint16_t x, uint16_t y, const char *str, uint8_t length, uint16_t color, uint16_t background) {
 	uint16_t currentX = x;
+	
+	color = (color>>8)|(color<<8);
+	background = (background>>8)|(background<<8);
 	
 	for (int j = 0 ; j < length ; ++j) {
 		
 		uint16_t bmp[480];
 		if (str[j] == '.') {
 			for (uint16_t i = 0; i < 60; i++) {
-				bmp[i*8  ] = (fonts[10][i] >> 7 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+1] = (fonts[10][i] >> 6 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+2] = (fonts[10][i] >> 5 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+3] = (fonts[10][i] >> 4 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+4] = (fonts[10][i] >> 3 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+5] = (fonts[10][i] >> 2 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+6] = (fonts[10][i] >> 1 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+7] = (fonts[10][i]      & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8  ] = (fonts[10][i] >> 7 & 0x01) ? background : color;
+				bmp[i*8+1] = (fonts[10][i] >> 6 & 0x01) ? background : color;
+				bmp[i*8+2] = (fonts[10][i] >> 5 & 0x01) ? background : color;
+				bmp[i*8+3] = (fonts[10][i] >> 4 & 0x01) ? background : color;
+				bmp[i*8+4] = (fonts[10][i] >> 3 & 0x01) ? background : color;
+				bmp[i*8+5] = (fonts[10][i] >> 2 & 0x01) ? background : color;
+				bmp[i*8+6] = (fonts[10][i] >> 1 & 0x01) ? background : color;
+				bmp[i*8+7] = (fonts[10][i]      & 0x01) ? background : color;
 			}
 		} else {
 			for (uint16_t i = 0; i < 60; i++) {
-				bmp[i*8  ] = (fonts[str[j] - '0'][i] >> 7 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+1] = (fonts[str[j] - '0'][i] >> 6 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+2] = (fonts[str[j] - '0'][i] >> 5 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+3] = (fonts[str[j] - '0'][i] >> 4 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+4] = (fonts[str[j] - '0'][i] >> 3 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+5] = (fonts[str[j] - '0'][i] >> 2 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+6] = (fonts[str[j] - '0'][i] >> 1 & 0x01) ? YELLOW : ((color>>8)|(color<<8));
-				bmp[i*8+7] = (fonts[str[j] - '0'][i]      & 0x01) ? YELLOW : ((color>>8)|(color<<8));
+				bmp[i*8  ] = (fonts[str[j] - '0'][i] >> 7 & 0x01) ? background : color;
+				bmp[i*8+1] = (fonts[str[j] - '0'][i] >> 6 & 0x01) ? background : color;
+				bmp[i*8+2] = (fonts[str[j] - '0'][i] >> 5 & 0x01) ? background : color;
+				bmp[i*8+3] = (fonts[str[j] - '0'][i] >> 4 & 0x01) ? background : color;
+				bmp[i*8+4] = (fonts[str[j] - '0'][i] >> 3 & 0x01) ? background : color;
+				bmp[i*8+5] = (fonts[str[j] - '0'][i] >> 2 & 0x01) ? background : color;
+				bmp[i*8+6] = (fonts[str[j] - '0'][i] >> 1 & 0x01) ? background : color;
+				bmp[i*8+7] = (fonts[str[j] - '0'][i]      & 0x01) ? background : color;
 			}
 		}
 		setRegion(currentX, y, currentX + 16, y + 30);
 		sendWdata(bmp, 480);
 		currentX += 16;
 	}
+	sendCommand(0x29);
 }
 
 void Screen::drawString(const char *const str) {
