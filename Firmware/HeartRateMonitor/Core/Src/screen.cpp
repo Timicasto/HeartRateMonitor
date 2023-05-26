@@ -33,7 +33,7 @@ void Screen::switchBacklight(bool enable) {
 
 void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color) {
 
-	size_t size = (endX-startX+1)*(endY-startY+1);
+	size_t size = (endX-startX)*(endY-startY);
 	uint16_t buffer[size];
 	
 	for (auto &item: buffer) {
