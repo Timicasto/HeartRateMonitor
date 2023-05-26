@@ -18,10 +18,12 @@ void IO_Pin::reset() const {
 	HAL_GPIO_WritePin(_gpio.GPIOx, _gpio.GPIO_Pin, GPIO_PIN_RESET);
 }
 
-Screen::Screen(SPI_HandleTypeDef *hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt): spi(hspi), CS(cs), RES(res), DC(dc), BKLT(bklt) {
+/*Screen::Screen(SPI_HandleTypeDef *hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt): spi(hspi), CS(cs), RES(res), DC(dc), BKLT(bklt) {
 	reset();
 	Init();
-}
+}*/
+
+
 
 void Screen::switchBacklight(bool enable) {
 	if (enable) {
@@ -29,6 +31,11 @@ void Screen::switchBacklight(bool enable) {
 	} else {
 		this -> BKLT.reset();
 	}
+}
+
+Screen::Screen(IO_Pin scl, IO_Pin sda, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt) : SDA(sda), SCL(scl), CS(cs), RES(res), DC(dc), BKLT(bklt){
+	reset();
+	Init();
 }
 
 void Screen::fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color) {
@@ -51,7 +58,7 @@ void Screen::reset() {
 	HAL_Delay(120);
 }
 
-void Screen::drawFont(uint16_t x, uint16_t y, char *str, uint8_t length, uint16_t color) {
+void Screen::drawFont(uint16_t x, uint16_t y, const char *str, uint8_t length, uint16_t color) {
 	uint16_t currentX = x;
 	
 	for (int j = 0 ; j < length ; ++j) {
@@ -109,36 +116,54 @@ void Screen::setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_
 void Screen::sendCommand(uint8_t command) {
 	this -> CS.reset();
 	this -> DC.reset();
-	HAL_SPI_Transmit(spi, &command, 1, 1000);
+	spiSend(command);
 	this -> CS.set();
 }
 
 void Screen::sendData(uint8_t data) {
 	this -> CS.reset();
 	this -> DC.set();
-	HAL_SPI_Transmit(spi, &data, 1, 1000);
+	spiSend(data);
 	this -> CS.set();
+}
+
+void Screen::spiSend(uint8_t data) {
+	uint8_t i = 0;
+	for (i = 8 ; i > 0 ; i--) {
+		if (data & 0x80) {
+			SDA.set();
+		} else {
+			SDA.reset();
+		}
+		SCL.reset();
+		SCL.set();
+		data <<= 1;
+	}
 }
 
 void Screen::sendWdata(uint16_t data) {
 	this -> CS.reset();
 	this -> DC.set();
 	data = (data<<8)|(data >>8);
-	HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), 2, 1000);
+	spiSend(data >> 8);
+	spiSend(data);
 	this -> CS.set();
 }
 
 void Screen::sendWdata(uint16_t *data, size_t size) {
 	this -> CS.reset();
 	this -> DC.set();
-	if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), size*2, HAL_MAX_DELAY)!=HAL_OK) {
+/*	if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), size*2, HAL_MAX_DELAY)!=HAL_OK) {
 		__NOP();
+	}*/
+	for (int i = 0; i < size; ++i) {
+		sendWdata(data[i]);
 	}
 	this -> CS.set();	
 }
 
 void Screen::sendWdata(uint16_t data, uint16_t count) {
-	this -> CS.reset();
+	/*this -> CS.reset();
 	this -> DC.set();
 	data = (data<<8)|(data >>8);
 	for(uint16_t i = 0; i < count; i++) {
@@ -146,7 +171,10 @@ void Screen::sendWdata(uint16_t data, uint16_t count) {
 			__NOP();
 		}
 	}
-	this -> CS.set();
+	this -> CS.set();*/
+	for (int i = 0; i < count; ++i) {
+		sendWdata(data);
+	}
 }
 
 void Screen::writeRegister(uint8_t address, uint8_t data) {
@@ -268,14 +296,27 @@ void Screen::Init() {
 	sendCommand(0x3A);
 	sendData(0x05);
 
+	sendCommand(0x13);
+	HAL_Delay(10);
 	// Enable Display
 	sendCommand(0x29);
+	HAL_Delay(10);
 }
 
-ScreenFactory ScreenFactory::spi(SPI_HandleTypeDef* hspi) {
-	this -> SPI = hspi;
+ScreenFactory ScreenFactory::scl(GPIO_TypeDef *gpio, uint16_t pin) {
+	this -> SCL = {gpio, pin};
 	return *this;
 }
+
+ScreenFactory ScreenFactory::sda(GPIO_TypeDef *gpio, uint16_t pin) {
+	this -> SDA = {gpio, pin};
+	return *this;
+}
+
+/*ScreenFactory ScreenFactory::spi(SPI_HandleTypeDef* hspi) {
+	this -> SPI = hspi;
+	return *this;
+}*/
 
 ScreenFactory ScreenFactory::cs(GPIO_TypeDef* gpio, uint16_t pin) {
 	this -> CS = {gpio, pin};
@@ -298,5 +339,5 @@ ScreenFactory ScreenFactory::bklt(GPIO_TypeDef* gpio, uint16_t pin) {
 }
 
 Screen ScreenFactory::build() {
-	return {this -> SPI, IO_Pin(this -> CS), IO_Pin(this -> RES), IO_Pin(this -> DC), IO_Pin(this -> BKLT)};
+	return {IO_Pin(this -> SCL), IO_Pin(this -> SDA), IO_Pin(this -> CS), IO_Pin(this -> RES), IO_Pin(this -> DC), IO_Pin(this -> BKLT)};
 }
