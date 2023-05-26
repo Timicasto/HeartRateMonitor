@@ -23,21 +23,25 @@ private:
 
 class Screen {
 public:
-	Screen(SPI_HandleTypeDef* hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt);
+//	Screen(SPI_HandleTypeDef* hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt);
+	Screen(IO_Pin scl, IO_Pin sda, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt);
 	void Init();
 
 	void switchBacklight(bool enable);
 	void fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color);
 	void reset();
-	void drawFont(uint16_t x, uint16_t y, char* str, uint8_t length, uint16_t color);
+	void drawFont(uint16_t x, uint16_t y, const char* str, uint8_t length, uint16_t color);
 	void drawString(const char *);
 private:
-	SPI_HandleTypeDef* spi;
+//	SPI_HandleTypeDef* spi;
+	IO_Pin SDA;
+	IO_Pin SCL;
 	IO_Pin CS;
 	IO_Pin RES;
 	IO_Pin DC;
 	IO_Pin BKLT;
 
+	void spiSend(uint8_t data);
 	void sendCommand(uint8_t command);
 	void sendData(uint8_t data);
 	void sendWdata(uint16_t data);
@@ -49,7 +53,9 @@ private:
 
 class ScreenFactory {
 public:
-	ScreenFactory spi(SPI_HandleTypeDef* hspi);
+//	ScreenFactory spi(SPI_HandleTypeDef* hspi);
+	ScreenFactory scl(GPIO_TypeDef* gpio, uint16_t pin);
+	ScreenFactory sda(GPIO_TypeDef* gpio, uint16_t pin);
 	ScreenFactory cs(GPIO_TypeDef* gpio, uint16_t pin);
 	ScreenFactory dc(GPIO_TypeDef* gpio, uint16_t pin);
 	ScreenFactory res(GPIO_TypeDef* gpio, uint16_t pin);
@@ -57,7 +63,9 @@ public:
 	Screen build();
 
 private:
-	SPI_HandleTypeDef* SPI;
+//	SPI_HandleTypeDef* SPI;
+	GPIO SDA;
+	GPIO SCL;
 	GPIO CS;
 	GPIO DC;
 	GPIO RES;

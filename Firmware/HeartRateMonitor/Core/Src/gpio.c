@@ -55,7 +55,8 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOC, LED1_Pin|LED2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, SCREEN_DC_Pin|SCREEN_RES_Pin|SCREEN_BLK_Pin|SCREEN_CS_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, SCREEN_SDA_Pin|SCREEN_DC_Pin|SCREEN_RES_Pin|SCREEN_SCL_Pin
+                          |SCREEN_BLK_Pin|SCREEN_CS_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PB8 PB9 PB0 PB1
                            PB2 PB3 PB4 PB5 */
@@ -72,8 +73,10 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PAPin PAPin PAPin PAPin */
-  GPIO_InitStruct.Pin = SCREEN_DC_Pin|SCREEN_RES_Pin|SCREEN_BLK_Pin|SCREEN_CS_Pin;
+  /*Configure GPIO pins : PAPin PAPin PAPin PAPin
+                           PAPin PAPin */
+  GPIO_InitStruct.Pin = SCREEN_SDA_Pin|SCREEN_DC_Pin|SCREEN_RES_Pin|SCREEN_SCL_Pin
+                          |SCREEN_BLK_Pin|SCREEN_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;

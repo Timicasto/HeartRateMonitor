@@ -64,10 +64,14 @@ void Error_Handler(void);
 #define LED1_GPIO_Port GPIOC
 #define LED2_Pin GPIO_PIN_15
 #define LED2_GPIO_Port GPIOC
+#define SCREEN_SDA_Pin GPIO_PIN_2
+#define SCREEN_SDA_GPIO_Port GPIOA
 #define SCREEN_DC_Pin GPIO_PIN_3
 #define SCREEN_DC_GPIO_Port GPIOA
 #define SCREEN_RES_Pin GPIO_PIN_4
 #define SCREEN_RES_GPIO_Port GPIOA
+#define SCREEN_SCL_Pin GPIO_PIN_5
+#define SCREEN_SCL_GPIO_Port GPIOA
 #define SCREEN_BLK_Pin GPIO_PIN_6
 #define SCREEN_BLK_GPIO_Port GPIOA
 #define SCREEN_CS_Pin GPIO_PIN_7
