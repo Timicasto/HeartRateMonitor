@@ -2,6 +2,6 @@
 \contentsline {section}{\numberline {2}基本原理}{5}{section.2}%
 \contentsline {section}{\numberline {3}方案论证}{6}{section.3}%
 \contentsline {section}{\numberline {4}硬件电路设计}{7}{section.4}%
-\contentsline {section}{\numberline {5}软件设计}{8}{section.5}%
-\contentsline {section}{\numberline {6}测试报告}{9}{section.6}%
-\contentsline {section}{\numberline {7}结论}{10}{section.7}%
+\contentsline {section}{\numberline {5}软件设计}{9}{section.5}%
+\contentsline {section}{\numberline {6}测试报告}{10}{section.6}%
+\contentsline {section}{\numberline {7}结论}{11}{section.7}%
