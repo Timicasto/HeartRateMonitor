@@ -5,6 +5,7 @@
 \usepackage{float}
 \usepackage{subfigure}
 \usepackage{hyperref}
+\usepackage{longtable}
 
 % Title Page
 \title{光电心率计}
@@ -114,15 +115,33 @@
 
 \newpage
 \section{测试报告}
-\begin{cent-powerpeak-test}
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{amCharts.png}
 	\caption{电源纹波测试：5.78mV Peak-to-Peak}
-\end{cent-powerpeak-test}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ppg.png}
+	\caption{原始电平波形，Y轴单位长度0.8mV}
+\end{figure}	
 
 
 \newpage
 \section{结论}
+
+	本设计实现了一个基于PPG（光电容积描记术）的光学心率检测系统，使用主波长540nm的LED作为发射源实现了1Ksps的精确的PPG血流容积量测，
+
+\section{免责声明}
+	\textbf{此设计不可用于声明攸关的医疗设备，除非已由双方授权官员签署了专门管控此类使用情况的特殊合同}
+	
+	\textbf{使用风险自负}
+	
+	\textbf{This design may not used in life-critical medical equipment unless authorized officers of the parties have executed a special contract specifically governing such use.}
+	
+	\textbf{USE AT YOUR OWN RISK.}
 
 \newpage
 \begin{thebibliography}{20}

@@ -4,4 +4,5 @@
 \contentsline {section}{\numberline {4}硬件电路设计}{7}{section.4}%
 \contentsline {section}{\numberline {5}软件设计}{9}{section.5}%
 \contentsline {section}{\numberline {6}测试报告}{10}{section.6}%
-\contentsline {section}{\numberline {7}结论}{11}{section.7}%
+\contentsline {section}{\numberline {7}结论}{12}{section.7}%
+\contentsline {section}{\numberline {8}免责声明}{12}{section.8}%
