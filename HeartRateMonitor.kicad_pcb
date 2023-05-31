@@ -64,7 +64,7 @@
     (pad_to_mask_clearance 0)
     (pcbplotparams
       (layerselection 0x00410fc_ffffffff)
-      (plot_on_all_layers_selection 0x0000000_00000000)
+      (plot_on_all_layers_selection 0x0001000_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
       (usegerberattributes true)
@@ -73,7 +73,7 @@
       (dashed_line_dash_ratio 12.000000)
       (dashed_line_gap_ratio 3.000000)
       (svgprecision 4)
-      (plotframeref false)
+      (plotframeref true)
       (viasonmask false)
       (mode 1)
       (useauxorigin false)

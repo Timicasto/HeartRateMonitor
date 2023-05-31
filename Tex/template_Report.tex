@@ -6,6 +6,10 @@
 \usepackage{subfigure}
 \usepackage{hyperref}
 \usepackage{longtable}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[titletoc]{appendix}
+\usepackage{csvsimple}
 
 % Title Page
 \title{光电心率计}
@@ -150,5 +154,141 @@
 	\bibitem{Activity:HRM Circuit}\href{https://wiki.analog.com/university/courses/alm1k/alm-lab-heart-rate-mon}{Doug Mercer. Activity: Heart Rate Monitor Circuit[R].Analog Wiki, 14 May 2022}
 	\bibitem{HRM Circuit}\href{https://www.homemade-circuits.com/heart-rate-monitor-alarm-circuit/}{Swagatam. Heart Rate Monitor Circuit[J]. Homemade Circuit Projects, October 18, 2019}
 \end{thebibliography}
+
+
+\begin{appendices}
+	\newpage
+		\setlength{\baselineskip}{8pt}
+		\section{附录 1 - PCB原理图}
+		
+		\begin{figure}[H]
+			\centering
+			\rotatebox{90}{\includegraphics[width=2\textwidth]{schem.pdf}}
+			\hspace{-10mm}
+			\setlength{\leftskip}{-42.5pt}
+			
+		\end{figure}
+	
+	\newpage
+	
+	\section{附录2 - PCB生产版图}
+	
+	\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-B_Cu.pdf}}
+		\caption{背面铜层}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-B_Mask.pdf}}
+		\caption{背面阻焊层}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-B_Paste.pdf}}
+		\caption{背面SMT锡膏层}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-B_Silkscreen.pdf}}
+		\caption{背面丝印层}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-Edge_Cuts.pdf}}
+		\caption{板框层}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-F_Cu.pdf}}
+		\caption{正面铜层}
+	\end{figure}
+	
+			\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-F_Mask.pdf}}
+		\caption{正面阻焊层}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-F_Paste.pdf}}
+		\caption{正面SMT锡膏层}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-F_Silkscreen.pdf}}
+		\caption{正面丝印层}
+	\end{figure}
+	
+		\begin{figure}[H]
+		\centering
+		\setlength{\leftskip}{-42.5pt}
+		\rotatebox{90}{\includegraphics[width=2\textwidth]{HeartRateMonitor-User_1.pdf}}
+		\caption{参数层}
+	\end{figure}
+	
+	\newpage
+	\newpage
+	\newpage
+	\section{附录 3 - BOM表}
+	
+	\begin{tabular}{c|c|c|c}
+		Ref&Qnty&Value&Cmp name\\
+		\hline
+		C1 C2 C3 C5 C14 C19&6&100nF&TCC0603X7R104M160CT\\
+		C4 C12 C16 C18&4&10uF&CL10A106MQ8NNNC\\
+		C6&1&470pF&CC0603KRX7R9BB471\\
+		C7 C17&2&22uF&GRM188R61A226ME15D\\
+		C8&1&150pF&TCC0603X7R151K500CT\\
+		C9 C10 C11 C20&4&1uF&CL10A105KO8NNNC\\
+		C15&1&220nF&CS1608Y5V224Z160NRB\\
+		C21&1&33uF&C3216X5R1A336MTJ00N\\
+		C22&1&15uF&GRM155R60J156ME05D\\
+		D1&1&VEMD5510C&VEMD5510C\\
+		D2 D3&2&VLMTG41S2U1&VLMTG41S2U1\\
+		F1&1&2A&SMD0805-100C-12V\\
+		J1&1&USB-C-Receptacle-USB2.0&USB-TYPE-C-019\\
+		J2&1&SWD&Conn-01x04-Pin\\
+		J3&1&Conn-01x08-Pin&22850108ANG1SYA01\\
+		L1&1&HEI252012A-2R2M-Q8&HEI252012A-2R2M-Q8\\
+		R1 R2&2&5K1&SCR0603F5K1\\
+		R3&1&1M&SC0603F1004F2BNRH\\
+		R4&1&562K&FRC0603F5623TS\\
+		R5&1&180K&SCR0603F180K\\
+		R8&1&100K&SCR0603F100K\\
+		R13&1&500K&ARG03BTC5003N\\
+		R14 R25&2&15K8&FRC0603F1582TS\\
+		R16 R18&2&1K96&FRC0603F1961TS\\
+		R17 R19&2&3K65&FRC0603F3651TS\\
+		R20 R21&2&10K&SC0603F1002F2BNRH\\
+		R22&1&1K&0603WAF1001T5E\\
+		R23 R24&2&4.7R&FRC0603F4R70TS\\
+		R26&1&3K92&0603WAF3921T5E\\
+		U1&1&CH340E&CH340E\\
+		U2 U6 U11&3&LM2904&LM2904DGKR\\
+		U3&1&TLV62130&TLV62130RGTR\\
+		U4&1&STM32G030F6Px&STM32G030F6P6\\
+		U5&1&TPS60403&TPS60403DBVR\\
+		U9&1&AD5272BCP&AD5272BCPZ-20\\
+	\end{tabular}
+	
+\end{appendices}
+
 
 \end{document}          
