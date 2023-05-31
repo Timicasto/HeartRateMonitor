@@ -104,8 +104,6 @@ int main()
   MX_I2C2_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-//	HAL_TIM_Base_Start(&htim3);
-//	HAL_ADC_Start_DMA(&hadc1, (uint32_t *) dmabuf, 256);
 	auto logger = Logger(&huart1);
 	logger.log(Logger::INFO, "Logger Initialized");
 	
@@ -124,7 +122,6 @@ int main()
 	screen.fillArea(64,  0,  96,  32, WHITE);
 	screen.fillArea(96,  0, 128,  32, WHITE);
 	screen.fillArea( 0, 32,  32,  64, WHITE);
-//	screen.fillArea( 5,  5,  10,  10, WHITE);
 	screen.fillArea(32, 32,  64,  64, WHITE);
 	screen.fillArea(64, 32,  96,  64, WHITE);
 	screen.fillArea(96, 32, 128,  64, WHITE);
@@ -139,12 +136,6 @@ int main()
 	
 	char str[3] = {'0', '0', '0'};
 	screen.drawFont(0, 0, str, 3, WHITE, YELLOW);
-//	screen.fillArea(0,0,32,32,YELLOW);
-//	screen.fillArea(32,0,64,32,WHITE);
-//	screen.fillArea(96,0,128,32,GREEN);
-//	screen.fillArea(64,0,96,32,RED);
-//	screen.fillArea(0,32,32,64,BLUE);
-//	screen.fillArea(32,32,64,64,BLACK);
 
 	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
@@ -180,10 +171,6 @@ int main()
 				HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t *>(buffer), 11, HAL_MAX_DELAY);
 				screen.drawFont(0, 0, buffer, 3, WHITE, YELLOW);
 			}
-//			char bufferval[8]={0};
-//			Print printval(bufferval, 8);
-//			printval.uint16(val).carriagereturn().newline().end();
-//			HAL_UART_Transmit(&huart1, reinterpret_cast<const uint8_t *>(bufferval), 8, HAL_MAX_DELAY);
 		}
 	
     /* USER CODE END WHILE */

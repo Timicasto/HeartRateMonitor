@@ -45,7 +45,6 @@ private:
 
 class Screen {
 public:
-//	Screen(SPI_HandleTypeDef* hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt);
 	Screen(IO_Pin scl, IO_Pin sda, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt);
 	void Init();
 
@@ -53,9 +52,7 @@ public:
 	void fillArea(uint16_t startX, uint16_t startY, uint16_t endX, uint16_t endY, uint16_t color);
 	void reset();
 	void drawFont(uint16_t x, uint16_t y, const char* str, uint8_t length, uint16_t color, uint16_t background);
-	void drawString(const char *);
 private:
-//	SPI_HandleTypeDef* spi;
 	IO_Pin SDA;
 	IO_Pin SCL;
 	IO_Pin CS;
@@ -68,14 +65,11 @@ private:
 	void sendData(uint8_t data);
 	void sendWdata(uint16_t data);
 	void sendWdata(uint16_t *data, size_t size);
-	void sendWdata(uint16_t data, uint16_t count);
-	void writeRegister(uint8_t address, uint8_t data);
 	void setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_t stopY);
 };
 
 class ScreenFactory {
 public:
-//	ScreenFactory spi(SPI_HandleTypeDef* hspi);
 	ScreenFactory scl(GPIO_TypeDef* gpio, uint16_t pin);
 	ScreenFactory sda(GPIO_TypeDef* gpio, uint16_t pin);
 	ScreenFactory cs(GPIO_TypeDef* gpio, uint16_t pin);
@@ -85,7 +79,6 @@ public:
 	Screen build();
 
 private:
-//	SPI_HandleTypeDef* SPI;
 	GPIO SDA;
 	GPIO SCL;
 	GPIO CS;

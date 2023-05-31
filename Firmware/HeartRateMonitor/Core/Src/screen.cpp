@@ -28,10 +28,6 @@ IO_Pin::IO_Pin(GPIO gpio): _gpio(gpio) {
 
 }
 
-IO_Pin::IO_Pin(GPIO_TypeDef *io, uint16_t pinNum): _gpio({io, pinNum}) {
-
-}
-
 void IO_Pin::set() const {
 	HAL_GPIO_WritePin(_gpio.GPIOx, _gpio.GPIO_Pin, GPIO_PIN_SET);
 }
@@ -39,13 +35,6 @@ void IO_Pin::set() const {
 void IO_Pin::reset() const {
 	HAL_GPIO_WritePin(_gpio.GPIOx, _gpio.GPIO_Pin, GPIO_PIN_RESET);
 }
-
-/*Screen::Screen(SPI_HandleTypeDef *hspi, IO_Pin cs, IO_Pin res, IO_Pin dc, IO_Pin bklt): spi(hspi), CS(cs), RES(res), DC(dc), BKLT(bklt) {
-	reset();
-	Init();
-}*/
-
-
 
 void Screen::switchBacklight(bool enable) {
 	if (enable) {
@@ -120,10 +109,6 @@ void Screen::drawFont(uint16_t x, uint16_t y, const char *str, uint8_t length, u
 	sendCommand(0x29);
 }
 
-void Screen::drawString(const char *const str) {
-
-}
-
 void Screen::setRegion(uint16_t startX, uint16_t startY, uint16_t stopX, uint16_t stopY) {
 	sendCommand(0x2A);
 	sendData(0x00);
@@ -180,33 +165,10 @@ void Screen::sendWdata(uint16_t data) {
 void Screen::sendWdata(uint16_t *data, size_t size) {
 	this -> CS.reset();
 	this -> DC.set();
-/*	if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), size*2, HAL_MAX_DELAY)!=HAL_OK) {
-		__NOP();
-	}*/
 	for (int i = 0; i < size; ++i) {
 		sendWdata(data[i]);
 	}
 	this -> CS.set();	
-}
-
-void Screen::sendWdata(uint16_t data, uint16_t count) {
-	/*this -> CS.reset();
-	this -> DC.set();
-	data = (data<<8)|(data >>8);
-	for(uint16_t i = 0; i < count; i++) {
-		if(HAL_SPI_Transmit(spi, reinterpret_cast<uint8_t *>(data), 2, 1000)!=HAL_OK) {
-			__NOP();
-		}
-	}
-	this -> CS.set();*/
-	for (int i = 0; i < count; ++i) {
-		sendWdata(data);
-	}
-}
-
-void Screen::writeRegister(uint8_t address, uint8_t data) {
-	sendCommand(address);
-	sendData(data);
 }
 
 void Screen::Init() {
@@ -339,11 +301,6 @@ ScreenFactory ScreenFactory::sda(GPIO_TypeDef *gpio, uint16_t pin) {
 	this -> SDA = {gpio, pin};
 	return *this;
 }
-
-/*ScreenFactory ScreenFactory::spi(SPI_HandleTypeDef* hspi) {
-	this -> SPI = hspi;
-	return *this;
-}*/
 
 ScreenFactory ScreenFactory::cs(GPIO_TypeDef* gpio, uint16_t pin) {
 	this -> CS = {gpio, pin};

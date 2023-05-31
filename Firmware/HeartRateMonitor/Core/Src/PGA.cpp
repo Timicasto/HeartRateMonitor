@@ -22,8 +22,8 @@
 
 #include "PGA.h"
 
-PGA::PGA(uint16_t R_const, uint16_t R_var_max, uint16_t acc, I2C_HandleTypeDef *hi2c, AddrMode addr, Logger log)
-: r_const(R_const), r_var_max(R_var_max), accuracy(acc), i2c(hi2c), addr(addr), logger(log) {
+PGA::PGA(uint16_t R_const, uint16_t R_var_max, uint16_t acc, I2C_HandleTypeDef *hi2c, AddrMode addr, Logger log) : i2c(hi2c),
+addr(addr), logger(log), r_const(R_const), r_var_max(R_var_max), accuracy(acc) {
 	sendCommand(Commands::writeCtrl, Ctrls::enableWiper);
 	logger.log(Logger::INFO, "PGA Initialized.");
 }

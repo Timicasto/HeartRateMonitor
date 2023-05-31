@@ -32,7 +32,6 @@ public:
 	uint8_t getRate();
 	void poll();
 	
-	//MaxDetector detector[8];
 	bool isValid = false;
 	uint16_t threshold = 65535;
 	uint16_t t = 0;

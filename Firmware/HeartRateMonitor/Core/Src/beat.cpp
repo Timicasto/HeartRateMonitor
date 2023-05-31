@@ -34,7 +34,7 @@ bool Beat::update(uint16_t sample) {
 		beat_s = 0;
 		last_s = 0;
 	} else {
-		if (sample >= 40) {
+		if (sample >= threshold) {
 			if (sample >= beat_s) {
 				beat_t = t;
 				beat_s = sample;
@@ -73,8 +73,8 @@ uint8_t Beat::getRate() {
 	uint16_t time = 0;
 	while(time < 60000)
 	{
-		r = r + 1;
-		time = time + T;
+		++r;
+		time += T;
 	}
 	return r;
 }

@@ -70,7 +70,6 @@ Core/Src/system_stm32g0xx.c
 
 # CPP sources
 CXX_SOURCES = \
-Core/Src/ad5272.cpp \
 Core/Src/beat.cpp \
 Core/Src/logger.cpp \
 Core/Src/main.cpp \
