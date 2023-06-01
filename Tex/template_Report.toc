@@ -7,6 +7,6 @@
 \contentsline {section}{\numberline {7}结论}{12}{section.7}%
 \contentsline {section}{\numberline {8}免责声明}{12}{section.8}%
 \contentsline {section}{附录 \numberline {A}附录 1 - PCB原理图}{14}{appendix.1.A}%
-\contentsline {section}{附录 \numberline {B}附录2 - PCB生产版图}{16}{appendix.1.B}%
-\contentsline {section}{附录 \numberline {C}附录 3 - BOM表}{27}{appendix.1.C}%
+\contentsline {section}{附录 \numberline {B}附录2 - PCB生产版图}{15}{appendix.1.B}%
+\contentsline {section}{附录 \numberline {C}附录 3 - BOM表}{26}{appendix.1.C}%
 \contentsfinish 
