@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.1)  1 JUN 2023 20:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.5.30)  1 JUN 2023 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,120 +653,120 @@ Overfull \vbox (153.37689pt too high) has occurred while \output is active []
 File: HeartRateMonitor-B_Cu.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Cu.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 185--186
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
 [16]
-Overfull \vbox (165.29504pt too high) has occurred while \output is active []
+Overfull \vbox (79.04504pt too high) has occurred while \output is active []
 
 
 [17]
 File: HeartRateMonitor-B_Mask.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Mask.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 192--193
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
 
-Overfull \vbox (120.33852pt too high) has occurred while \output is active []
+Overfull \vbox (34.08852pt too high) has occurred while \output is active []
 
 
 [18]
 File: HeartRateMonitor-B_Paste.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Paste.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 199--200
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 199--200
  [][] 
  []
 
 
-Overfull \vbox (120.31744pt too high) has occurred while \output is active []
+Overfull \vbox (34.06744pt too high) has occurred while \output is active []
 
 
 [19]
 File: HeartRateMonitor-B_Silkscreen.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Silkscreen.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 206--207
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 206--207
  [][] 
  []
 
 
-Overfull \vbox (120.32799pt too high) has occurred while \output is active []
+Overfull \vbox (34.07799pt too high) has occurred while \output is active []
 
 
 [20]
 File: HeartRateMonitor-Edge_Cuts.pdf Graphic file (type pdf)
 <use HeartRateMonitor-Edge_Cuts.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 213--214
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
 
-Overfull \vbox (120.1172pt too high) has occurred while \output is active []
+Overfull \vbox (33.8672pt too high) has occurred while \output is active []
 
 
 [21]
 File: HeartRateMonitor-F_Cu.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Cu.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 220--221
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 220--221
  [][] 
  []
 
 
-Overfull \vbox (120.3596pt too high) has occurred while \output is active []
+Overfull \vbox (34.1096pt too high) has occurred while \output is active []
 
 
 [22]
 File: HeartRateMonitor-F_Mask.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Mask.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 227--228
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 227--228
  [][] 
  []
 
 
-Overfull \vbox (120.33852pt too high) has occurred while \output is active []
+Overfull \vbox (34.08852pt too high) has occurred while \output is active []
 
 
 [23]
 File: HeartRateMonitor-F_Paste.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Paste.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 234--235
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 234--235
  [][] 
  []
 
 
-Overfull \vbox (120.31744pt too high) has occurred while \output is active []
+Overfull \vbox (34.06744pt too high) has occurred while \output is active []
 
 
 [24]
 File: HeartRateMonitor-F_Silkscreen.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Silkscreen.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 241--242
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 241--242
  [][] 
  []
 
 
-Overfull \vbox (120.32799pt too high) has occurred while \output is active []
+Overfull \vbox (34.07799pt too high) has occurred while \output is active []
 
 
 [25]
 File: HeartRateMonitor-User_1.pdf Graphic file (type pdf)
 <use HeartRateMonitor-User_1.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 248--249
+Overfull \hbox (38.01785pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
 
-Overfull \vbox (120.34906pt too high) has occurred while \output is active []
+Overfull \vbox (34.09906pt too high) has occurred while \output is active []
 
 
 [26]
@@ -784,11 +784,11 @@ Package rerunfilecheck Info: File `template_Report.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  16993 strings out of 476683
- 390592 string characters out of 5809791
+ 390592 string characters out of 5809790
  1865018 words of memory out of 5000000
  36966 multiletter control sequences out of 15000+600000
  519097 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,11n,97p,525b,401s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,11n,97p,525b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on template_Report.pdf (28 pages).
