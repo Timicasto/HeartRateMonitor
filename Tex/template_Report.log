@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.5.31)  1 JUN 2023 04:54
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.1)  1 JUN 2023 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,12 +778,12 @@ Package rerunfilecheck Info: File `template_Report.out' has not changed.
 (rerunfilecheck)             Checksum: 92F544D1035F4A3CEDA6454D765403E2;1063.
  ) 
 Here is how much of TeX's memory you used:
- 16969 strings out of 476683
- 389438 string characters out of 5809790
- 1864018 words of memory out of 5000000
- 36943 multiletter control sequences out of 15000+600000
+ 16981 strings out of 476683
+ 390382 string characters out of 5809791
+ 1865018 words of memory out of 5000000
+ 36955 multiletter control sequences out of 15000+600000
  518181 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,7n,97p,525b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,7n,97p,525b,401s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on template_Report.pdf (28 pages).
