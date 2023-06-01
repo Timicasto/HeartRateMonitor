@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.1)  1 JUN 2023 20:33
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.6.1)  1 JUN 2023 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,35 +637,37 @@ File: amCharts.png Graphic file (type bmp)
 <amCharts.png>
 File: ppg.png Graphic file (type bmp)
 <ppg.png>
- [10] [11] [12] [13]
+ [10] [11] [12]
+File: signature.png Graphic file (type bmp)
+<signature.png>
 File: schem.pdf Graphic file (type pdf)
 <use schem.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 172--175
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 177--180
  [][] 
  []
 
-[14]
+[13]
 Overfull \vbox (153.37689pt too high) has occurred while \output is active []
 
 
-[15]
+[14]
 File: HeartRateMonitor-B_Cu.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Cu.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 185--186
+Overfull \hbox (76.01735pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
+[15]
+Overfull \vbox (130.79294pt too high) has occurred while \output is active []
+
+
 [16]
-Overfull \vbox (165.29504pt too high) has occurred while \output is active []
-
-
-[17]
 File: HeartRateMonitor-B_Mask.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Mask.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 192--193
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 196--197
  [][] 
  []
 
@@ -673,11 +675,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 192--193
 Overfull \vbox (120.33852pt too high) has occurred while \output is active []
 
 
-[18]
+[17]
 File: HeartRateMonitor-B_Paste.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Paste.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 199--200
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
@@ -685,11 +687,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 199--200
 Overfull \vbox (120.31744pt too high) has occurred while \output is active []
 
 
-[19]
+[18]
 File: HeartRateMonitor-B_Silkscreen.pdf Graphic file (type pdf)
 <use HeartRateMonitor-B_Silkscreen.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 206--207
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 210--211
  [][] 
  []
 
@@ -697,11 +699,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 206--207
 Overfull \vbox (120.32799pt too high) has occurred while \output is active []
 
 
-[20]
+[19]
 File: HeartRateMonitor-Edge_Cuts.pdf Graphic file (type pdf)
 <use HeartRateMonitor-Edge_Cuts.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 213--214
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 217--218
  [][] 
  []
 
@@ -709,11 +711,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 213--214
 Overfull \vbox (120.1172pt too high) has occurred while \output is active []
 
 
-[21]
+[20]
 File: HeartRateMonitor-F_Cu.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Cu.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 220--221
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 224--225
  [][] 
  []
 
@@ -721,11 +723,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 220--221
 Overfull \vbox (120.3596pt too high) has occurred while \output is active []
 
 
-[22]
+[21]
 File: HeartRateMonitor-F_Mask.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Mask.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 227--228
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 231--232
  [][] 
  []
 
@@ -733,11 +735,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 227--228
 Overfull \vbox (120.33852pt too high) has occurred while \output is active []
 
 
-[23]
+[22]
 File: HeartRateMonitor-F_Paste.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Paste.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 234--235
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 238--239
  [][] 
  []
 
@@ -745,11 +747,11 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 234--235
 Overfull \vbox (120.31744pt too high) has occurred while \output is active []
 
 
-[24]
+[23]
 File: HeartRateMonitor-F_Silkscreen.pdf Graphic file (type pdf)
 <use HeartRateMonitor-F_Silkscreen.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 241--242
+Overfull \hbox (100.41588pt too wide) in paragraph at lines 245--246
  [][] 
  []
 
@@ -757,38 +759,38 @@ Overfull \hbox (100.41588pt too wide) in paragraph at lines 241--242
 Overfull \vbox (120.32799pt too high) has occurred while \output is active []
 
 
-[25]
+[24]
 File: HeartRateMonitor-User_1.pdf Graphic file (type pdf)
 <use HeartRateMonitor-User_1.pdf>
 
-Overfull \hbox (100.41588pt too wide) in paragraph at lines 248--249
+Overfull \hbox (76.01735pt too wide) in paragraph at lines 252--253
  [][] 
  []
 
 
-Overfull \vbox (120.34906pt too high) has occurred while \output is active []
+Overfull \vbox (85.84695pt too high) has occurred while \output is active []
 
 
-[26]
-Overfull \hbox (97.28836pt too wide) in paragraph at lines 257--296
+[25]
+Overfull \hbox (97.28836pt too wide) in paragraph at lines 258--297
 [][] 
  []
 
-[27]
+[26]
 Overfull \vbox (24.22716pt too high) has occurred while \output is active []
 
 
-[28] (./template_Report.aux)
+[27] (./template_Report.aux)
 Package rerunfilecheck Info: File `template_Report.out' has not changed.
 (rerunfilecheck)             Checksum: 92F544D1035F4A3CEDA6454D765403E2;1063.
  ) 
 Here is how much of TeX's memory you used:
- 16993 strings out of 476683
- 390592 string characters out of 5809791
+ 17001 strings out of 476683
+ 390731 string characters out of 5809791
  1865018 words of memory out of 5000000
- 36966 multiletter control sequences out of 15000+600000
+ 36973 multiletter control sequences out of 15000+600000
  519097 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,11n,97p,525b,401s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template_Report.pdf (28 pages).
+Output written on template_Report.pdf (27 pages).
