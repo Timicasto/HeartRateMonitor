@@ -1,0 +1,18 @@
+@startuml design
+"Timer"-->[每1ms]"采集"
+-->[ADC采集完成，触发中断]"isConversionFinished=true"
+
+"Beat.update"-->"峰值检测" as detect
+-->[y]"记录峰值"
+-->[有两次峰值记录]"计算心率\n返回true,\n指示算得心率"
+detect-->[n]"update cursor"
+
+"main while"-->"isConversionFinished"
+-->[y]"Beat update"
+"isConversionFinished"-->[n]"isConversionFinished"
+"Beat update"-->[true]"获取心率"
+-->"显示心率到屏幕上"
+"Beat update"-->[false]"isConversionFinished"
+
+
+@enduml
