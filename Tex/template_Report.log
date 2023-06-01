@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.5.30)  1 JUN 2023 22:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Arch Linux) (preloaded format=xelatex 2023.5.30)  1 JUN 2023 22:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -821,25 +821,21 @@ Overfull \vbox (34.09906pt too high) has occurred while \output is active []
 
 
 [24]
-Overfull \hbox (97.28836pt too wide) in paragraph at lines 256--295
+Overfull \hbox (21.07886pt too wide) in paragraph at lines 295--296
 [][] 
  []
 
-[25]
-Overfull \vbox (24.22716pt too high) has occurred while \output is active []
-
-
-[26] (./template_Report.aux)
+[25] (./template_Report.aux)
 Package rerunfilecheck Info: File `template_Report.out' has not changed.
 (rerunfilecheck)             Checksum: 92F544D1035F4A3CEDA6454D765403E2;1063.
  ) 
 Here is how much of TeX's memory you used:
  18167 strings out of 476683
  412108 string characters out of 5809790
- 1865018 words of memory out of 5000000
+ 1870018 words of memory out of 5000000
  38101 multiletter control sequences out of 15000+600000
  519097 words of font info for 80 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,11n,97p,525b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on template_Report.pdf (26 pages).
+Output written on template_Report.pdf (25 pages).
